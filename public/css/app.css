@@ -31,8 +31,8 @@ h6 {
   font-weight: 700;
 }
 
-hr.star-light,
-hr.star-primary {
+hr.midIcon-light,
+hr.midIcon-primary {
   padding: 0;
   border: none;
   border-top: solid 1px;
@@ -41,10 +41,10 @@ hr.star-primary {
   margin: 25px auto 30px;
 }
 
-hr.star-light:after,
-hr.star-primary:after {
-  content: "\f005";
-  font-family: FontAwesome;
+hr.midIcon-light:after,
+hr.midIcon-primary:after {
+  content: "\f037";
+  font-family: Font Awesome\ 5 Free;
   display: inline-block;
   position: relative;
   top: -0.8em;
@@ -52,20 +52,20 @@ hr.star-primary:after {
   padding: 0 0.25em;
 }
 
-hr.star-light {
+hr.midIcon-light {
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-hr.star-light:after {
+hr.midIcon-light:after {
   background-color: #5742bc;
   color: white;
 }
 
-hr.star-primary {
+hr.midIcon-primary {
   border-color: rgba(51, 51, 51, 0.5);
 }
 
-hr.star-primary:after {
+hr.midIcon-primary:after {
   background-color: white;
   color: #333;
 }
@@ -266,11 +266,11 @@ section.success {
   max-width: 400px;
   margin: 0 auto;
   border-radius: 4px;
-  overflow: hidden;
+  overflow: hidden;box-shadow: rgba(0, 0, 0, 0.25) 0 5px 30px;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption {
-  background: rgba(24, 188, 156, 0.9);
+  background: rgba(87, 66, 188, 0.9);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -281,7 +281,7 @@ section.success {
 }
 
 #portfolio .portfolio-item .portfolio-link .caption:hover {
-  opacity: 1;
+  opacity: 1;-webkit-backdrop-filter: blur(5px);
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
@@ -343,8 +343,6 @@ section.success {
   margin: 0;
   font-size: 0.85em;
   line-height: 1.764705882em;
-  vertical-align: middle;
-  vertical-align: baseline;
   opacity: 0;
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
@@ -472,10 +470,9 @@ fieldset[disabled] .btn-primary.active {
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
   color: white;
-  background-color: #128f76;
-  border-color: #11866f;
+  background-color: #6149d1 !important;
+  border-color: #6149d1 !important;
 }
-
 .btn-success:active,
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
@@ -612,4 +609,17 @@ fieldset[disabled] .btn-success.active {
 .portfolio-modal .modal-backdrop {
   opacity: 0;
   display: none;
+}
+.bottom-gap{
+  margin-bottom: 50px;
+}
+.skills span{
+  display: block;
+  margin-top: 10px;
+}
+.skills i{
+  font-size: 50px;
+}
+.skills li{
+  margin: 0 25px;
 }
