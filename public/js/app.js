@@ -44,3 +44,12 @@
     $('[data-tooltip]').tooltip(); 
 
 })(jQuery); // End of use strict
+
+angular.module('cujs', []).controller('main', ['$scope', '$http', function($scope, $http) {
+    $scope.portfolio = null
+    $http.get('portfolio.json').then(function(response){
+        $scope.portfolio = response.data;
+    }).catch(function(error){
+        console.error(error);
+    });
+}]);

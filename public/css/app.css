@@ -31,6 +31,7 @@ h6 {
   font-weight: 700;
 }
 
+hr.midIcon-grey,
 hr.midIcon-light,
 hr.midIcon-primary {
   padding: 0;
@@ -42,6 +43,7 @@ hr.midIcon-primary {
 }
 
 hr.midIcon-light:after,
+hr.midIcon-grey:after,
 hr.midIcon-primary:after {
   content: "\f037";
   font-family: Font Awesome\ 5 Free;
@@ -61,12 +63,17 @@ hr.midIcon-light:after {
   color: white;
 }
 
-hr.midIcon-primary {
+hr.midIcon-primary, hr.midIcon-grey {
   border-color: rgba(51, 51, 51, 0.5);
 }
 
 hr.midIcon-primary:after {
   background-color: white;
+  color: #333;
+}
+
+hr.midIcon-grey:after {
+  background-color: #f7f7f7;
   color: #333;
 }
 
@@ -165,8 +172,8 @@ header .intro-text .skills {
 }
 
 .navbar-custom .navbar-nav li a:hover {
-  color: #5742bc;
   outline: none;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .navbar-custom .navbar-nav li a:focus,
@@ -266,7 +273,10 @@ section.success {
   max-width: 400px;
   margin: 0 auto;
   border-radius: 4px;
-  overflow: hidden;box-shadow: rgba(0, 0, 0, 0.25) 0 5px 30px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 5px 30px;
+  height: 250px;
+  background: #ecf0f1;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption {
@@ -281,7 +291,8 @@ section.success {
 }
 
 #portfolio .portfolio-item .portfolio-link .caption:hover {
-  opacity: 1;-webkit-backdrop-filter: blur(5px);
+  opacity: 1;
+  -webkit-backdrop-filter: blur(5px);
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
@@ -306,6 +317,11 @@ section.success {
 
 #portfolio * {
   z-index: 2;
+}
+
+.portfolio-link img{
+    max-width: initial;
+    height: 100%;
 }
 
 @media (min-width: 767px) {
@@ -473,6 +489,7 @@ fieldset[disabled] .btn-primary.active {
   background-color: #6149d1 !important;
   border-color: #6149d1 !important;
 }
+
 .btn-success:active,
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
@@ -560,7 +577,13 @@ fieldset[disabled] .btn-success.active {
 .portfolio-modal .modal-content img {
   margin-bottom: 30px;
   border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 15px 50px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 15px 50px;
+  background: #ecf0f1;
+  max-height: 500px;
+}
+
+.no-shadow {
+  box-shadow: none !important;
 }
 
 .portfolio-modal .modal-content .item-details {
@@ -606,26 +629,23 @@ fieldset[disabled] .btn-success.active {
   z-index: 1052;
 }
 
-section.grey{
-
+section.grey {
+  background: #f7f7f7;
 }
+
 .portfolio-modal .modal-backdrop {
   opacity: 0;
   display: none;
 }
-.bottom-gap{
+
+.bottom-gap {
   margin-bottom: 50px;
 }
-.skills span{
-  display: block;
-  margin-top: 10px;
+
+.skills {
+  margin-bottom: -25;
 }
-.skills i{
-  font-size: 50px;
-}
-.skills li{
-  margin: 0 25px;
-}
-.skill {
-  margin-bottom: 10px;
+
+.skills li {
+  margin: 0 25px 25px 25px;
 }
