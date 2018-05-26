@@ -576,11 +576,9 @@ fieldset[disabled] .btn-success.active {
 }
 
 .portfolio-modal .modal-content img {
-  margin-bottom: 30px;
   border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 15px 50px;
-  background: #ecf0f1;
-  max-height: 500px;
+  position: relative;
+  z-index: 1;
 }
 
 .no-shadow {
@@ -649,4 +647,49 @@ section.grey {
 
 .skills li {
   margin: 0 25px 25px 25px;
+}
+
+.portfolio-img-wrap {
+  margin-bottom: 30px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 15px 50px;
+  background: #ecf0f1;
+  max-height: 500px;
+  display: block;
+  position: relative;
+  transition-duration: 0.3s;
+  transform: translateY(0px);
+}
+
+.portfolio-img-wrap:after,
+.portfolio-img-wrap:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: inherit;
+  transform: scale(0.95) translateY(0px);
+  background: #fff;
+  transition-duration: 0.3s;
+  opacity: 0.6;
+}
+
+.portfolio-img-wrap:hover {
+  transform: translateY(-10px);
+}
+
+.portfolio-img-wrap:hover:after {
+  transform: scale(0.98) translateY(10px);
+}
+
+.portfolio-img-wrap:hover:before {
+  transform: scale(0.95) translateY(25px);
+}
+.lightboxOverlay {
+  background: rgba(0, 0, 0, 0.8);
+-webkit-backdrop-filter: blur(5px);
+backdrop-filter: blur(5px);
+opacity: 1;
 }

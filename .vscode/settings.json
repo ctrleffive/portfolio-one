@@ -1,3 +1,4 @@
 {
-  "standard.enable": false
+  "standard.enable": false,
+  "files.autoSave": "onWindowChange"
 }
