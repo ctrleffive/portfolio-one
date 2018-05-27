@@ -323,6 +323,9 @@
                             </a>
                             <a ng-repeat="image in item.images track by $index" ng-if="$index>0" data-lightbox="{{ item.slug }}" data-title="{{ image.caption }}" href="{{ image.image }}" class="hidden"></a>
                             <p>{{ item.description }}</p>
+                            <ul class="list-inline portfolio-tags">
+                                <li ng-repeat="tag in item.tags"><span class="portfolio-tag">{{ tag }}</span></li>
+                            </ul>
                             <ul class="list-inline item-details">
                                 <li ng-if="item.link">Link:
                                     <strong>

@@ -5,6 +5,7 @@
     "images": [
       {"caption": "Home Page", "image": "img/portfolio/truewayfze/screen_1.png"}
     ],
+    "tags": ["php","codeigniter","jquery","javascript","html","css","ui/ux","mysql"],
     "slug": "truewayfze",
     "link": "truewayfze.com",
     "thumb": "img/portfolio/truewayfze/thumb.png",
