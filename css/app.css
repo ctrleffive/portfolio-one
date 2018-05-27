@@ -729,7 +729,6 @@ section.grey {
 .portfolio-tag {
   background: #5742bc;
   color: #fff;
-  display: block;
   padding: 5px 15px;
   border-radius: 100px;
 }
