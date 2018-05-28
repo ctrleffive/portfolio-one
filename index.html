@@ -313,7 +313,7 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-10 col-lg-offset-1">
                         <div class="modal-body">
                             <h2>{{ item.name }}</h2>
                             <hr class="midIcon-primary">
@@ -337,14 +337,19 @@
                                         <a href="javascript:void(0)">{{ item.client }}</a>
                                     </strong>
                                 </li>
-                                <li>Date:
+                                <li ng-if="item.date">Date:
                                     <strong>
                                         <a href="javascript:void(0)">{{ item.date }}</a>
                                     </strong>
                                 </li>
-                                <li>Service:
+                                <li ng-if="item.service">Service:
                                     <strong>
                                         <a href="javascript:void(0)">{{ item.service }}</a>
+                                    </strong>
+                                </li>
+                                <li ng-if="item.workspace">Workspace:
+                                    <strong>
+                                        <a href="javascript:void(0)">{{ item.workspace }}</a>
                                     </strong>
                                 </li>
                             </ul>
