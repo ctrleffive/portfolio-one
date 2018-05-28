@@ -270,6 +270,7 @@ section.success {
 #portfolio .portfolio-item {
   margin: 0 0 15px;
   right: 0;
+  position: relative;
 }
 
 #portfolio .portfolio-item .portfolio-link {
@@ -314,7 +315,7 @@ section.success {
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content i {
-  margin-top: -12px;
+  margin-top: -30px;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
@@ -741,4 +742,22 @@ section.grey {
       -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
   }
+}
+
+.portfolio-item::before {
+  content: attr(data-name);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  z-index: 3;
+  background: #fff;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 9px 10px;
+  border-radius: 3px;
+  transition-duration: 0.3s;
+}
+
+.portfolio-item:hover:before {
+  bottom: 10px;
 }
