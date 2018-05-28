@@ -87,6 +87,7 @@ header {
   background: #5742bc;
   color: white;
   min-height: 100vh;
+  position: relative;
 }
 
 header .container {
@@ -144,12 +145,6 @@ header .intro-text .skills {
   background-color: rgba(34, 34, 34, 0.95);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-}
-
-.navbar-custom.affix-top {
-  background-color: rgba(255, 255, 255, 0);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
 }
 
 .navbar-custom a:focus {
@@ -739,5 +734,11 @@ section.grey {
 @media (max-width: 768px) {
   .img-my-avatar {
       max-width: 100px;
+  }
+
+  .navbar-custom {
+      background-color: rgba(255, 255, 255, 0);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
   }
 }
