@@ -96,7 +96,7 @@
           <br>
           <br>
         </p>
-        <div ng-repeat="item in portfolio track by $index" class="col-sm-4 portfolio-item">
+        <div ng-repeat="item in portfolio track by $index" class="col-sm-4 portfolio-item" data-name="{{item.name}}">
           <a href="#portfolio{{$index}}" class="portfolio-link" data-toggle="modal">
             <div class="caption">
               <div class="caption-content">
