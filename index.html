@@ -25,7 +25,6 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118450969-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
     function gtag() {
       dataLayer.push(arguments);
     }
@@ -85,17 +84,11 @@
         <div class="col-lg-12 text-center">
           <h2>Portfolio</h2>
           <hr class="midIcon-primary">
+          <p>Some of my active works. More list coming soon.</p>
+          <div class="bottom-gap"></div>
         </div>
       </div>
       <div class="row">
-        <p ng-if="!portfolio" class="text-center">
-          <br>
-          <br>
-          <br>please wait..
-          <br>
-          <br>
-          <br>
-        </p>
         <div ng-repeat="item in portfolio track by $index" class="col-sm-4 portfolio-item" data-name="{{item.name}}">
           <a href="#portfolio{{$index}}" class="portfolio-link" data-toggle="modal">
             <div class="caption">
