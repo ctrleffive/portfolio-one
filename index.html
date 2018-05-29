@@ -103,7 +103,7 @@
                 <i class="fa fa-search-plus fa-3x"></i>
               </div>
             </div>
-            <img src="img/img-loading.svg" ng-src="{{item.thumb}}" class="img-responsive" alt="{{item.name}}">
+            <img src="img/img-loading.svg" ng-src="img/portfolio/{{ item.slug }}/thumb.png" class="img-responsive" alt="{{item.name}}">
           </a>
         </div>
       </div>
@@ -328,11 +328,11 @@
               <h2>{{ item.name }}</h2>
               <hr class="midIcon-primary">
               <br>
-              <a data-lightbox="{{ item.slug }}" data-title="{{ item.images[0].caption }}" href="{{ item.images[0].image }}" class="portfolio-img-wrap">
-                <img ng-src="{{ item.images[0].image }}" src="img/img-loading.svg" class="img-responsive img-centered" alt="">
+              <a data-lightbox="{{ item.slug }}" data-title="{{ item.images[0].caption }}" href="img/portfolio/{{ item.slug }}/{{ item.images[0].image }}" class="portfolio-img-wrap">
+                <img ng-src="img/portfolio/{{ item.slug }}/{{ item.images[0].image }}" src="img/img-loading.svg" class="img-responsive img-centered" alt="">
               </a>
               <a ng-repeat="image in item.images track by $index" ng-if="$index>0" data-lightbox="{{ item.slug }}" data-title="{{ image.caption }}"
-                href="{{ image.image }}" class="hidden"></a>
+                href="img/portfolio/{{ item.slug }}/{{ image.image }}" class="hidden"></a>
               <p>{{ item.description }}</p>
               <ul class="list-inline portfolio-tags">
                 <li ng-repeat="tag in item.tags">
