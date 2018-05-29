@@ -659,12 +659,11 @@ section.grey {
 }
 
 .portfolio-img-wrap {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   border-radius: 4px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 15px 50px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 15px 50px;
   background: #ecf0f1;
-  max-height: 500px;
   display: block;
   position: relative;
   -webkit-transition-duration: 0.3s;
