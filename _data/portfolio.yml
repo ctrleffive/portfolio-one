@@ -1,0 +1,38 @@
+- name: PureFM
+  slug: purefm
+  description: 'PureFM - A radio streaming website.'
+  images: [{caption: 'Home Page', image: screen_1.png}]
+  tags: [php, codeigniter, jquery, angularjs, html, css, ui/ux, sqlite, bootstrap, admin-panel]
+  link: www.purefm.sc
+  client: IndesignX
+  service: 'Website Development'
+
+- name: 'Caya Property'
+  slug: cayaproperty
+  description: 'Caya Property Ltd. is a full service property management company based in the Turks and Caicos Islands (TCI). We strive to build long term relationships and strong customer satisfaction to our clients based in the TCI and internationally.'
+  images: [{caption: 'Home Page', image: screen_1.png}]
+  tags: [php, codeigniter, jquery, javascript, html, css, ui/ux, mysql, live-chat, bootstrap, admin-panel]
+  link: cayaproperty.com
+  client: 'Designcrewz Webstudio'
+  service: 'Website Development'
+
+- name: 'Trueway Infotech'
+  slug: truewayinfotech
+  description: 'Trueway Infotech is a team includes a power packed bunch of strong contenders of the era that ensures high quality, cost effective web solutions within a limited period of time. Instead of providing a menu with full options, we harness our team’s passion, tech wizardry each and every second to develop strategies that meet your needs in creative and surprising ways.'
+  images: [{caption: 'Home Page', image: screen_1.png}]
+  tags: [php, codeigniter, jquery, javascript, html, css, ui/ux, mysql, bootstrap, blog, admin-panel]
+  link: truewayinfotech.com
+  client: 'Trueway Infotech'
+  workspace: 'Trueway Infotech'
+  service: 'Website Development'
+
+- name: 'Trueway FZE'
+  slug: truewayfze
+  description: 'Trueway is the well known brand of digital room thermostat, delivering only high quality and durable products. The quality checking is a time consuming process, it has to undergo many test including manual and system generated. But we aren''t in a hurry because we believe the success stands in our customer''s satisfaction so we have to ensure the complete perfection of our products.'
+  images: [{caption: 'Home Page', image: screen_1.png}]
+  tags: [php, codeigniter, jquery, javascript, html, css, ui/ux, mysql, bootstrap]
+  link: truewayfze.com
+  date: 'August 2015'
+  client: 'Trueway FZE'
+  workspace: 'Trueway Infotech'
+  service: 'Website Development'

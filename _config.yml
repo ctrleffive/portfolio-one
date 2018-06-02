@@ -1,0 +1,9 @@
+title: "Chandu J S"
+markdown: "kramdown"
+sass:
+  sass_dir: "assets/css" 
+  style: "compressed"
+include:
+  - "assets"
+plugins:
+  - "jekyll-babel"
