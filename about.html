@@ -1,0 +1,91 @@
+---
+layout: default
+menu: about
+permalink: /about/
+---
+<div class="padding-section image">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="h1 head">{{ site.data.about.about.head }}
+          <span class="branded">{{ site.data.about.about.headBranded }}</span>
+        </div>
+        {% for pdata in site.data.about.about.description %}
+        <p class="sub-head">{{ pdata }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="padding-section grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="h3 m-b sec-head">Experience</div>
+        {% for experience in site.data.about.experience %}
+        <div class="m-b">
+          <div class="h5">{{ experience.company }}</div>
+          <p>
+            {{ experience.job }}
+            <br> {{ experience.from }} – {{ experience.to }}
+          </p>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="col-md-4">
+        <div class="h3 m-b sec-head">Education</div>
+        {% for education in site.data.about.education %}
+        <div class="m-b">
+          <div class="h5">{{ education.level }}</div>
+          <p>
+            {{ education.institution }}
+            <br> {{ education.from }} – {{ education.to }}
+          </p>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="col-md-4">
+        <div class="m-b">
+          <div class="h3 m-b sec-head">Proficiency</div>
+          <p class="m-b-0">
+          {% for proficiency in site.data.about.proficiency %}
+            {{ proficiency }} <br>
+          {% endfor %}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="padding-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="m-b">
+          <div class="h3 m-b sec-head">Hobbies</div>
+          <p>
+          {% for hobbies in site.data.about.hobbies %}
+            {{ hobbies }} <br>
+          {% endfor %}
+          </p>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="m-b">
+          <div class="h3 m-b sec-head">Skillset</div>
+          <div class="row">
+            {% for skillset in site.data.about.skillset %}
+            <div class="col-md-4">
+              <p>
+              {% for skill in skillset %}
+                {{ skill }} <br>
+              {% endfor %}
+              </p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
