@@ -63,3 +63,8 @@ skillset:
     - "Manga &amp; Anime"
     - "Traveling"
     - "Writing"
+contact:
+  head: "Contact "
+  headBranded: "Me"
+  description:
+    - "email: <b>chandujs@live.com</b>, mobile: <b>+91 9497851381</b>"
