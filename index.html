@@ -16,88 +16,20 @@ permalink: /
   </div>
 </div>
 <div class="works-blocks row text-center no-gutters row-eq-height">
+  {% for item in site.works %}
   <div class="col-sm-6 col-md-4">
-    <div class="work-block" style="background: #DCE9FB">
-      <a href="#" class="work-link"></a>
-      <img src="http://iljamiskov.com/assets/img/works/zono.jpg" alt="Work Title" class="work-thumb">
+    <div class="work-block" style="background: {{ item.color }}">
+      <a href="works/{{ item.slug }}/" class="work-link"></a>
+      <img src="http://iljamiskov.com/assets/img/works/zono.jpg" alt="{{ item.title }}" class="work-thumb">
       <div class="work-middle">
-        <div class="h3 wm-head">Work Title</div>
+        <div class="h3 wm-head">{{ item.title }}</div>
         <ul class="list-inline wm-tags">
-          <li class="list-inline-item">Web</li>
-          <li class="list-inline-item">Icons</li>
-          <li class="list-inline-item">Illustration</li>
+          {% for cat in item.cats %}
+          <li class="list-inline-item">{{ cat }}</li>
+          {% endfor %}
         </ul>
       </div>
     </div>
   </div>
-  <div class="col-sm-6 col-md-4">
-    <div class="work-block" style="background: #FFDFDF">
-      <a href="#" class="work-link"></a>
-      <img src="http://iljamiskov.com/assets/img/works/zono.jpg" alt="Work Title" class="work-thumb">
-      <div class="work-middle">
-        <div class="h3 wm-head">Work Title</div>
-        <ul class="list-inline wm-tags">
-          <li class="list-inline-item">Web</li>
-          <li class="list-inline-item">Icons</li>
-          <li class="list-inline-item">Illustration</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-4">
-    <div class="work-block" style="background: #FFE9D7">
-      <a href="#" class="work-link"></a>
-      <img src="http://iljamiskov.com/assets/img/works/zono.jpg" alt="Work Title" class="work-thumb">
-      <div class="work-middle">
-        <div class="h3 wm-head">Work Title</div>
-        <ul class="list-inline wm-tags">
-          <li class="list-inline-item">Web</li>
-          <li class="list-inline-item">Icons</li>
-          <li class="list-inline-item">Illustration</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-4">
-    <div class="work-block" style="background: #E0E0E0">
-      <a href="#" class="work-link"></a>
-      <img src="http://iljamiskov.com/assets/img/works/zono.jpg" alt="Work Title" class="work-thumb">
-      <div class="work-middle">
-        <div class="h3 wm-head">Work Title</div>
-        <ul class="list-inline wm-tags">
-          <li class="list-inline-item">Web</li>
-          <li class="list-inline-item">Icons</li>
-          <li class="list-inline-item">Illustration</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-4">
-    <div class="work-block" style="background: #DCE9FB">
-      <a href="#" class="work-link"></a>
-      <img src="http://iljamiskov.com/assets/img/works/zono.jpg" alt="Work Title" class="work-thumb">
-      <div class="work-middle">
-        <div class="h3 wm-head">Work Title</div>
-        <ul class="list-inline wm-tags">
-          <li class="list-inline-item">Web</li>
-          <li class="list-inline-item">Icons</li>
-          <li class="list-inline-item">Illustration</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-4">
-    <div class="work-block" style="background: #FFDFDF">
-      <a href="#" class="work-link"></a>
-      <img src="http://iljamiskov.com/assets/img/works/zono.jpg" alt="Work Title" class="work-thumb">
-      <div class="work-middle">
-        <div class="h3 wm-head">Work Title</div>
-        <ul class="list-inline wm-tags">
-          <li class="list-inline-item">Web</li>
-          <li class="list-inline-item">Icons</li>
-          <li class="list-inline-item">Illustration</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  {% endfor %}
 </div>
