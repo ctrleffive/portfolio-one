@@ -6,7 +6,6 @@ html,
 body {
   font-family: 'Quicksand', sans-serif;
   font-size: 20px;
-  font-weight: 100;
 }
 
 p,
@@ -28,7 +27,13 @@ a {
   }
 }
 
-.h1,
+b, strong {
+  font-weight: 500;
+}
+
+.h1 {
+  font-weight: 100
+}
 .h2,
 .h3,
 .h4,
@@ -176,7 +181,7 @@ header {
 
 .padding-section {
   padding: 100px 0px;
-  background: linear-gradient(158.4deg, rgba(255, 255, 255, 0) 63.03%, rgba(0, 0, 0, 0.05));
+  background: linear-gradient(170deg, rgba(255,255,255,0) 63.03%, rgba(0,0,0,0.05));
   &.bg-white {
     background: #ffffff;
   }
@@ -187,10 +192,31 @@ header {
     background: rgba(255, 255, 255, 0.85);
     margin-top: -40px;
   }
+  &.grey {
+    background: #fafafa;
+  }
+  &.image {
+    .container {
+      position: relative;
+      &:before {
+        content: '';
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-image: url(../images/art.png);
+        right: 0;
+        top: -90px;
+        bottom: -100px;
+        position: absolute;
+        left: 0;
+        opacity: 0.1;
+      }
+    }
+  }
 }
 
-.foot-head {
+.sec-head {
   position: relative;
+  @extend .m-b;
   &:after {
     content: '';
     border-bottom: 1px solid #ddd;
@@ -199,6 +225,10 @@ header {
     margin-top: 15px;
     margin-left: 1px;
   }
+}
+
+.m-b{
+  margin-bottom: 30px;
 }
 
 .spl-button {
@@ -256,9 +286,14 @@ footer {
     }
   }
   .nav-item {
-    &:last-child {
+    &:last-child  {
       .nav-link {
         margin-right: 0;
+      }
+    }
+    &:first-child  {
+      .nav-link {
+        margin-left: 0;
       }
     }
   }

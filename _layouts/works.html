@@ -46,7 +46,9 @@ layout: default
 <div class="padding-section text-center work">
   <div class="container">
     <div class="h5 head">About The Project</div>
-    {{ page.description }}
+    {% for pdata in page.description %}
+    <p>{{ pdata }}</p>
+    {% endfor %}
     <br>
     <ul class="list-inline wm-tags">
       {% for tag in page.tags %}

@@ -1,6 +1,6 @@
 <div class="padding-section bg-white">
   <div class="container">
-    <div class="h5 foot-head">Have a project? I can help!</div>
+    <div class="h5 sec-head">{{ site.data.misc.getintouch }}</div>
     <a href="contact" class="spl-button">Get in touch</a>
   </div>
 </div>
@@ -9,18 +9,13 @@
     <div class="row align-items-center no-gutters">
       <div class="col-lg">
         <div class="h6">&copy; Chandu J S {{ site.time | date: "%Y" }}</div>
-        <p class="m-b-0">Words may show a man’s wit but actions his meaning.</p>
+        <p class="m-b-0">{{ site.data.misc.footerTag }}</p>
         <p class="d-md-none"></p>
       </div>
-      <a href="#" class="soc-link"><img src="https://png.icons8.com/wired/40/000000/twitter.png" alt="Twitter"></a>
-      <a href="#" class="soc-link"><img src="https://png.icons8.com/wired/40/000000/linkedin.png" alt="LinkedIn"></a>
-      <a href="#" class="soc-link"><img src="https://png.icons8.com/wired/40/000000/instagram.png" alt="Instagram"></a>
-      <a href="#" class="soc-link"><img src="https://png.icons8.com/wired/40/000000/github.png" alt="Github"></a>
+      <a href="{{ site.data.misc.social.twitter }}" target="_blank" class="soc-link"><img src="https://png.icons8.com/wired/40/000000/twitter.png" alt="Twitter"></a>
+      <a href="{{ site.data.misc.social.linkedin }}" target="_blank" class="soc-link"><img src="https://png.icons8.com/wired/40/000000/linkedin.png" alt="LinkedIn"></a>
+      <a href="{{ site.data.misc.social.instagram }}" target="_blank" class="soc-link"><img src="https://png.icons8.com/wired/40/000000/instagram.png" alt="Instagram"></a>
+      <a href="{{ site.data.misc.social.github }}" target="_blank" class="soc-link"><img src="https://png.icons8.com/wired/40/000000/github.png" alt="Github"></a>
     </div>
   </div>
 </footer>
-<script src="https://www.googletagmanager.com/gtag/js?id=UA-118450969-1"></script>
-<script src="assets/js/jquery.slim.js"></script>
-<script src="assets/js/popper.js"></script>
-<script src="assets/js/bootstrap.js"></script>
-<script src="assets/js/main.js"></script>

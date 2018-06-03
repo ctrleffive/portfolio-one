@@ -3,14 +3,16 @@ layout: default
 menu: works
 permalink: /
 ---
-<div class="padding-section">
+<div class="padding-section image">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <div class="h1 head">Chandu
-          <span class="branded">J S</span>
+        <div class="h1 head">{{ site.data.about.home.head }}
+          <span class="branded">{{ site.data.about.home.headBranded }}</span>
         </div>
-        <p class="sub-head">Passionate designer who loves simplicity in things and crafts beautiful user interfaces with love.</p>
+        {% for pdata in site.data.about.home.description %}
+        <p class="sub-head">{{ pdata }}</p>
+        {% endfor %}
       </div>
     </div>
   </div>

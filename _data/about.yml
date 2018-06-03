@@ -1,0 +1,65 @@
+home:
+  head: "Chandu "
+  headBranded: "J S"
+  description:
+    - "Passionate designer who loves simplicity in things and crafts beautiful user interfaces with love."
+about:
+  head: "Who Am"
+  headBranded: "I"
+  description: 
+    - "Hello, my name is Ilja Miskov. I am a twenty year old designer from Tallinn, Estonia."
+    - "I love everything that has to do with web design, user interface design &amp; graphic design. I am very passionate about my work. My credo is to keep things simple, convenient and outstanding for everyone."
+experience:
+  - company: "Peppers Design Agency"
+    job: "UX &amp; Web Designer"
+    from: "2014"
+    to: "Present"
+  - company: "Freelance Designer"
+    job: "Working on hundreds of projects"
+    from: "2006"
+    to: "Present"
+education:
+  - level: "Peppers Design Agency"
+    institution: "UX &amp; Web Designer"
+    from: "2014"
+    to: "Present"
+  - level: "Freelance Designer"
+    institution: "Working on hundreds of projects"
+    from: "2006"
+    to: "Present"
+proficiency:
+  - "User-focused work"
+  - "Grid based layouts"
+  - "Sketching &amp; wireframing"
+  - "Minimal web &amp; interface design"
+  - "Stunning &amp; sharp iconography"
+  - "Responsive user experience"
+hobbies:
+  - "Illustration &amp; Drawing"
+  - "Cycling"
+  - "Photography"
+  - "Manga &amp; Anime"
+  - "Traveling"
+  - "Writing"
+skillset:
+  -
+    - "Illustration &amp; Drawing"
+    - "Cycling"
+    - "Photography"
+    - "Manga &amp; Anime"
+    - "Traveling"
+    - "Writing"
+  -
+    - "Illustration &amp; Drawing"
+    - "Cycling"
+    - "Photography"
+    - "Manga &amp; Anime"
+    - "Traveling"
+    - "Writing"
+  -
+    - "Illustration &amp; Drawing"
+    - "Cycling"
+    - "Photography"
+    - "Manga &amp; Anime"
+    - "Traveling"
+    - "Writing"
