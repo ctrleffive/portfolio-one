@@ -1,0 +1,55 @@
+---
+layout: default
+---
+<style>
+  body {
+    background: {{ page.color }};
+  }
+</style>
+<img src="assets/images/works/{{ page.slug }}/thumb.jpg" class="work-background" alt="">
+<div class="padding-section text-center transparent">
+  <div class="container">
+    <div class="h2 head">{{ page.title }}</div>
+    <ul class="list-inline wm-tags">
+      <li class="list-inline-item">{{ page.time | date_to_long_string }}</li>
+      <li class="list-inline-item">
+        <a href="{{ site.url }}/works/{{ page.slug }}">Share</a>
+      </li>
+    </ul>
+  </div>
+  <div id="works-slider" class="carousel slide" data-ride="carousel" data-pause="false">
+    <div class="carousel-inner">
+      {% for index in (1..page.screens) %}
+      <div class="carousel-item active">
+        <img src="assets/images/works/{{ page.slug }}/screen_{{ index }}.jpg" class="work-image" alt="">
+      </div>
+      {% endfor %}
+    </div>
+    {% if page.images > 1 %}
+    <a class="carousel-control-prev" href="#works-slider" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#works-slider" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    {% endif %}
+  </div>
+</div>
+<div class="padding-section text-center work">
+  <div class="container">
+    <div class="h5 head">About The Project</div>
+    {{ page.description }}
+    <br>
+    <ul class="list-inline wm-tags">
+      {% for tag in page.tags %}
+      <li class="list-inline-item">{{ tag }}</li>
+      {% endfor %}
+    </ul>
+    {% if page.link %}
+    <br>
+    <a href="//{{ page.link }}" target="_blank" class="btn btn-outline-info">Goto Link</a>
+    {% endif %}
+  </div>
+</div>

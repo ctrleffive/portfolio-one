@@ -7,3 +7,5 @@ include:
   - "assets"
 plugins:
   - "jekyll-babel"
+collections:
+  - "works"
