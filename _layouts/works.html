@@ -12,8 +12,14 @@ layout: default
     <div class="h2 head">{{ page.title }}</div>
     <ul class="list-inline wm-tags">
       <li class="list-inline-item">{{ page.time | date_to_long_string }}</li>
+      {% for cat in page.cats %}
+      <li class="list-inline-item"><b>{{ cat }}</b></li>
+      {% endfor %}
       <li class="list-inline-item">
-        <a href="{{ site.url }}/works/{{ page.slug }}">Share</a>
+        <a href="{{ site.url }}/works/{{ page.slug }}">
+          <img src="https://png.icons8.com/ios/25/000000/share-filled.png" alt="Share">
+          <span> Share</span>
+        </a>
       </li>
     </ul>
   </div>
