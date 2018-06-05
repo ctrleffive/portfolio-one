@@ -7,33 +7,41 @@ about:
   head: "Who Am"
   headBranded: "I"
   description: 
-    - "Hello, my name is Chandu J S. I am a twenty two year old designer from Trivandrum, India."
+    - "Hello, my name is Chandu J S. I am a twenty two year old developer from Trivandrum, India."
     - "I love everything that has to do with coding, user interface design & development. I am very passionate about my work. My credo is to keep things simple, convenient and outstanding for everyone."
 experience:
-  - company: "Peppers Design Agency"
-    job: "UX &amp; Web Designer"
+  - company: "Inometrics Technology"
+    job: "Full Stack Developer"
+    from: "2017"
+    to: "Present"
+  - company: "Trueway Infotech"
+    job: "Full Stack Developer"
+    from: "2016"
+    to: "2017"
+  - company: "Trueway Infotech"
+    job: "Junior Web Developer"
     from: "2014"
-    to: "Present"
-  - company: "Freelance Designer"
-    job: "Working on hundreds of projects"
-    from: "2006"
-    to: "Present"
+    to: "2016"
 education:
-  - level: "Peppers Design Agency"
-    institution: "UX &amp; Web Designer"
-    from: "2014"
-    to: "Present"
-  - level: "Freelance Designer"
-    institution: "Working on hundreds of projects"
-    from: "2006"
-    to: "Present"
+  - level: "B.Sc. Computer"
+    institution: "University of Kerala"
+    from: "2013"
+    to: "2016"
+  - level: "+2 (Plus two)"
+    institution: "St. John's Model HSS"
+    from: "2011"
+    to: "2013"
+  - level: "SSLC"
+    institution: "St. Mary's HSS"
+    from: "2005"
+    to: "2011"
 proficiency:
   - "User-focused work"
-  - "Grid based layouts"
+  - "Clean code"
   - "Sketching &amp; wireframing"
   - "Minimal web &amp; interface design"
-  - "Stunning &amp; sharp iconography"
   - "Responsive user experience"
+  - "Clear documentation"
 hobbies:
   - "Coding"
   - "Photography"
@@ -43,26 +51,30 @@ hobbies:
   - "Comics"
 skillset:
   -
-    - "Illustration &amp; Drawing"
-    - "Cycling"
-    - "Photography"
-    - "Manga &amp; Anime"
-    - "Traveling"
-    - "Writing"
+    - Angular
+    - CSS
+    - Dart
+    - MySQL
+    - Firebase
+    - Git
+    - Gulp
   -
-    - "Illustration &amp; Drawing"
-    - "Cycling"
-    - "Photography"
-    - "Manga &amp; Anime"
-    - "Traveling"
-    - "Writing"
+    - HTML
+    - Ionic
+    - JavaScript
+    - Lua
+    - Markdown
+    - MongoDB
+    - NodeJS
   -
-    - "Illustration &amp; Drawing"
-    - "Cycling"
-    - "Photography"
-    - "Manga &amp; Anime"
-    - "Traveling"
-    - "Writing"
+    - NPM
+    - PHP
+    - SASS
+    - TypeScript
+    - Swift
+    - Android
+
+  
 contact:
   head: "Contact "
   headBranded: "Me"
