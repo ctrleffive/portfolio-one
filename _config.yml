@@ -3,8 +3,6 @@ sass:
   style: "compressed"
 include:
   - "assets"
-plugins:
-  - "jekyll-babel"
 collections:
   works:
     output: true
