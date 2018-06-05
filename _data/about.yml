@@ -2,13 +2,13 @@ home:
   head: "Chandu "
   headBranded: "J S"
   description:
-    - "Passionate designer who loves simplicity in things and crafts beautiful user interfaces with love."
+    - "Passionate developer who loves simplicity in things and crafts beautiful user interfaces with love."
 about:
   head: "Who Am"
   headBranded: "I"
   description: 
-    - "Hello, my name is Ilja Miskov. I am a twenty year old designer from Tallinn, Estonia."
-    - "I love everything that has to do with web design, user interface design &amp; graphic design. I am very passionate about my work. My credo is to keep things simple, convenient and outstanding for everyone."
+    - "Hello, my name is Chandu J S. I am a twenty two year old designer from Trivandrum, India."
+    - "I love everything that has to do with coding, user interface design & development. I am very passionate about my work. My credo is to keep things simple, convenient and outstanding for everyone."
 experience:
   - company: "Peppers Design Agency"
     job: "UX &amp; Web Designer"
@@ -35,12 +35,12 @@ proficiency:
   - "Stunning &amp; sharp iconography"
   - "Responsive user experience"
 hobbies:
-  - "Illustration &amp; Drawing"
-  - "Cycling"
+  - "Coding"
   - "Photography"
-  - "Manga &amp; Anime"
-  - "Traveling"
-  - "Writing"
+  - "Reading"
+  - "Cycling"
+  - "Movies"
+  - "Comics"
 skillset:
   -
     - "Illustration &amp; Drawing"

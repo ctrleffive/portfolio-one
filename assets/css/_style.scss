@@ -8,6 +8,26 @@ body {
   font-size: 20px;
 }
 
+body {
+  &:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: #fff;
+    opacity: 1;
+    visibility: visible;
+    transition-duration: 0.5s;
+  }
+  &.ok:before {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 p,
 a {
   opacity: 0.5;
