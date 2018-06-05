@@ -12,5 +12,5 @@ gtag('config', 'UA-118450969-1')
 window.onload = () => {
   setTimeout(() => {
     $('body').addClass('ok')
-  }, 1000)
+  }, 500)
 }
