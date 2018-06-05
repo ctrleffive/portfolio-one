@@ -23,15 +23,15 @@ layout: default
       </li>
     </ul>
   </div>
-  <div id="works-slider" class="carousel slide" data-ride="carousel" data-pause="false">
+  <div id="works-slider" class="carousel slide" data-ride="carousel" data-interval="false">
     <div class="carousel-inner">
       {% for index in (1..page.screens) %}
-      <div class="carousel-item active">
+      <div class="carousel-item{% if index == 1 %} active{% endif %}">
         <img src="assets/images/works/{{ page.slug }}/screen_{{ index }}.jpg" class="work-image" alt="">
       </div>
       {% endfor %}
     </div>
-    {% if page.images > 1 %}
+    {% if page.screens > 1 %}
     <a class="carousel-control-prev" href="#works-slider" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>

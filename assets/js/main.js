@@ -1,5 +1,3 @@
----
----
 // Google Analytics
 window.dataLayer = window.dataLayer || []
 const gtag = function () {
