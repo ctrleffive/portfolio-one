@@ -9,8 +9,8 @@ gtag('js', new Date())
 gtag('config', 'UA-118450969-1')
 
 // Smooth navigation
-window.onload = () => {
-  setTimeout(() => {
+window.onload = function () {
+  setTimeout(function () {
     $('body').addClass('ok')
   }, 500)
 }
