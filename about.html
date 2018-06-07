@@ -3,16 +3,19 @@ layout: default
 menu: about
 permalink: /about/
 ---
-<div class="padding-section image">
+<div class="padding-section">
   <div class="container">
+    <div class="h1 head">{{ site.data.about.about.head }}
+      <span class="branded">{{ site.data.about.about.headBranded }}</span>
+    </div>
     <div class="row">
-      <div class="col-md-7">
-        <div class="h1 head">{{ site.data.about.about.head }}
-          <span class="branded">{{ site.data.about.about.headBranded }}</span>
-        </div>
+      <div class="col-md-9">
         {% for pdata in site.data.about.about.description %}
         <p class="sub-head">{{ pdata }}</p>
         {% endfor %}
+      </div>
+      <div class="col-md-3">
+        <img src="assets/images/chandu.jpg" alt="" width="100%" class="circle-avatar">
       </div>
     </div>
   </div>
