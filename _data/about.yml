@@ -1,14 +1,17 @@
 home:
-  head: "Chandu "
+  head: "❤️ Chandu "
   headBranded: "J S"
   description:
     - "Passionate developer who loves simplicity in things and crafts beautiful user interfaces with love."
 about:
-  head: "Who Am"
+  head: "🤔 Who Am"
   headBranded: "I"
   description: 
     - "Hello, my name is Chandu J S. I am a twenty two year old developer from Trivandrum, India."
     - "I love everything that has to do with coding, user interface design & development. I am very passionate about my work. My credo is to keep things simple, convenient and outstanding for everyone."
+    - "I am a self-directed and motivated Software Engineer who works effectively in a dynamic environment."
+    - "I am a problem-solving Web Developer successful at creating a seamless user experience throughout entire product line. Highly focused developer adept at streamlining complicated processes by incorporating minimalist design principles into the user experience."
+    - "I am an Expert Software Developer dedicated to constantly improving tools and infrastructure to maximize productivity, minimize system downtime and quickly respond to the changing needs of the business."
 experience:
   - company: "Inometrics Technology"
     job: "Full Stack Developer"
@@ -76,7 +79,7 @@ skillset:
 
   
 contact:
-  head: "Contact "
+  head: "🤝 Contact "
   headBranded: "Me"
   description:
     - "email: <b>chandujs@live.com</b>, mobile: <b>+91 9497851381</b>"

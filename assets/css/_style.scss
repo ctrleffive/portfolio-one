@@ -201,7 +201,7 @@ header {
 
 .padding-section {
   padding: 100px 0px;
-  background: linear-gradient(170deg, rgba(255,255,255,0) 63.03%, rgba(0,0,0,0.05));
+  background: linear-gradient(170deg, rgba(255,255,255,0) 63.03%, rgba(0,0,0,0.02));
   &.bg-white {
     background: #ffffff;
   }
@@ -336,4 +336,8 @@ footer {
   max-width: 95%;
   width: 1000px;
   margin-bottom: 45px;
+}
+
+.circle-avatar {
+  border-radius: 100%;
 }
