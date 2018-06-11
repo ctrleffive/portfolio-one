@@ -6,7 +6,7 @@ layout: default
     background: {{ page.color }};
   }
 </style>
-<img src="assets/images/works/{{ page.slug }}/thumb.jpg" class="work-background" alt="">
+<img src="assets/images{{ page.url }}thumb.jpg" class="work-background" alt="">
 <div class="padding-section text-center transparent">
   <div class="container">
     <div class="h2 head">{{ page.title }}</div>
@@ -16,7 +16,7 @@ layout: default
       <li class="list-inline-item"><b>{{ cat }}</b></li>
       {% endfor %}
       <li class="list-inline-item">
-        <a href="{{ site.url }}/works/{{ page.slug }}">
+        <a href="{{ site.url }}">
           <img src="assets/images/share.png" alt="Share">
           <span> Share</span>
         </a>
@@ -27,7 +27,7 @@ layout: default
     <div class="carousel-inner">
       {% for index in (1..page.screens) %}
       <div class="carousel-item{% if index == 1 %} active{% endif %}">
-        <img src="assets/images/works/{{ page.slug }}/screen_{{ index }}.jpg" class="work-image" alt="">
+        <img src="assets/images{{ page.url }}screen_{{ index }}.jpg" class="work-image" alt="">
       </div>
       {% endfor %}
     </div>

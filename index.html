@@ -18,11 +18,12 @@ permalink: /
   </div>
 </div>
 <div class="works-blocks row text-center no-gutters row-eq-height">
-  {% for item in site.works %}
+  {% assign works = site.works | sort: 'priority' %}
+  {% for item in works %}
   <div class="col-sm-6 col-md-4">
     <div class="work-block" style="background: {{ item.color }}">
-      <a href="works/{{ item.slug }}/" class="work-link"></a>
-      <img src="assets/images/works/{{ item.slug }}/thumb.jpg" alt="{{ item.title }}" class="work-thumb">
+      <a href="{{ item.url }}" class="work-link"></a>
+      <img src="assets/images{{ item.url }}thumb.jpg" alt="{{ item.title }}" class="work-thumb">
       <div class="work-middle">
         <div class="h3 wm-head">{{ item.title }}</div>
         <ul class="list-inline wm-tags">
