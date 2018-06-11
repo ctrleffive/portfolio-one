@@ -26,7 +26,7 @@ layout: default
   <div id="works-slider" class="carousel slide" data-interval="false">
     <div class="carousel-inner">
       {% for image in site.static_files %}
-        {% if image.path contains page.url %}{% unless image.path contains "thumb.jpg" %}
+        {% if image.path contains page.url %}{% unless image.path contains "thumb.png" %}
         <div class="carousel-item{% if image.path contains "_1." %} active{% endif %}">
           <img src="{{ image.path }}" class="work-image" alt="">
         </div>
