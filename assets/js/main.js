@@ -12,3 +12,12 @@ window.onload = function () {
     $('body').addClass('ok')
   }, 500)
 }
+
+$(document).ready(function () {
+  $('.carousel').carousel({
+      interval: false
+  }).on('slide.bs.carousel', function (e) {
+      var nextH = $(e.relatedTarget).height();
+      $(this).find('.active').parent().animate({ height: nextH }, 500);
+  });
+});
