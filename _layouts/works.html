@@ -23,14 +23,14 @@ layout: default
       </li>
     </ul>
   </div>
-  <div id="works-slider" class="carousel slide" data-ride="carousel" data-interval="false">
+  <div id="works-slider" class="carousel slide" data-interval="false">
     <div class="carousel-inner">
       {% for image in site.static_files %}
-        {% if image.path contains page.url %}
-        <div class="carousel-item{% if index == 1 %} active{% endif %}">
+        {% if image.path contains page.url %}{% unless image.path contains "thumb.jpg" %}
+        <div class="carousel-item{% if image.path contains "_1." %} active{% endif %}">
           <img src="{{ image.path }}" class="work-image" alt="">
         </div>
-        {% endif %}
+        {% endunless %}{% endif %}
       {% endfor %}
     </div>
     {% if page.screens > 1 %}
