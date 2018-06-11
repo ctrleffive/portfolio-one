@@ -25,10 +25,12 @@ layout: default
   </div>
   <div id="works-slider" class="carousel slide" data-ride="carousel" data-interval="false">
     <div class="carousel-inner">
-      {% for index in (1..page.screens) %}
-      <div class="carousel-item{% if index == 1 %} active{% endif %}">
-        <img src="assets/images{{ page.url }}screen_{{ index }}.jpg" class="work-image" alt="">
-      </div>
+      {% for image in site.static_files %}
+        {% if image.path contains page.url %}
+        <div class="carousel-item{% if index == 1 %} active{% endif %}">
+          <img src="{{ image.path }}" class="work-image" alt="">
+        </div>
+        {% endif %}
       {% endfor %}
     </div>
     {% if page.screens > 1 %}
