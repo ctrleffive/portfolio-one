@@ -14,24 +14,24 @@ Below are the list of websites that involves my contribution. Only published one
 - [x] PureFM - purefm.sc
 - [x] Abhaye - abhaye.com
 - [x] AMT IT Solutions - amtitsolutions.com
-- [ ] GCS Protech - gcsprotech.com
+- [x] GCS Protech - gcsprotech.com
+- [x] Habshi Trading - habshitrading.com
+- [x] Score Advisory - scoreadvisory.net
+- [x] Smartline Decor - smartlinedecor.com
+- [x] SourceOne UAE - sourceoneuae.com
+- [x] Trueway INT - truewayint.com
+- [x] MSH UAE - mshuae.com
+- [x] Old Age Home - oldagehome.org
+- [x] Taz Roc Media - tazrocmedia.com
+- [x] Insultherm - insultherme.com
+- [x] MAK Machinery - makmachinery.com
 - [ ] Glaze Maker - glazemaker.com
-- [ ] Habshi Trading - habshitrading.com
 - [ ] Jude Krishnan - judekrishnan.com
-- [ ] Score Advisory - scoreadvisory.net
-- [ ] Smartline Decor - smartlinedecor.com
-- [ ] SourceOne UAE - sourceoneuae.com
 - [ ] Swami Global - swamiglobal.com
-- [ ] Trueway INT - truewayint.com
 - [ ] Veeram Movie - veerammovie.com
 - [ ] Garuda Com - garudacom.com
 - [ ] Michel Toule - micheltoule.com
 - [ ] Leftclick News - leftclicknews.com
-- [ ] MSH UAE - mshuae.com
-- [ ] Old Age Home - oldagehome.org
-- [ ] Taz Roc Media - tazrocmedia.com
-- [ ] Insultherm - insultherme.com
-- [ ] MAK Machinery - makmachinery.com
 - [ ] AZ Group - azgroup.ae
 - [ ] Island Shine - islandshine.com
 - [ ] Josoor Travels - josoortravels.com
