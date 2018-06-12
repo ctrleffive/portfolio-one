@@ -1,3 +1,7 @@
+---
+layout: readme
+permalink: /welcome/
+---
 # The Portfolio of Chandu J S
 
 Welcome to my portoflio
@@ -8,7 +12,8 @@ Below are the list of websites that involves my contribution. Only published one
 - [x] Trueway Infotech - truewayinfotech.com
 - [x] Caya Property - cayaproperty.com
 - [x] PureFM - purefm.sc
-- [ ] AMT IT Solutions - amtitsolutions.com
+- [x] Abhaye - abhaye.com
+- [x] AMT IT Solutions - amtitsolutions.com
 - [ ] GCS Protech - gcsprotech.com
 - [ ] Glaze Maker - glazemaker.com
 - [ ] Habshi Trading - habshitrading.com
@@ -25,7 +30,6 @@ Below are the list of websites that involves my contribution. Only published one
 - [ ] MSH UAE - mshuae.com
 - [ ] Old Age Home - oldagehome.org
 - [ ] Taz Roc Media - tazrocmedia.com
-- [ ] Abhaye - abhaye.com
 - [ ] Insultherm - insultherme.com
 - [ ] MAK Machinery - makmachinery.com
 - [ ] AZ Group - azgroup.ae

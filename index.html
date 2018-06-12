@@ -18,8 +18,8 @@ permalink: /
   </div>
 </div>
 <div class="works-blocks row text-center no-gutters row-eq-height">
-  {% assign works = site.works | sort: 'priority' %}
-  {% for item in works %}
+  {% assign works = site.works | sort: 'order' %}
+  {% for item in works reversed  %}
   <div class="col-sm-6 col-md-4">
     <div class="work-block" style="background: {{ item.color }}">
       <a href="{{ item.url }}" class="work-link"></a>
