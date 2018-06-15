@@ -26,6 +26,8 @@ Below are the list of websites that involves my contribution. Only published one
 - [x] Taz Roc Media - tazrocmedia.com
 - [x] Insultherm - insultherme.com
 - [x] MAK Machinery - makmachinery.com
+- [ ] Elaenor Web Console
+- [ ] Elaenor Mobile Apps
 - [ ] Glaze Maker - glazemaker.com
 - [ ] Jude Krishnan - judekrishnan.com
 - [ ] Swami Global - swamiglobal.com
