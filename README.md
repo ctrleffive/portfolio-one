@@ -3,6 +3,7 @@ layout: readme
 permalink: /welcome/
 ---
 # The Portfolio of Chandu J S
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 Welcome to my portoflio
 
