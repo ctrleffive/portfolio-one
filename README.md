@@ -3,6 +3,7 @@ layout: readme
 permalink: /welcome/
 ---
 # The Portfolio of Chandu J S
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a297c001d1bd4068993ac00e81e26644)](https://app.codacy.com/app/cujslive/chandujs.in?utm_source=github.com&utm_medium=referral&utm_content=cujslive/chandujs.in&utm_campaign=Badge_Grade_Settings)
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 Welcome to my portoflio
