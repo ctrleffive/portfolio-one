@@ -1,9 +1,0 @@
-sass:
-  sass_dir: "assets/css" 
-  style: "compressed"
-include:
-  - "assets"
-collections:
-  works:
-    output: true
-    permalink: /works/:slug/
