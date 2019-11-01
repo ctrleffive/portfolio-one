@@ -13,9 +13,8 @@ jobs:
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@master
       env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: github-pages
         FOLDER: dist
-        BASE_BRANCH: github-pages
-        BUILD_SCRIPT: npm install && npm run-script build
+        BRANCH: gh-pages
         CNAME: chandujs.in
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BUILD_SCRIPT: npm install && npm run-script build
