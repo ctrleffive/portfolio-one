@@ -16,5 +16,6 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: github-pages
         FOLDER: dist
+        BASE_BRANCH: github-pages
         BUILD_SCRIPT: npm install && npm run-script build
         CNAME: chandujs.in
