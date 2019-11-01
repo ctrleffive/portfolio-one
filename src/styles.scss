@@ -1,1 +1,114 @@
-/* You can add global styles to this file, and also import other style files */
+$mainColor: #2a1c77;
+$accentColor: #FFEB3B;
+$secondaryColor: lighten($mainColor, 60%);
+
+// Resets
+
+*{
+  outline: none !important;
+}
+a {
+  color: inherit;
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+// Custom styling
+
+body, html {
+  font-family: 'Raleway', sans-serif;
+  background-color: $mainColor;
+  color: $secondaryColor;
+  font-size: 16px;
+}
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 10rem;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-bar.side-bar {
+  left: 0;
+}
+
+.right-bar.side-bar {
+  right: 0;
+}
+
+.logo {
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 2rem;
+  position: relative;
+  top: -0.6rem;
+}
+
+.contact-button {
+  border-radius: 100%;
+  background-color: $accentColor;
+  width: 3rem;
+  height: 3rem;
+  display: block;
+}
+
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  .high {
+    color: $accentColor;
+  }
+}
+
+.scroll-helper {
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+}
+
+.site-link {
+  font-weight: bold;
+  text-transform: lowercase;
+  font-size: 1.4rem;
+  position: relative;
+  transition-duration: 0.2s;
+  transform: translateY(0.1rem);
+  &:before {
+    content: '';
+    border-bottom: 2px solid;
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 0;
+    color: yellow;
+    transition-duration: 0.2s;
+    opacity: 0;
+    transform: translateY(-0.7rem);
+  }
+  &.active {
+    color: $accentColor;
+  }
+  &:hover {
+    transform: translateY(0rem);
+    color: #fff;
+    &:before  {
+      opacity: 1;
+      transform: translateY(0rem);
+    }
+  }
+}
