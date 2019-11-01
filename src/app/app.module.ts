@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router'
 import { NgModule } from '@angular/core'
 
 import { AppComponent } from './app.component'
-import { HeaderComponent } from './header/header.component'
+import { HeaderComponent } from './partials/header/header.component'
 
 const routes: Routes = [
   {
@@ -12,7 +12,15 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./welcome/welcome.module').then(file => file.WelcomeModule)
+        loadChildren: () => import('./pages/welcome/welcome.module').then(file => file.WelcomeModule)
+      },
+      {
+        path: 'works',
+        loadChildren: () => import('./pages/works/works.module').then(file => file.WorksModule)
+      },
+      {
+        path: 'about',
+        loadChildren: () => import('./pages/about/about.module').then(file => file.AboutModule)
       }
     ]
   },

@@ -1,0 +1,39 @@
+@import 'src/variables';
+
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  .high {
+    color: $accentColor;
+  }
+}
+
+.scroll-helper {
+  padding: 1rem;
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  &:before {
+    content: '';
+    border: 2px solid $accentColor;
+    width: 0.7rem;
+    height: 0.7rem;
+    display: block;
+    border-left: 0;
+    border-top: 0;
+    transform: rotate(45deg);
+    position: relative;
+    top: -3px;
+  }
+  &:hover {
+    top: 68%;
+  }
+}
