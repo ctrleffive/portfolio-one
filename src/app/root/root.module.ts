@@ -8,7 +8,6 @@ import { HeaderComponent } from '../partials/header/header.component'
 const routes: Routes = [
   {
     path: '',
-    component: RootComponent,
     children: [
       {
         path: '',
