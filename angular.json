@@ -47,6 +47,8 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/css/bootstrap.css",
+              "src/assets/css/fonts.css",
               "src/styles.scss"
             ],
             "scripts": []
