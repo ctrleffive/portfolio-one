@@ -1,0 +1,128 @@
+@import 'src/variables';
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 10rem;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-bar.side-bar {
+  left: 0;
+}
+
+.right-bar.side-bar {
+  right: 0;
+  width: 8rem;
+  @media screen and (max-width: 500px) {
+    flex-direction: row;
+    width: initial;
+    bottom: initial;
+  }
+}
+
+.logo {
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 2rem;
+  position: relative;
+  top: -0.6rem;
+}
+
+.contact-button {
+  border-radius: 100%;
+  background-color: $accentColor;
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  position: relative;
+  &:before,
+  &:after {
+    content: '';
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:before {
+    width: 1.5rem;
+    height: 1.1rem;
+    border-radius: 3px;
+  }
+  &:after {
+    width: 1rem;
+    height: 1rem;
+    border-left: 0;
+    border-top: 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+    margin-top: -5px;
+  }
+}
+
+.site-link {
+  font-weight: bold;
+  text-transform: lowercase;
+  font-size: 1.4rem;
+  position: relative;
+  transition-duration: 0.2s;
+  transform: translateY(0.1rem);
+  &:before {
+    content: '';
+    border-bottom: 2px solid;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: yellow;
+    transition-duration: 0.2s;
+    opacity: 0;
+    transform: translateY(-0.7rem);
+  }
+  &.active {
+    color: $accentColor;
+  }
+  &:hover {
+    transform: translateY(0rem);
+    color: #fff;
+    &:before  {
+      opacity: 1;
+      transform: translateY(0rem);
+    }
+  }
+  @media screen and (max-width: 500px) {
+    margin-left: 2rem;
+  }
+}
+
+.social-icons {
+  @media screen and (max-width: 500px) {
+    position: absolute;
+    right: 2rem;
+    top: 5rem;
+    order: 1;
+  }
+}
+.social-icon {
+  display: block;
+  width: 2.3rem;
+  height: 2.3rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 100%;
+  margin: 1rem auto;
+  // &[alt="Instagram"] {
+  //   background-image: url(assets/images/icons/instagram.svg);
+  // }
+  // &[alt="LinkedIn"] {
+  //   background-image: url(assets/images/icons/linkedin.svg);
+  // }
+  // &[alt="Twitter"] {
+  //   background-image: url(assets/images/icons/twitter.svg);
+  // }
+}
