@@ -113,16 +113,25 @@
   display: block;
   width: 2.3rem;
   height: 2.3rem;
-  background-color: rgba(255, 255, 255, 0.25);
-  border-radius: 100%;
   margin: 1rem auto;
-  // &[alt="Instagram"] {
-  //   background-image: url(assets/images/icons/instagram.svg);
-  // }
-  // &[alt="LinkedIn"] {
-  //   background-image: url(assets/images/icons/linkedin.svg);
-  // }
-  // &[alt="Twitter"] {
-  //   background-image: url(assets/images/icons/twitter.svg);
-  // }
+  background-position: center;
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  transition-duration: 0.2s;
+  &:hover {
+    opacity: 1;
+  }
+  &[alt="GitHub"] {
+    background-image: url(src/assets/images/icons/github.png);
+  }
+  &[alt="Instagram"] {
+    background-image: url(src/assets/images/icons/instagram.png);
+  }
+  &[alt="LinkedIn"] {
+    background-image: url(src/assets/images/icons/linkedin.png);
+  }
+  &[alt="Twitter"] {
+    background-image: url(src/assets/images/icons/twitter.png);
+  }
 }
