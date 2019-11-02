@@ -4,9 +4,9 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "ng-serve",
+      "label": "ng-hmr",
       "type": "shell",
-      "command": "npm start",
+      "command": "npm run hmr",
       "isBackground": true,
       "presentation": {
         "echo": true,

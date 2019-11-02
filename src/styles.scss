@@ -1,7 +1,36 @@
 @import 'src/variables';
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1)
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+}
+
 *{
   outline: none !important;
+}
+
+body, html {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+body {
+  color: $secondaryColor;
+  overflow-y: scroll;
+  transition: background-color 0.3s;
+  background-color: $mainColor;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 a {
@@ -16,17 +45,22 @@ a {
   color: $accentColor;
 }
 
-body, html {
-  font-family: 'Raleway', sans-serif;
-  background-color: $mainColor;
-  color: $secondaryColor;
-  font-size: 16px;
-}
-
 .h1 {
   line-height: 3.5rem;
 }
 
 .h3 {
   line-height: 2.4rem;
+}
+
+.content-wrap {
+  position: absolute;
+  margin: 8rem 12rem;
+
+  @media screen and (max-width: 1000px) {
+    margin: 8rem 6.5rem;
+  }
+  @media screen and (max-width: 500px) {
+    margin: 8rem 2rem;
+  }
 }
