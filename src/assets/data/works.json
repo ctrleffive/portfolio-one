@@ -2,9 +2,14 @@
   {
     "slug": "chandujs-website",
     "title": "Chandu J S's Website",
+    "type": "Portolio Website",
+    "link": "/",
+    "linkLabel": "Go To Website",
     "tags": [
       "case-study",
+      "website",
       "angular"
-    ]
+    ],
+    "screens": 0
   }
 ]

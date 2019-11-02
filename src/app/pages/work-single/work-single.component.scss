@@ -1,2 +1,19 @@
 @import 'src/variables';
 
+.main-image {
+  border-radius: 0.5rem;
+}
+
+.work-desc {
+  line-height: 2rem;
+}
+
+.work-link {
+  display: inline-block;
+  margin-top: 3rem;
+  background-color: $accentColor;
+  color: #000;
+  text-transform: uppercase;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+}
