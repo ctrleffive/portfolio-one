@@ -10,21 +10,29 @@
 .welcome-wrap {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 25%;
   transform: translate(-50%, -50%);
-  font-weight: 700;
+
+  @media screen and (max-width: 1000px) {
+    left: 50%;
+  }
+  @media screen and (max-width: 500px) {
+    left: 50%;
+    width: calc(100% - 5rem);
+  }
 }
 
 .scroll-helper {
   padding: 1rem;
-  position: absolute;
-  top: 67%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 100%;
   transition-duration: 0.2s;
   cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  top: 0;
   &:before {
     content: '';
     border: 2px solid $accentColor;
@@ -33,11 +41,12 @@
     display: block;
     border-left: 0;
     border-top: 0;
-    transform: rotate(45deg);
-    position: relative;
-    top: -3px;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
   }
   &:hover {
-    top: 68%;
+    top: 0.5rem;
   }
 }
