@@ -1,6 +1,8 @@
-import { Routes, RouterModule } from '@angular/router'
 import { NgModule } from '@angular/core'
 import { WorksComponent } from './works.component'
+import { NgxMasonryModule } from 'ngx-masonry'
+import { Routes, RouterModule } from '@angular/router'
+import { CommonModule } from '@angular/common'
 
 const routes: Routes = [
   {
@@ -11,7 +13,9 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forChild(routes)
+    CommonModule,
+    RouterModule.forChild(routes),
+    NgxMasonryModule
   ],
   declarations: [
     WorksComponent
