@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "slug": "chandujs-website",
+    "title": "Chandu J S's Website",
+    "tags": [
+      "case-study",
+      "angular"
+    ]
+  }
+]
