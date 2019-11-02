@@ -3,20 +3,17 @@ import { HttpClient } from '@angular/common/http'
 import { Work } from 'src/app/models/work'
 
 @Component({
-  selector: 'app-works',
-  templateUrl: './works.component.html',
-  styleUrls: ['./works.component.scss']
+  selector: 'app-work-single',
+  templateUrl: './work-single.component.html',
+  styleUrls: ['./work-single.component.scss']
 })
-export class WorksComponent implements OnInit {
-  public works: Array<Work>
-
+export class WorkSingleComponent implements OnInit {
   constructor(private http: HttpClient) {
-    this.works = []
   }
 
   private async getData(): Promise<void> {
     const apiResponse: any = await this.http.get('/assets/data/works.json').toPromise()
-    this.works = Work.fromJsonList(apiResponse)
+    // this.works = Work.fromJsonList(apiResponse)
   }
 
   ngOnInit(): void {

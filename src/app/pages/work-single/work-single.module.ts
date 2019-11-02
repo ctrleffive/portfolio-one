@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core'
-import { WorksComponent } from './works.component'
+import { WorkSingleComponent } from './work-single.component'
 import { NgxMasonryModule } from 'ngx-masonry'
 import { Routes, RouterModule } from '@angular/router'
 import { CommonModule } from '@angular/common'
@@ -8,17 +8,8 @@ import { HttpClientModule } from '@angular/common/http'
 const routes: Routes = [
   {
     path: '',
-    children: [
-      {
-        path: '',
-        component: WorksComponent
-      },
-      {
-        path: ':slug',
-        loadChildren: () => import('../work-single/work-single.module').then(file => file.WorkSingleModule)
-      },
-    ]
-  },
+    component: WorkSingleComponent
+  }
 ]
 
 @NgModule({
@@ -29,9 +20,9 @@ const routes: Routes = [
     NgxMasonryModule
   ],
   declarations: [
-    WorksComponent
+    WorkSingleComponent
   ],
   providers: [],
-  bootstrap: [WorksComponent]
+  bootstrap: [WorkSingleComponent]
 })
-export class WorksModule { }
+export class WorkSingleModule { }
