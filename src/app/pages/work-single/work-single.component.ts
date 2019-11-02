@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
+import { ActivatedRoute, Router } from '@angular/router'
 import { Work } from 'src/app/models/work'
 
 @Component({
@@ -8,12 +9,23 @@ import { Work } from 'src/app/models/work'
   styleUrls: ['./work-single.component.scss']
 })
 export class WorkSingleComponent implements OnInit {
-  constructor(private http: HttpClient) {
-  }
+  public work: Work
+
+  constructor(
+    private http: HttpClient,
+    private route: ActivatedRoute,
+    private router: Router
+    ) {}
 
   private async getData(): Promise<void> {
+    const slug: string = this.route.snapshot.paramMap.get('slug')
     const apiResponse: any = await this.http.get('/assets/data/works.json').toPromise()
-    // this.works = Work.fromJsonList(apiResponse)
+    const works: Array<Work> = Work.fromJsonList(apiResponse).filter(item => item.slug === slug)
+    if (works.length) {
+      this.work = works[0]
+    } else {
+      this.router.navigate(['/works'])
+    }
   }
 
   ngOnInit(): void {

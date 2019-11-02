@@ -18,13 +18,13 @@
 
 body, html {
   font-family: 'Raleway', sans-serif;
-  background-color: $mainColor;
-  color: $secondaryColor;
   font-size: 16px;
 }
-
 body {
+  color: $secondaryColor;
   overflow-y: scroll;
+  transition: background-color 0.3s;
+  background-color: $mainColor;
   -webkit-touch-callout: none;
     -webkit-user-select: none;
      -khtml-user-select: none;
