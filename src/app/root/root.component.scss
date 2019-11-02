@@ -1,12 +1,1 @@
 @import 'src/variables';
-
-.content-wrap {
-  margin: 8rem 12rem;
-
-  @media screen and (max-width: 1000px) {
-    margin: 8rem 6.5rem;
-  }
-  @media screen and (max-width: 500px) {
-    margin: 8rem 2rem;
-  }
-}
