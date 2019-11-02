@@ -1,3 +1,20 @@
 <div class="content-wrap">
-  works
+  <div class="h1 font-weight-bold mb-5">
+    My <span class="high">Works</span>.<br>
+  </div>
+  <div class="all-works">
+    <ngx-masonry [options]="masonryOptions" [useImagesLoaded]="true">
+      <a ngxMasonryItem class="work-item" *ngFor="let item of works" [routerLink]="['/works/' + item.slug]">
+        <img [src]="'assets/images/works/' + item.slug + '.gif'" alt="" class="w-100">
+        <div class="title-wrap">
+          <div class="item-name h5 font-weight-bold text-white">My Portfolio Item</div>
+          <div class="item-tags mt-2">
+            <span>animation</span>
+            <span>illustration</span>
+            <span>design</span>
+          </div>
+        </div>
+      </a>
+    </ngx-masonry>
+  </div>
 </div>
