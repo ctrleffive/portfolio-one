@@ -13,4 +13,15 @@ export class RootComponent {
   public getRouterOutletState(outlet) {
     return outlet.isActivated ? outlet.activatedRoute : ''
   }
+
+  public onActivate(event) {
+    const scrollToTop = window.setInterval(() => {
+      const position = window.pageYOffset
+      if (position > 0) {
+        window.scrollTo(0, position - 20)
+      } else {
+        window.clearInterval(scrollToTop)
+      }
+    }, 16)
+  }
 }
