@@ -30,3 +30,15 @@ body, html {
 .h3 {
   line-height: 2.4rem;
 }
+
+.content-wrap {
+  position: absolute;
+  margin: 8rem 12rem;
+
+  @media screen and (max-width: 1000px) {
+    margin: 8rem 6.5rem;
+  }
+  @media screen and (max-width: 500px) {
+    margin: 8rem 2rem;
+  }
+}
