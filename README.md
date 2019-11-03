@@ -1,7 +1,7 @@
 # My Website
 
 ![Netlify Status](https://api.netlify.com/api/v1/badges/e5f445ee-4cf3-4bc3-bbac-eb34a7ed2ace/deploy-status)
-![Version](https://img.shields.io/static/v1?label=Version&message=1.0.1&color=greeen)
+![Version](https://img.shields.io/static/v1?label=Version&message=1.0.2&color=greeen)
 ![Code Size](https://img.shields.io/github/languages/code-size/ctrleffive/ctrleffive?label=Code%20Size)
 ![License](https://img.shields.io/github/license/ctrleffive/ctrleffive?label=License)
 ![Last Commit](https://img.shields.io/github/last-commit/ctrleffive/ctrleffive?label=Last%20Commit)
