@@ -1,15 +1,33 @@
 [
   {
+    "slug": "elaenor",
+    "title": "Elaenor",
+    "type": "Home Automation",
+    "link": "#",
+    "lastUpdated": "2 November 2019",
+    "description": "A home automation project. My work in this project involes design & development of server, dashboard & mobile application. Contributed in embeded programming also.",
+    "linkLabel": "Go To Playstore",
+    "tags": [
+      "nodejs",
+      "embeded",
+      "flutter",
+      "angular"
+    ],
+    "screens": 0
+  },
+  {
     "slug": "chandujs-website",
     "title": "Chandu J S's Website",
     "type": "Portolio Website",
     "link": "/",
+    "lastUpdated": "2 November 2019",
+    "description": "A webiste for displaying my portfolio. I tried to keep it minimal. Not much fancy stuff. Website is done in Angular.",
     "linkLabel": "Go To Website",
     "tags": [
       "case-study",
       "website",
       "angular"
     ],
-    "screens": 0
+    "screens": 2
   }
 ]

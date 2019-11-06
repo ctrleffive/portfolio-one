@@ -4,6 +4,7 @@
   &:before {
     @extend .page-bg;
     background-image: url('src/assets/images/bgs/works.svg');
+    opacity: 0.05;
   }
 }
 
