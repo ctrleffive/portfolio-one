@@ -5,6 +5,8 @@ export class Work {
   public type: string
   public screens: number
   public linkLabel: string
+  public lastUpdated: string
+  public description: string
   public tags: Array<string>
 
   constructor({
@@ -14,7 +16,9 @@ export class Work {
     type,
     tags,
     screens,
-    linkLabel
+    linkLabel,
+    lastUpdated,
+    description
   }: {
     slug?: string,
     type?: string,
@@ -22,6 +26,8 @@ export class Work {
     title?: string,
     tags?: Array<string>,
     screens?: number,
+    lastUpdated?: string,
+    description?: string,
     linkLabel?: string
   }) {
     if (slug) { this.slug = slug }
@@ -31,6 +37,8 @@ export class Work {
     if (title) { this.title = title}
     if (screens) { this.screens = screens}
     if (linkLabel) { this.linkLabel = linkLabel}
+    if (lastUpdated) { this.lastUpdated = lastUpdated}
+    if (description) { this.description = description }
   }
 
   /**
