@@ -14,7 +14,6 @@ Below are some of the projects I've worked with.
 |Elaenor|-|https://play.google.com/store/apps/details?id=com.inometrics.elaenor|
 |Janatha|An application built for voters to communicate with the elected members of their constituency. Designed & developed 1st major version.|https://play.google.com/store/apps/details?id=com.inometrics.janatha|
 |Diabeez|A personal health management application. Designed & developed 2 mobile apps and involved in server side coding also.|https://play.google.com/store/apps/details?id=com.diabeez.patient|
-|QCS|Quality Control System (QCS) application for infection prevention. Designed & developed myself. App still in beta.|https://play.google.com/store/apps/details?id=com.inometrics.qcs|
 |PureFM|Radio streaming website & mobile based on Seychelles.|http://www.pure907.sc/|
 |OIMS|-|-|
 |Trueway FZE|Website of a thermostat manufacturing company based in UAE.|http://www.truewayfze.com/|
