@@ -1,5 +1,7 @@
-import { Component } from '@angular/core'
+import { Component, Inject } from '@angular/core'
 import { fadeAnimation } from '../animations/fade.animation'
+import { Router, NavigationEnd } from '@angular/router'
+import { DOCUMENT } from '@angular/common'
 
 @Component({
   selector: 'app-root',
@@ -8,7 +10,18 @@ import { fadeAnimation } from '../animations/fade.animation'
   animations: [fadeAnimation]
 })
 export class RootComponent {
-  constructor() {}
+  constructor(@Inject(DOCUMENT) private document: Document, private router: Router) {
+    this.router.events.subscribe(value => {
+      if (value instanceof NavigationEnd) {
+        const firstPart: string = value.url.split('/')[1]
+        if (firstPart === 'blog') {
+          this.document.body.classList.add('lights-on')
+        } else {
+          this.document.body.classList.remove('lights-on')
+        }
+      }
+    })
+  }
 
   public getRouterOutletState(outlet) {
     return outlet.isActivated ? outlet.activatedRoute : ''
