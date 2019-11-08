@@ -1,19 +1,20 @@
 [
   {
-    "slug": "elaenor",
-    "title": "Elaenor",
-    "type": "Home Automation",
-    "link": "#",
+    "slug": "qcs",
+    "title": "QCS",
+    "type": "Mobile Application",
+    "link": "https://play.google.com/store/apps/details?id=com.inometrics.qcs",
     "lastUpdated": "2 November 2019",
-    "description": "A home automation project. My work in this project involes design & development of server, dashboard & mobile application. Contributed in embeded programming also.",
+    "description": "Quality Control System (QCS) application for infection prevention. Designed & developed logo, screens, and app myself. App still in beta.",
     "linkLabel": "Go To Playstore",
     "tags": [
+      "logo",
+      "design",
       "nodejs",
-      "embeded",
-      "flutter",
-      "angular"
+      "mobile-app",
+      "flutter"
     ],
-    "screens": 0
+    "screens": 3
   },
   {
     "slug": "chandujs-website",
