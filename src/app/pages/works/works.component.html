@@ -7,7 +7,7 @@
       <a ngxMasonryItem class="work-item rounded-lg overflow-hidden" *ngFor="let item of works" [routerLink]="['/works/' + item.slug]">
         <img [src]="'assets/images/works/' + item.slug + '/thumbnail.gif'" alt="" class="w-100">
         <div class="title-wrap">
-          <div class="item-name h5 font-weight-bold text-white" [innerText]="item.title"></div>
+          <div class="item-name h5 font-weight-bold brand-light" [innerText]="item.title"></div>
           <div class="item-tags text-lowercase mt-2">
             <span *ngFor="let tag of item.tags" [innerText]="tag"></span>
           </div>

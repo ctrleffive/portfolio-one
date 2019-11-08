@@ -1,6 +1,12 @@
-$mainColor: #1e1552;
+$brandColor: #5d49d3;
 $accentColor: #FFEB3B;
+
+$mainColor: darken($brandColor, 30%);
 $secondaryColor: lighten($mainColor, 60%);
+
+$mainColorLightsOn: #ececec;
+$accentColorLightsOn: $brandColor;
+$secondaryColorLightsOn: darken($mainColorLightsOn, 60%);
 
 .page-bg {
   top: 0;
