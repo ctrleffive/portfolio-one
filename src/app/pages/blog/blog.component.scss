@@ -1,0 +1,69 @@
+@import 'src/variables';
+
+:host {
+  &:before {
+    @extend .page-bg;
+    background-image: url('src/assets/images/bgs/works.svg');
+    opacity: 0.05;
+  }
+}
+
+.all-works {
+  width: calc(100vw - 24rem);
+  margin-left: -1rem;
+  margin-right: -1rem;
+
+  @media screen and (max-width: 1000px) {
+    width: calc(100vw - 13rem);
+  }
+  @media screen and (max-width: 500px) {
+    width: calc(100vw - 4rem);
+  }
+}
+
+.work-item {
+  max-width: 100%;
+  width: 30rem;
+  margin: 1rem;
+  background-color: darken($mainColor, 10%);
+  overflow: hidden;
+  &:before{
+    opacity: 0;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition-duration: 0.4s;
+    background-color: darken($mainColor, 10%);
+  }
+  &:hover{
+    &:before {
+      opacity: 0.95;
+    }
+    .title-wrap {
+      opacity: 1;
+      transform: translateY(0rem);
+    }
+  }
+}
+
+.title-wrap {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(1rem);
+  transition-duration: 0.2s;
+}
+
+.item-tags {
+  span {
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
