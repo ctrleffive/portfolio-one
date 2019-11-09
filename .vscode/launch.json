@@ -10,7 +10,8 @@
       "name": "Debug",
       "url": "http://localhost:4200",
       "preLaunchTask": "ng-hmr",
-      "webRoot": "${workspaceFolder}"
+      "webRoot": "${workspaceFolder}",
+      "userDataDir": false
     }
   ]
 }

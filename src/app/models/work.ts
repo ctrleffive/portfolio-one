@@ -5,7 +5,7 @@ export class Work {
   public type: string
   public screens: number
   public linkLabel: string
-  public lastUpdated: string
+  public lastUpdated: Date
   public description: string
   public tags: Array<string>
 
@@ -26,7 +26,7 @@ export class Work {
     title?: string,
     tags?: Array<string>,
     screens?: number,
-    lastUpdated?: string,
+    lastUpdated?: Date,
     description?: string,
     linkLabel?: string
   }) {
