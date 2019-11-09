@@ -12,11 +12,6 @@ body {
   transition: background-color 0.3s;
   color: $secondaryColor;
   background-color: $mainColor;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   &.lights-on {
     color: $secondaryColorLightsOn;
@@ -186,4 +181,44 @@ a {
   &[alt="Twitter"] {
     background-image: url(src/assets/images/icons/twitter.png);
   }
+}
+
+pre[class*="language-"] {
+  display: inline-block;
+  border-radius: 4px;
+  margin: 1.5rem auto;
+  box-shadow: -27.1px 62.5px 125px -25px rgba(50, 50, 93, 0.5), -16.2px 37.5px 75px -37.5px rgba(0, 0, 0, 0.6);
+  transform: rotate3d(0.5, 0.866, 0, 15deg) rotate(-1deg);
+  transition-duration: 0.2s;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      to top right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0) 20%,
+      rgba(255, 255, 255, 0.5) 70%,
+      #fff
+    );
+    opacity: 0.2;
+    transition-duration: 0.2s;
+  }
+  &:hover {
+    transform: rotate3d(0, 0, 0, 0) rotate(0);
+    &:before {
+      opacity: 0.1;
+    }
+  }
+}
+
+pre[class*="language-"] code {
+  font-size: 0.95rem;
+}
+
+markdown img {
+  border-radius: 5px;
 }
