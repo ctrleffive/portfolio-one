@@ -4,7 +4,7 @@
     "title": "QCS",
     "type": "Mobile Application",
     "link": "https://play.google.com/store/apps/details?id=com.inometrics.qcs",
-    "lastUpdated": "2 November 2019",
+    "lastUpdated": "2019-11-01T20:00:00.000Z",
     "description": "Quality Control System (QCS) application for infection prevention. Designed & developed logo, screens, and app myself. App still in beta.",
     "linkLabel": "Go To Playstore",
     "tags": [
@@ -21,7 +21,7 @@
     "title": "Chandu J S's Website",
     "type": "Portolio Website",
     "link": "/",
-    "lastUpdated": "2 November 2019",
+    "lastUpdated": "2019-11-01T20:00:00.000Z",
     "description": "A webiste for displaying my portfolio. I tried to keep it minimal. Not much fancy stuff. Website is done in Angular.",
     "linkLabel": "Go To Website",
     "tags": [
