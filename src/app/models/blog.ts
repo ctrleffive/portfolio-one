@@ -1,44 +1,32 @@
 export class Blog {
   public slug: string
-  public title: string
-  public link: string
-  public type: string
-  public screens: number
-  public linkLabel: string
-  public lastUpdated: string
-  public description: string
   public tags: Array<string>
+  public title: string
+  public thumbnail: string
+  public dateCreated: Date
+  public lastUpdated: Date
 
   constructor({
     slug,
-    title,
-    link,
-    type,
     tags,
-    screens,
-    linkLabel,
-    lastUpdated,
-    description
+    title,
+    thumbnail,
+    dateCreated,
+    lastUpdated
   }: {
-    slug?: string,
-    type?: string,
-    link?: string,
-    title?: string,
-    tags?: Array<string>,
-    screens?: number,
-    lastUpdated?: string,
-    description?: string,
-    linkLabel?: string
+    slug: string
+    tags: Array<string>
+    title: string
+    thumbnail: string
+    dateCreated: Date
+    lastUpdated: Date
   }) {
     if (slug) { this.slug = slug }
-    if (tags) { this.tags = tags}
-    if (type) { this.type = type}
-    if (link) { this.link = link}
-    if (title) { this.title = title}
-    if (screens) { this.screens = screens}
-    if (linkLabel) { this.linkLabel = linkLabel}
-    if (lastUpdated) { this.lastUpdated = lastUpdated}
-    if (description) { this.description = description }
+    if (tags) { this.tags = tags }
+    if (title) { this.title = title }
+    if (thumbnail) { this.thumbnail = thumbnail }
+    if (dateCreated) { this.dateCreated = dateCreated }
+    if (lastUpdated) { this.lastUpdated = lastUpdated }
   }
 
   /**
