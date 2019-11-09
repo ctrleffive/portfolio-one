@@ -49,9 +49,15 @@
             "styles": [
               "src/assets/css/bootstrap.css",
               "src/assets/css/fonts.css",
+              "src/assets/css/code.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/marked/lib/marked.js",
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-csharp.min.js",
+              "node_modules/prismjs/components/prism-css.min.js"
+            ]
           },
           "configurations": {
             "production": {

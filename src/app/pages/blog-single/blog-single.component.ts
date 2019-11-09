@@ -9,7 +9,8 @@ import { Blog } from 'src/app/models/blog'
   styleUrls: ['./blog-single.component.scss']
 })
 export class BlogSingleComponent implements OnInit {
-  public blog: Blog
+  public meta: Blog
+  public data: any
 
   constructor(
     private http: HttpClient,
@@ -22,7 +23,10 @@ export class BlogSingleComponent implements OnInit {
     const apiResponse: any = await this.http.get('/assets/data/blog.json').toPromise()
     const blog: Array<Blog> = Blog.fromJsonList(apiResponse).filter(item => item.slug === slug)
     if (blog.length) {
-      this.blog = blog[0]
+      this.meta = blog[0]
+      this.data = await this.http.get(`/assets/data/blog/${slug}.md`, {
+        responseType: 'text'
+      }).toPromise()
     } else {
       this.router.navigate(['/blog'])
     }
