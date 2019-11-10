@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { RootComponent } from './root.component'
 import { HeaderComponent } from '../partials/header/header.component'
+import { AnalyticsService } from '../shared/analytics.service'
 
 const routes: Routes = [
   {
@@ -41,7 +42,7 @@ const routes: Routes = [
     RootComponent,
     HeaderComponent,
   ],
-  providers: [],
+  providers: [AnalyticsService],
   bootstrap: [RootComponent]
 })
 export class RootModule { }
