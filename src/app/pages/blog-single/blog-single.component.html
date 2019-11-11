@@ -10,5 +10,8 @@
     <div class="bg-white rounded-lg p-5">
       <markdown ngPreserveWhitespaces [data]="data"></markdown>
     </div>
+    <div class="bg-white rounded-lg mt-2 p-5">
+      <disqus [identifier]="'/blog/' + meta.slug"></disqus>
+    </div>
   </div>
 </div>
