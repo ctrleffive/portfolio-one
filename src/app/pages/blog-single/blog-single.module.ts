@@ -5,6 +5,7 @@ import { NgxMasonryModule } from 'ngx-masonry'
 import { HttpClientModule } from '@angular/common/http'
 import { Routes, RouterModule } from '@angular/router'
 import { BlogSingleComponent } from './blog-single.component'
+import { DisqusModule } from 'ngx-disqus'
 
 const routes: Routes = [
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+    DisqusModule,
     HttpClientModule,
     MarkdownModule.forRoot({
       markedOptions: {
