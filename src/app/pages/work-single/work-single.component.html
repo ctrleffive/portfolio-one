@@ -20,7 +20,7 @@
     </div>
   </div>
   <ngx-masonry [useImagesLoaded]="true" *ngIf="work.screens" class="row">
-    <div ngxMasonryItem *ngFor="let _ of [].constructor(work.screens); let i = index" class="col-lg-6 col-xl-4 mb-4 pb-2">
+    <div ngxMasonryItem *ngFor="let _ of [].constructor(work.screens); let i = index" class="ngxMasonryItem col-lg-6 col-xl-4 mb-4 pb-2">
       <img [src]="'assets/images/works/' + work.slug + '/screen-' + i + '.gif'" class="w-100 rounded-lg">
     </div>
   </ngx-masonry>
