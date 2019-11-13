@@ -2,9 +2,7 @@ import { Component, Inject } from '@angular/core'
 import { fadeAnimation } from '../animations/fade.animation'
 import { Router, NavigationEnd } from '@angular/router'
 import { DOCUMENT } from '@angular/common'
-
-// tslint:disable-next-line: ban-types
-declare let gtag: Function
+import { SystemService } from '../shared/system.service'
 
 @Component({
   selector: 'app-root',
@@ -13,19 +11,8 @@ declare let gtag: Function
   animations: [fadeAnimation]
 })
 export class RootComponent {
-  constructor(@Inject(DOCUMENT) private document: Document, private router: Router) {
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        gtag('config', 'G-5HYWSQFG6F', { page_path: event.urlAfterRedirects })
-
-        const firstPart: string = event.url.split('/')[1]
-        if (firstPart === 'blog') {
-          this.document.body.classList.add('lights-on')
-        } else {
-          this.document.body.classList.remove('lights-on')
-        }
-      }
-    })
+  constructor(private systemService: SystemService) {
+    this.systemService.listenToNavigation()
   }
 
   public getRouterOutletState(outlet) {

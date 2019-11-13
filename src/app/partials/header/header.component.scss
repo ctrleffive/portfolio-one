@@ -1,48 +1,51 @@
 @import 'src/variables';
 
-.side-bar {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 10rem;
-  padding: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index: 2;
-}
-
-.left-bar.side-bar {
-  left: 0;
-}
-
-.right-bar.side-bar {
-  right: 0;
-  width: 8rem;
-  @media screen and (max-width: 500px) {
+:host {
+  animation: fadeIn 0.5s;
+  .side-bar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
     width: 10rem;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
   }
-}
 
-.logo {
-  letter-spacing: 0.5rem;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  line-height: 2rem;
-  position: relative;
-  top: -0.6rem;
-}
+  .left-bar.side-bar {
+    left: 0;
+  }
 
-.social-icons {
-  right: 2rem;
-  bottom: 2rem;
-  position: absolute;
-  @media screen and (max-width: 500px) {
-    position: absolute;
+  .right-bar.side-bar {
+    right: 0;
+    width: 8rem;
+    @media screen and (max-width: 500px) {
+      width: 10rem;
+    }
+  }
+
+  .logo {
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    line-height: 2rem;
+    position: relative;
+    top: -0.6rem;
+  }
+
+  .social-icons {
     right: 2rem;
-    top: 12rem;
-    bottom: initial;
-    order: 1;
+    bottom: 2rem;
+    position: absolute;
+    @media screen and (max-width: 500px) {
+      position: absolute;
+      right: 2rem;
+      top: 12rem;
+      bottom: initial;
+      order: 1;
+    }
   }
 }
