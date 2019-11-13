@@ -4,7 +4,7 @@
   </div>
   <div class="all-works">
     <ngx-masonry [useImagesLoaded]="true">
-      <a ngxMasonryItem class="work-item rounded-lg overflow-hidden" *ngFor="let item of works" [routerLink]="['/works/' + item.slug]">
+      <a ngxMasonryItem class="work-item ngxMasonryItem rounded-lg overflow-hidden" *ngFor="let item of works" [routerLink]="['/works/' + item.slug]">
         <img [src]="'assets/images/works/' + item.slug + '/thumbnail.gif'" alt="" class="w-100 rounded-lg">
         <div class="title-wrap">
           <div class="item-name h5 font-weight-bold brand-light" [innerText]="item.title"></div>
