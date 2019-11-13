@@ -3,5 +3,10 @@
     My <span class="high">Blog</span>.<br>
   </div>
   <div class="all-blogs">
+    <ul>
+      <li *ngFor="let item of blogs">
+        <a [routerLink]="['/blog/' + item.slug]" class="h1">{{ item.title }}</a>
+      </li>
+    </ul>
   </div>
 </div>
