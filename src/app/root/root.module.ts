@@ -9,6 +9,7 @@ import { environment as ENV } from 'src/environments/environment'
 import { RootComponent } from './root.component'
 import { HeaderComponent } from '../partials/header/header.component'
 import { AnalyticsService } from '../shared/analytics.service'
+import { SystemService } from '../shared/system.service'
 
 const routes: Routes = [
   {
@@ -47,6 +48,7 @@ const routes: Routes = [
     HeaderComponent,
   ],
   providers: [
+    SystemService,
     AnalyticsService,
     { provide: DISQUS_SHORTNAME, useValue: ENV.disqusId }
   ],
