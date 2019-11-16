@@ -19,6 +19,12 @@ body {
   }
 }
 
+app-root {
+  &:empty:before{
+    filter: invert(0);
+  }
+}
+
 .badge-brand {
   color: #000;
   background-color: $accentColor;
