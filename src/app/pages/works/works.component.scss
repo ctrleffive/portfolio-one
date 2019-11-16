@@ -1,11 +1,5 @@
 @import 'src/variables';
 
-:host {
-  .page-bg {
-    opacity: 0.05;
-  }
-}
-
 .all-works {
   width: calc(100vw - 24rem);
   margin-left: -1rem;

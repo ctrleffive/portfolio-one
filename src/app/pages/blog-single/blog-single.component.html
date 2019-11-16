@@ -7,10 +7,11 @@
         <span *ngFor="let tag of meta.tags" class="badge badge-pill badge-brand mb-2 mr-2 ng-star-inserted py-1">#{{ tag }}</span>
       </div>
     </div>
-    <div class="bg-white rounded-lg p-5">
+    <div class="bg-white rounded-lg p-5 overflow-auto">
+      <img *ngIf="meta.thumbnail" [src]="meta.thumbnail" [alt]="meta.title" class="post-thumbnail">
       <markdown ngPreserveWhitespaces [data]="data"></markdown>
     </div>
-    <div class="bg-white rounded-lg mt-2 p-5">
+    <div class="bg-white rounded-lg mt-4 p-5">
       <disqus [identifier]="'/blog/' + meta.slug"></disqus>
     </div>
   </div>
