@@ -233,7 +233,7 @@ markdown {
   transform: translate(calc(50% - 35rem), -50%);
   max-height: 100%;
 
-  &.nop {
+  &.nop, .nop & {
     opacity: 0;
   }
 
