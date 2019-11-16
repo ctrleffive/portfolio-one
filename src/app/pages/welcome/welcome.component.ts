@@ -1,7 +1,6 @@
-import { Component, HostBinding, OnInit } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { SystemService } from 'src/app/shared/system.service'
 import { HttpClient } from '@angular/common/http'
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser'
 
 @Component({
   selector: 'app-welcome',
@@ -9,21 +8,18 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser'
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent implements OnInit {
-  public background: SafeHtml
-
   constructor(
     private systemService: SystemService,
-    private sanitizer: DomSanitizer,
     private http: HttpClient
     ) {}
 
-  private async setBg(): Promise<void> {
+  private setBg(): void {
     const num: number = Math.ceil((Math.random() * (10 - 1) + 1))
-    const apiResponse: any = await this.http.get(`assets/images/bgs/welcome/${num}.svg`, { responseType: 'text' }).toPromise()
-    this.background = this.sanitizer.bypassSecurityTrustHtml(apiResponse)
+    this.systemService.setBg(`welcome/${num}.svg`)
   }
+
   ngOnInit(): void {
-    this.setBg()
     this.systemService.appTitle = null
+    this.setBg()
   }
 }

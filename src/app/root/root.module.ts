@@ -10,6 +10,7 @@ import { RootComponent } from './root.component'
 import { HeaderComponent } from '../partials/header/header.component'
 import { AnalyticsService } from '../shared/analytics.service'
 import { SystemService } from '../shared/system.service'
+import { HttpClientModule } from '@angular/common/http'
 
 const routes: Routes = [
   {
@@ -39,6 +40,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     DisqusModule.forRoot(ENV.disqusId)

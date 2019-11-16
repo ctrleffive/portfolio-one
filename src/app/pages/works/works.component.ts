@@ -25,5 +25,6 @@ export class WorksComponent implements OnInit {
   ngOnInit(): void {
     this.getData()
     this.systemService.appTitle = 'Portfolio of Chandu'
+    this.systemService.setBg('works.svg')
   }
 }
