@@ -13,6 +13,7 @@ body {
   color: $secondaryColor;
   background-color: $mainColor;
   user-select: none;
+  overflow-x: hidden;
   &.lights-on {
     color: $secondaryColorLightsOn;
     background-color: $mainColorLightsOn;
@@ -61,7 +62,7 @@ a {
     margin: 8rem 6.5rem;
   }
   @media screen and (max-width: 500px) {
-    margin: 8rem 2rem;
+    margin: 8rem 2rem 0;
   }
 }
 
@@ -110,87 +111,8 @@ a {
     transform: translate(-50%, -50%) rotate(45deg);
     margin-top: -5px;
   }
-}
-
-.site-link {
-  font-weight: bold;
-  text-transform: lowercase;
-  font-size: 1.4rem;
-  position: relative;
-  transition-duration: 0.2s;
-  transform: translateY(0.1rem);
-  display: inline-block;
-  margin-bottom: 2rem;
-  margin-top: -1rem;
-  &:before {
-    content: '';
-    border-bottom: 2px solid;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    color: $accentColor;
-    transition-duration: 0.2s;
-    opacity: 0;
-    transform: translateY(-0.7rem);
-    transition: color 0.5s;
-    .lights-on & {
-      color: $accentColorLightsOn;
-    }
-  }
-  &.active {
-    color: $accentColor;
-    .lights-on & {
-      color: $accentColorLightsOn;
-    }
-  }
-  &:hover {
-    transform: translateY(0rem);
-    color: #fff;
-    .lights-on & {
-      color: #000;
-    }
-    &:before  {
-      opacity: 1;
-      transform: translateY(0rem);
-    }
-  }
   @media screen and (max-width: 500px) {
-    margin-left: 2rem;
-  }
-}
-
-.social-icon {
-  display: block;
-  width: 2.3rem;
-  height: 2.3rem;
-  margin-top: 1rem;
-  background-position: center;
-  background-size: 1.5rem;
-  background-repeat: no-repeat;
-  opacity: 0.5;
-  transition-duration: 0.2s;
-  .lights-on & {
-    opacity: 0.7;
-    filter: invert(1);
-  }
-  &:last-child {
-    margin-bottom: 0;
-  }
-  &:hover {
-    opacity: 1;
-  }
-  &[alt="GitHub"] {
-    background-image: url(src/assets/images/icons/github.png);
-  }
-  &[alt="Instagram"] {
-    background-image: url(src/assets/images/icons/instagram.png);
-  }
-  &[alt="LinkedIn"] {
-    background-image: url(src/assets/images/icons/linkedin.png);
-  }
-  &[alt="Twitter"] {
-    background-image: url(src/assets/images/icons/twitter.png);
+    display: none;
   }
 }
 
@@ -200,6 +122,7 @@ pre[class*="language-"] code {
 
 markdown {
   img {
+    max-width: 100%;
     border-radius: 5px;
     margin-top: 1.5rem;
     margin-bottom: 0.8rem;
