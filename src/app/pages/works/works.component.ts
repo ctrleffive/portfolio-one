@@ -16,8 +16,10 @@ export class WorksComponent implements OnInit {
   }
 
   private async getData(): Promise<void> {
+    this.systemService.loader = true
     const apiResponse: any = await this.http.get('/assets/data/works.json').toPromise()
     this.works = Work.fromJsonList(apiResponse)
+    this.systemService.loader = false
   }
 
   ngOnInit(): void {

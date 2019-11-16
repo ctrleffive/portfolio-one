@@ -1,13 +1,17 @@
 @import 'src/variables';
 
-:host {
-  &:before {
-    @extend .page-bg;
-    background-image: url('src/assets/images/bgs/about.svg');
-  }
-}
-
 .contact-item-label {
   width: 150px;
   display: inline-block;
+}
+
+.skills {
+  line-height: 2rem;
+  width: 50%;
+  @media screen and (max-width: 1000px) {
+    width: 75%;
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
 }

@@ -21,6 +21,7 @@ export class BlogSingleComponent implements OnInit {
     ) {}
 
   private async getData(): Promise<void> {
+    this.systemService.loader = true
     const slug: string = this.route.snapshot.paramMap.get('slug')
     const apiResponse: any = await this.http.get('/assets/data/blog.json').toPromise()
     const blog: Array<Blog> = Blog.fromJsonList(apiResponse).filter(item => item.slug === slug)
@@ -33,6 +34,7 @@ export class BlogSingleComponent implements OnInit {
     } else {
       this.router.navigate(['/blog'])
     }
+    this.systemService.loader = false
   }
 
   ngOnInit(): void {

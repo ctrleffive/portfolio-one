@@ -16,8 +16,10 @@ export class BlogComponent implements OnInit {
   }
 
   private async getData(): Promise<void> {
+    this.systemService.loader = true
     const apiResponse: any = await this.http.get('/assets/data/blog.json').toPromise()
     this.blogs = Blog.fromJsonList(apiResponse)
+    this.systemService.loader = false
   }
 
   ngOnInit(): void {
