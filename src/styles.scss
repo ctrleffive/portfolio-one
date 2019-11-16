@@ -233,14 +233,16 @@ markdown {
   transform: translate(calc(50% - 35rem), -50%);
   max-height: 100%;
 
-  &.nop, .nop & {
-    opacity: 0;
-  }
-
   @media screen and (max-width: 1000px) {
     transform: translate(-50%, -50%);
   }
   @media screen and (max-width: 500px) {
     transform: translate(0, -50%);
+  }
+}
+
+.page-bg-wrap {
+  &.nop svg {
+    opacity: 0;
   }
 }
