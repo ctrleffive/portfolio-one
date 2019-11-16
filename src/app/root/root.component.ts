@@ -3,6 +3,7 @@ import { fadeAnimation } from '../animations/fade.animation'
 import { Router, NavigationEnd } from '@angular/router'
 import { DOCUMENT } from '@angular/common'
 import { SystemService } from '../shared/system.service'
+import { SafeHtml } from '@angular/platform-browser'
 
 @Component({
   selector: 'app-root',
@@ -11,8 +12,23 @@ import { SystemService } from '../shared/system.service'
   animations: [fadeAnimation]
 })
 export class RootComponent {
+  public isPageBgVisible: boolean
+  public pageBg: SafeHtml
+
   constructor(private systemService: SystemService) {
     this.systemService.listenToNavigation()
+    this.listenForPageBg()
+  }
+
+  private listenForPageBg(): void {
+    this.systemService.pageBg.subscribe(svgContent => {
+      if (svgContent) {
+        this.pageBg = svgContent
+        setTimeout(() => this.isPageBgVisible = true, 200)
+      } else {
+        this.isPageBgVisible = false
+      }
+    })
   }
 
   public getRouterOutletState(outlet) {

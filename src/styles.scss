@@ -222,27 +222,28 @@ markdown {
   }
 }
 
-.page-bg, .page-bg-wrap svg {
-  content: '';
-  top: 50%;
-  left: 50%;
-  z-index: -1;
-  opacity: 0.2;
-  position: fixed;
-  transition-duration: 0.2s;
-  transform: translate(calc(50% - 35rem), -50%);
-  max-height: 100%;
+.page-bg {
+  svg {
+    content: '';
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    opacity: 0.2;
+    position: fixed;
+    transition-duration: 0.2s;
+    transform: translate(calc(50% - 35rem), -50%);
+    max-height: 100%;
 
-  @media screen and (max-width: 1000px) {
-    transform: translate(-50%, -50%);
+    @media screen and (max-width: 1000px) {
+      transform: translate(-50%, -50%);
+    }
+    @media screen and (max-width: 500px) {
+      transform: translate(0, -50%);
+    }
   }
-  @media screen and (max-width: 500px) {
-    transform: translate(0, -50%);
-  }
-}
 
-.page-bg-wrap {
-  &.nop svg {
+  &.hide-page-bg svg{
     opacity: 0;
+    left: 51%;
   }
 }

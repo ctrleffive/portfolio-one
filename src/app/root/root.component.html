@@ -2,3 +2,4 @@
 <main [@fadeAnimation]="getRouterOutletState(o)">
   <router-outlet (activate)="onActivate($event)" #o="outlet"></router-outlet>
 </main>
+<div class="page-bg" [ngClass]="{'hide-page-bg': !isPageBgVisible}" [innerHTML]="pageBg"></div>

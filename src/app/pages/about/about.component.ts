@@ -11,5 +11,6 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.systemService.appTitle = 'About Chandu'
+    this.systemService.setBg('about.svg')
   }
 }
