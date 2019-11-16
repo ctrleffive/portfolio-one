@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
 import { ActivatedRoute, Router } from '@angular/router'
 import { Work } from 'src/app/models/work'
+import { SystemService } from 'src/app/shared/system.service'
 
 @Component({
   selector: 'app-work-single',
@@ -14,7 +15,8 @@ export class WorkSingleComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private systemService: SystemService
     ) {}
 
   private async getData(): Promise<void> {
@@ -23,6 +25,7 @@ export class WorkSingleComponent implements OnInit {
     const works: Array<Work> = Work.fromJsonList(apiResponse).filter(item => item.slug === slug)
     if (works.length) {
       this.work = works[0]
+      this.systemService.appTitle = `${this.work.title} | ${this.work.type}`
     } else {
       this.router.navigate(['/works'])
     }
