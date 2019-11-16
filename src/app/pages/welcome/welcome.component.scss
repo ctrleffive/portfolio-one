@@ -12,6 +12,8 @@
   @media screen and (max-width: 500px) {
     left: 50%;
     width: calc(100% - 5rem);
+    top: initial;
+    bottom: -10%;
   }
 }
 
