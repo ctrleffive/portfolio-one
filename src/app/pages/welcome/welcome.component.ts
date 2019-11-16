@@ -24,6 +24,6 @@ export class WelcomeComponent implements OnInit {
   }
   ngOnInit(): void {
     this.setBg()
-    this.systemService.appTitle = 'Chandu J S 💻 Full Stack Developer'
+    this.systemService.appTitle = null
   }
 }
