@@ -1,6 +1,7 @@
 import { Component, HostBinding, OnInit } from '@angular/core'
-import { SafeStyle, DomSanitizer } from '@angular/platform-browser'
 import { SystemService } from 'src/app/shared/system.service'
+import { HttpClient } from '@angular/common/http'
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser'
 
 @Component({
   selector: 'app-welcome',
@@ -8,13 +9,18 @@ import { SystemService } from 'src/app/shared/system.service'
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent implements OnInit {
-  @HostBinding('style.background-image') public background: SafeStyle
+  public background: SafeHtml
 
-  constructor(private sanitizer: DomSanitizer, private systemService: SystemService) { }
+  constructor(
+    private systemService: SystemService,
+    private sanitizer: DomSanitizer,
+    private http: HttpClient
+    ) {}
 
-  private setBg(): void {
+  private async setBg(): Promise<void> {
     const num: number = Math.ceil((Math.random() * (10 - 1) + 1))
-    this.background = this.sanitizer.bypassSecurityTrustStyle(`url('assets/images/bgs/welcome/${num}.svg')`)
+    const apiResponse: any = await this.http.get(`assets/images/bgs/welcome/${num}.svg`, { responseType: 'text' }).toPromise()
+    this.background = this.sanitizer.bypassSecurityTrustHtml(apiResponse)
   }
   ngOnInit(): void {
     this.setBg()

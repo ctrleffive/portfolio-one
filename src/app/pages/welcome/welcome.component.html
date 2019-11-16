@@ -5,3 +5,4 @@
   </div>
   <div routerLink="/works"  class="scroll-helper mt-4"></div>
 </div>
+<span *ngIf="background" [ngClass]="{nop: !background}" class="page-bg-wrap" [innerHTML]="background"></span>
