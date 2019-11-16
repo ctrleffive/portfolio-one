@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
 import { Work } from 'src/app/models/work'
+import { SystemService } from 'src/app/shared/system.service'
 
 @Component({
   selector: 'app-works',
@@ -10,7 +11,7 @@ import { Work } from 'src/app/models/work'
 export class WorksComponent implements OnInit {
   public works: Array<Work>
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private systemService: SystemService) {
     this.works = []
   }
 
@@ -21,5 +22,6 @@ export class WorksComponent implements OnInit {
 
   ngOnInit(): void {
     this.getData()
+    this.systemService.appTitle = 'Portfolio of Chandu'
   }
 }
