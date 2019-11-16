@@ -25,5 +25,6 @@ export class BlogComponent implements OnInit {
   ngOnInit(): void {
     this.getData()
     this.systemService.appTitle = 'Blog of Chandu'
+    this.systemService.setBg('blog.svg')
   }
 }
