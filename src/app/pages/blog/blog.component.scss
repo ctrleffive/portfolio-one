@@ -1,7 +1,11 @@
 @import 'src/variables';
 
-:host {
-  .page-bg {
-    opacity: 0.05;
-  }
+.blog-item {
+  padding: 2rem;
+  display: block;
+}
+
+.item-thumbnail {
+  margin: -2rem -2rem 2rem;
+  max-width: calc(100% - -4rem);
 }

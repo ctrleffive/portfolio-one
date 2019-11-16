@@ -3,10 +3,15 @@
     My <span class="high">Blog</span>.<br>
   </div>
   <div class="all-blogs">
-    <ul>
-      <li *ngFor="let item of blogs">
-        <a [routerLink]="['/blog/' + item.slug]" class="h1">{{ item.title }}</a>
-      </li>
-    </ul>
+    <a class="mb-4 blog-item rounded-lg bg-white overflow-hidden" *ngFor="let item of blogs; let i = index"
+      [routerLink]="['/blog/' + item.slug]">
+      <img *ngIf="i == 0 && item.thumbnail" [src]="item.thumbnail" [alt]="item.title" class="item-thumbnail">
+      <div [ngClass]="{h2: i == 0, h4: i != 0}" class="item-title font-weight-bold brand-light"
+        [innerText]="item.title"></div>
+      <div class="font-weight-bold text-muted item-date">{{ item.dateCreated | date: 'longDate' }}</div>
+      <div class="item-tags text-lowercase mt-2">
+        <span *ngFor="let tag of item.tags" class="mr-3">#{{ tag }}</span>
+      </div>
+    </a>
   </div>
 </div>
