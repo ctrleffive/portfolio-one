@@ -10,10 +10,14 @@
     left: 50%;
   }
   @media screen and (max-width: 500px) {
-    left: 50%;
-    width: calc(100% - 5rem);
+    left: initial;
+    width: initial;
     top: initial;
-    bottom: -10%;
+    bottom: initial;
+    position: initial;
+    margin: 8rem 2rem 0;
+    transform: initial;
+    margin-top: 7rem;
   }
 }
 
