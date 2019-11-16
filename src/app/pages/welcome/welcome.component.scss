@@ -1,12 +1,5 @@
 @import 'src/variables';
 
-:host {
-  &:before {
-    @extend .page-bg;
-    background-image: inherit;
-  }
-}
-
 .welcome-wrap {
   position: absolute;
   top: 50%;

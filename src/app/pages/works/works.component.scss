@@ -1,9 +1,7 @@
 @import 'src/variables';
 
 :host {
-  &:before {
-    @extend .page-bg;
-    background-image: url('src/assets/images/bgs/works.svg');
+  .page-bg {
     opacity: 0.05;
   }
 }
