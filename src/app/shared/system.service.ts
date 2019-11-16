@@ -34,4 +34,10 @@ export class SystemService {
       this.document.body.classList.remove('loading')
     }
   }
+
+  public set appTitle(value: string) {
+    if (value && value !== '') {
+      this.document.title = `${value} | Chandu J S`
+    }
+  }
 }
