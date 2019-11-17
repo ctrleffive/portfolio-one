@@ -23,6 +23,23 @@ body {
   }
 }
 
+.blinker {
+  animation: blink 1s infinite;
+  margin-left: 0.2rem;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 app-root {
   &:empty:before{
     filter: invert(0);
