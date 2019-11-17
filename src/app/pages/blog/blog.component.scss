@@ -1,11 +1,16 @@
 @import 'src/variables';
 
-.blog-item {
-  padding: 2rem;
-  display: block;
-}
+:host {
+  @media print {
+    display: none;
+  }
+  .blog-item {
+    padding: 2rem;
+    display: block;
+  }
 
-.item-thumbnail {
-  margin: -2rem -2rem 2rem;
-  max-width: calc(100% - -4rem);
+  .item-thumbnail {
+    margin: -2rem -2rem 2rem;
+    max-width: calc(100% - -4rem);
+  }
 }
