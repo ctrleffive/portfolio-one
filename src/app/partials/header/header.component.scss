@@ -6,6 +6,7 @@
   .logo-break {
     @media screen and (max-width: 500px) {
       display: inline;
+      white-space: nowrap;
     }
   }
 
