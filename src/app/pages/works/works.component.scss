@@ -1,6 +1,9 @@
 @import 'src/variables';
 
 :host {
+  @media print {
+    display: none;
+  }
   .all-works {
     width: calc(100vw - 24rem);
     margin-left: -1rem;

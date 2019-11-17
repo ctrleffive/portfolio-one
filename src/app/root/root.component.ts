@@ -21,6 +21,10 @@ export class RootComponent {
     this.listenForPageBg()
   }
 
+  public get service(): SystemService {
+    return this.systemService
+  }
+
   private listenForPageBg(): void {
     this.systemService.pageBg.subscribe(svgContent => {
       if (svgContent) {

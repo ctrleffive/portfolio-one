@@ -18,6 +18,9 @@ body {
     color: $secondaryColorLightsOn;
     background-color: $mainColorLightsOn;
   }
+  @media print {
+    background-color: #fff !important;
+  }
 }
 
 app-root {
@@ -63,6 +66,11 @@ a {
   }
   @media screen and (max-width: 500px) {
     margin: 8rem 2rem;
+  }
+  @media print {
+    margin: 0;
+    padding: 2rem;
+    position: initial;
   }
 }
 
@@ -116,11 +124,17 @@ a {
   }
 }
 
-pre[class*="language-"] code {
-  font-size: 0.95rem;
-}
 
 markdown {
+  pre[class*="language-"]{
+    @media print {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    code {
+      font-size: 0.95rem;
+    }
+  }
   img {
     max-width: 100%;
     border-radius: 5px;
