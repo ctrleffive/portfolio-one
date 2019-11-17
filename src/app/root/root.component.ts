@@ -16,6 +16,7 @@ export class RootComponent {
   public pageBg: SafeHtml
 
   constructor(private systemService: SystemService) {
+    this.systemService.listenSpecalClick()
     this.systemService.listenToNavigation()
     this.listenForPageBg()
   }

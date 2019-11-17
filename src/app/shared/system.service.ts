@@ -11,6 +11,7 @@ declare let gtag: Function
 @Injectable()
 export class SystemService {
   public pageBg: BehaviorSubject<SafeHtml>
+  private isBlogPage: boolean
 
   constructor(
     @Inject(DOCUMENT) private document: Document,
@@ -18,6 +19,7 @@ export class SystemService {
     private http: HttpClient,
     private sanitizer: DomSanitizer
     ) {
+    this.isBlogPage = false
     this.pageBg = new BehaviorSubject('')
   }
 
@@ -31,10 +33,33 @@ export class SystemService {
         gtag('config', 'G-5HYWSQFG6F', { page_path: event.urlAfterRedirects })
 
         const firstPart: string = event.url.split('/')[1]
-        if (firstPart === 'blog') {
-          this.document.body.classList.add('lights-on')
+        this.isBlogPage = firstPart === 'blog'
+
+        this.lights = localStorage.getItem('lights') ? true : this.isBlogPage
+      }
+    })
+  }
+
+  private set lights(value: boolean) {
+    if (value) {
+      this.document.body.classList.add('lights-on')
+    } else if (!this.isBlogPage) {
+      this.document.body.classList.remove('lights-on')
+    }
+  }
+
+  private get lights(): boolean {
+    return this.document.body.classList.contains('lights-on')
+  }
+
+  public listenSpecalClick(): void {
+    this.document.addEventListener('click', event => {
+      if (event.altKey) {
+        this.lights = !this.lights
+        if (this.lights) {
+          localStorage.setItem('lights', null)
         } else {
-          this.document.body.classList.remove('lights-on')
+          localStorage.removeItem('lights')
         }
       }
     })
