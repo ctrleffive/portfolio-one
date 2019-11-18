@@ -25,7 +25,7 @@ export class SystemService {
     ) {
     this.isBlogPage = false
     this.pageBg = new BehaviorSubject('')
-    this.emails = ['hello', 'hola', 'bonhour', 'hi', 'hallo', 'ciao', 'namaste', 'salaam']
+    this.emails = ['hello', 'hola', 'bonjour', 'hi', 'hallo', 'ciao', 'namaste', 'salaam']
     this.emailIndex = Math.ceil((Math.random() * ((this.emails.length - 1) - 0) + 0))
   }
 
