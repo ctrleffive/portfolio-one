@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   hmr: false,
+  analyticsId: 'G-97JFNZHF9C',
   disqusId: 'ctrleffive'
 }
 
