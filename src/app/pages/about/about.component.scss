@@ -1,17 +1,22 @@
 @import 'src/variables';
 
-.contact-item-label {
-  width: 150px;
-  display: inline-block;
-}
-
-.skills {
-  line-height: 2rem;
-  width: 50%;
-  @media screen and (max-width: 1000px) {
-    width: 75%;
+:host{
+  @media print {
+    display: none;
   }
-  @media screen and (max-width: 500px) {
-    width: 100%;
+  .contact-item-label {
+    width: 150px;
+    display: inline-block;
+  }
+
+  .skills {
+    line-height: 2rem;
+    width: 50%;
+    @media screen and (max-width: 1000px) {
+      width: 75%;
+    }
+    @media screen and (max-width: 500px) {
+      width: 100%;
+    }
   }
 }

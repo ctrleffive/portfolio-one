@@ -18,6 +18,26 @@ body {
     color: $secondaryColorLightsOn;
     background-color: $mainColorLightsOn;
   }
+  @media print {
+    background-color: #fff !important;
+  }
+}
+
+.blinker {
+  animation: blink 1s infinite;
+  margin-left: 0.2rem;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 app-root {
@@ -56,13 +76,21 @@ a {
 
 .content-wrap {
   position: absolute;
-  margin: 8rem 12rem;
+  margin: 8rem 12rem 0;
+  padding-bottom: 8rem;
 
   @media screen and (max-width: 1000px) {
-    margin: 8rem 6.5rem;
+    margin-left: 6.5rem;
+    margin-right: 6.5rem;
   }
   @media screen and (max-width: 500px) {
-    margin: 8rem 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  @media print {
+    margin: 0;
+    padding: 2rem;
+    position: initial;
   }
 }
 
@@ -116,11 +144,17 @@ a {
   }
 }
 
-pre[class*="language-"] code {
-  font-size: 0.95rem;
-}
 
 markdown {
+  pre[class*="language-"]{
+    @media print {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    code {
+      font-size: 0.95rem;
+    }
+  }
   img {
     max-width: 100%;
     border-radius: 5px;

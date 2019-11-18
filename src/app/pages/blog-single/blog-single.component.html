@@ -11,7 +11,7 @@
       <img *ngIf="meta.thumbnail" [src]="meta.thumbnail" [alt]="meta.title" class="post-thumbnail">
       <markdown ngPreserveWhitespaces [data]="data"></markdown>
     </div>
-    <div class="bg-white blog-wrap rounded-lg mt-4">
+    <div class="bg-white blog-wrap rounded-lg mt-4 d-print-none">
       <disqus [identifier]="'/blog/' + meta.slug"></disqus>
     </div>
   </div>
