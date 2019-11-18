@@ -148,6 +148,9 @@
     &:hover {
       opacity: 1;
     }
+    &[alt="DEV Community"] {
+      background-image: url(src/assets/images/icons/dev.png);
+    }
     &[alt="GitHub"] {
       background-image: url(src/assets/images/icons/github.png);
     }
