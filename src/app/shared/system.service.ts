@@ -4,6 +4,7 @@ import { Router, NavigationEnd, NavigationStart } from '@angular/router'
 import { BehaviorSubject } from 'rxjs'
 import { SafeHtml, DomSanitizer } from '@angular/platform-browser'
 import { HttpClient } from '@angular/common/http'
+import { environment as ENV } from 'src/environments/environment'
 
 // tslint:disable-next-line: ban-types
 declare let gtag: Function
@@ -30,7 +31,7 @@ export class SystemService {
         this.loader = true
       } else if (event instanceof NavigationEnd) {
         this.loader = false
-        gtag('config', 'G-5HYWSQFG6F', { page_path: event.urlAfterRedirects })
+        gtag('config', ENV.analyticsId, { page_path: event.urlAfterRedirects })
 
         const firstPart: string = event.url.split('/')[1]
         this.isBlogPage = firstPart === 'blog'
