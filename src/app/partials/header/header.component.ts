@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { SystemService } from 'src/app/shared/system.service';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core'
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  constructor() { }
+  constructor(private systemService: SystemService) {}
+
+  public get service(): SystemService {
+    return this.systemService
+  }
 }

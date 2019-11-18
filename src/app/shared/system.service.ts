@@ -14,6 +14,9 @@ export class SystemService {
   public pageBg: BehaviorSubject<SafeHtml>
   public isBlogPage: boolean
 
+  private emails: Array<string>
+  private emailIndex: number
+
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private router: Router,
@@ -22,6 +25,8 @@ export class SystemService {
     ) {
     this.isBlogPage = false
     this.pageBg = new BehaviorSubject('')
+    this.emails = ['hello', 'hola', 'bonhour', 'hi', 'hallo', 'ciao', 'namaste', 'salaam']
+    this.emailIndex = Math.ceil((Math.random() * ((this.emails.length - 1) - 0) + 0))
   }
 
   public listenToNavigation(): void {
@@ -87,5 +92,9 @@ export class SystemService {
     const apiResponse: any = await this.http.get(`assets/images/bgs/${svgPath}`, { responseType: 'text' }).toPromise()
     const htmlContent: SafeHtml = this.sanitizer.bypassSecurityTrustHtml(apiResponse)
     this.pageBg.next(htmlContent)
+  }
+
+  public get email(): string {
+    return `${this.emails[this.emailIndex]}@chandujs.dev`
   }
 }
