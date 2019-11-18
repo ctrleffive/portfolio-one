@@ -9,6 +9,10 @@ import { SystemService } from 'src/app/shared/system.service'
 export class AboutComponent implements OnInit {
   constructor(private systemService: SystemService) {}
 
+  public get service(): SystemService {
+    return this.systemService
+  }
+
   ngOnInit(): void {
     this.systemService.appTitle = 'About Chandu'
     this.systemService.setBg('about.svg')
