@@ -11,7 +11,7 @@ declare let gtag: Function
 @Injectable()
 export class SystemService {
   public pageBg: BehaviorSubject<SafeHtml>
-  private isBlogPage: boolean
+  public isBlogPage: boolean
 
   constructor(
     @Inject(DOCUMENT) private document: Document,
