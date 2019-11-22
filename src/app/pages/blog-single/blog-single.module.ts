@@ -1,6 +1,6 @@
+import { NgxMdModule } from 'ngx-md'
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { MarkdownModule, MarkedOptions } from 'ngx-markdown'
 import { NgxMasonryModule } from 'ngx-masonry'
 import { HttpClientModule } from '@angular/common/http'
 import { Routes, RouterModule } from '@angular/router'
@@ -19,20 +19,7 @@ const routes: Routes = [
     CommonModule,
     DisqusModule,
     HttpClientModule,
-    MarkdownModule.forRoot({
-      markedOptions: {
-        provide: MarkedOptions,
-        useValue: {
-          gfm: true,
-          tables: true,
-          breaks: false,
-          pedantic: false,
-          sanitize: false,
-          smartLists: true,
-          smartypants: false,
-        },
-      }
-    }),
+    NgxMdModule.forRoot(),
     RouterModule.forChild(routes),
     NgxMasonryModule
   ],

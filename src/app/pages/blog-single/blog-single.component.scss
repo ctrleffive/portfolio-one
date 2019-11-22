@@ -8,6 +8,11 @@
 
   .blog-wrap {
     padding: 3rem;
+    opacity: 0;
+    transition-duration: 0.3s;
+    &.md-loaded {
+      opacity: 1;
+    }
     @media screen and (max-width: 500px) {
       margin-left: -3rem;
       margin-right: -3rem;
