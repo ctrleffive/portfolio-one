@@ -52,12 +52,7 @@
               "src/assets/css/code.css",
               "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/marked/lib/marked.js",
-              "node_modules/prismjs/prism.js",
-              "node_modules/prismjs/components/prism-csharp.min.js",
-              "node_modules/prismjs/components/prism-css.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {

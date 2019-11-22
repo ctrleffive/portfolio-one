@@ -1,10 +1,10 @@
 import { Injectable, Inject } from '@angular/core'
 import { DOCUMENT } from '@angular/common'
 import { Router, NavigationEnd, NavigationStart } from '@angular/router'
-import { BehaviorSubject } from 'rxjs'
 import { SafeHtml, DomSanitizer } from '@angular/platform-browser'
 import { HttpClient } from '@angular/common/http'
 import { environment as ENV } from 'src/environments/environment'
+import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject'
 
 // tslint:disable-next-line: ban-types
 declare let gtag: Function

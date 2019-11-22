@@ -48,7 +48,10 @@ pre[class*="language-"] {
 	position: relative;
 	display: block;
   margin: 1.5rem -3rem;
-	padding: 1.25em 3em;
+  padding: 1.25em 3em;
+  border: 1px solid #f7f7f7;
+  border-left: 0;
+  border-right: 0;
 }
 
 .language-css > code,
@@ -205,4 +208,71 @@ pre[class*="language-"] {
 
 .token.variable {
 	color: #e53935;
+}
+
+
+pre[class*="language-"].line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+	position: relative;
+	white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border: 0;
+  opacity: 0.3;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+.code-toolbar .toolbar-item button {
+  position: absolute;
+  top: 1rem;
+  right: -2rem;
+  border: 0;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  background: none;
+  font-weight: bold;
+  opacity: 0;
+  transition-duration: 0.2s;
+}
+.code-toolbar {
+  position: relative;
+}
+
+.code-toolbar:hover button {
+  opacity: 0.2;
+}
+.code-toolbar .toolbar-item button:hover {
+  opacity: 0.7;
 }
