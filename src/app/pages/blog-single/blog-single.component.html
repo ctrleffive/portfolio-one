@@ -1,7 +1,7 @@
 <div class="content-wrap">
   <div *ngIf="meta">
     <div class="mb-5">
-      <div class="h1 font-weight-bold high" [innerText]="meta.title"></div>
+      <div class="h1 font-weight-bold text-body" [innerText]="meta.title"></div>
       <div class="mb-3">Last Updated: {{ meta.lastUpdated | date: 'longDate' }}</div>
       <div class="tags">
         <span *ngFor="let tag of meta.tags" class="badge badge-pill badge-brand mb-2 mr-2 ng-star-inserted py-1">#{{ tag }}</span>

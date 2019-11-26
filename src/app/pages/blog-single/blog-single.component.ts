@@ -13,6 +13,7 @@ import 'prismjs/plugins/line-numbers/prism-line-numbers'
 import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard'
 
 import 'prismjs/components/prism-markup-templating'
+import 'prismjs/components/prism-bash'
 import 'prismjs/components/prism-php'
 import 'prismjs/components/prism-dart'
 import 'prismjs/components/prism-yaml'
