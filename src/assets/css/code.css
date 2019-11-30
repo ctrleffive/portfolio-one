@@ -252,6 +252,7 @@ pre[class*="language-"].line-numbers > code {
   display: block;
   padding-right: 0.8em;
   text-align: right;
+  margin-bottom: 0.123rem;
 }
 
 .code-toolbar .toolbar-item button {

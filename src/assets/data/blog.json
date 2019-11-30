@@ -4,7 +4,7 @@
     "thumbnail": "https://res.cloudinary.com/practicaldev/image/fetch/s--FP9yzz3F--/c_imagga_scale%2Cf_auto%2Cfl_progressive%2Ch_420%2Cq_auto%2Cw_1000/https://thepracticaldev.s3.amazonaws.com/i/efyr3v85x8kfefvvl39d.png",
     "dateCreated": "2019-11-26T18:02:39.160Z",
     "lastUpdated": "2019-11-26T18:02:39.160Z",
-    "title": "Hot Module Replacement in Angular",
+    "title": "⚡️ Hot Module Replacement in  Angular",
     "tags": ["angular", "hmr", "typescript"]
   },
   {
@@ -12,7 +12,7 @@
     "thumbnail": null,
     "dateCreated": "2019-11-09T11:32:11.624Z",
     "lastUpdated": "2019-11-13T11:32:11.624Z",
-    "title": "My First Blog",
+    "title": "📝 My First Blog",
     "tags": ["first", "blog"]
   }
 ]
