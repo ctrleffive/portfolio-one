@@ -78,14 +78,17 @@ a {
   position: absolute;
   margin: 8rem 12rem 0;
   padding-bottom: 8rem;
+  max-width: calc(100% - 16rem);
 
   @media screen and (max-width: 1000px) {
     margin-left: 6.5rem;
     margin-right: 6.5rem;
+    max-width: calc(100% - 13rem);
   }
   @media screen and (max-width: 500px) {
     margin-left: 2rem;
     margin-right: 2rem;
+    max-width: calc(100% - 4rem);
   }
   @media print {
     margin: 0;
