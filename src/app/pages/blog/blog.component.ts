@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
 import { Blog } from 'src/app/models/blog'
 import { SystemService } from 'src/app/shared/system.service'
+import { BlogData } from 'src/app/data/blog'
 
 @Component({
   selector: 'app-blog',
@@ -15,15 +16,8 @@ export class BlogComponent implements OnInit {
     this.blogs = []
   }
 
-  private async getData(): Promise<void> {
-    this.systemService.loader = true
-    const apiResponse: any = await this.http.get('/assets/data/blog.json').toPromise()
-    this.blogs = Blog.fromJsonList(apiResponse)
-    this.systemService.loader = false
-  }
-
   ngOnInit(): void {
-    this.getData()
+    this.blogs = BlogData.all
     this.systemService.appTitle = 'Blog of Chandu'
     this.systemService.setBg('blog.svg')
   }
