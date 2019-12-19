@@ -19,6 +19,7 @@ import 'prismjs/components/prism-dart'
 import 'prismjs/components/prism-yaml'
 import 'prismjs/components/prism-typescript'
 import 'prismjs/components/prism-json'
+import { BlogData } from 'src/app/data/blog'
 
 @Component({
   selector: 'app-blog-single',
@@ -38,18 +39,14 @@ export class BlogSingleComponent implements OnInit {
       this.isVisible = false
     }
 
-  private async getData(): Promise<void> {
-    this.systemService.loader = true
-    const slug: string = this.route.snapshot.paramMap.get('slug')
-    const apiResponse: any = await this.http.get('/assets/data/blog.json').toPromise()
-    const blog: Array<Blog> = Blog.fromJsonList(apiResponse).filter(item => item.slug === slug)
-    if (blog.length) {
-      this.meta = blog[0]
+  private getData(): void {
+    try {
+      const slug: string = this.route.snapshot.paramMap.get('slug')
+      this.meta = BlogData.single(slug)
       this.systemService.appTitle = this.meta.title
-    } else {
+    } catch (error) {
       this.router.navigate(['/blog'])
     }
-    this.systemService.loader = false
   }
 
   public mdLoaded(): void {
