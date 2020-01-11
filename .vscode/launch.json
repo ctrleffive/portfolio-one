@@ -1,18 +1,14 @@
 {
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Debug",
       "type": "chrome",
       "request": "launch",
-      "name": "Debug",
-      "url": "http://localhost:4200",
-      "preLaunchTask": "ng-hmr",
-      "webRoot": "${workspaceFolder}",
+      "url": "http://localhost:8000",
+      "webRoot": "${workspaceRoot}/src",
       "userDataDir": false,
-      "disableNetworkCache": true
+      "preLaunchTask": "react"
     }
   ]
 }
