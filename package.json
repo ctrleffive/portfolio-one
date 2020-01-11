@@ -1,41 +1,35 @@
 {
-  "name": "ctrleffive",
-  "version": "1.5.0",
+  "name": "chandujs.dev",
+  "version": "2.0.0",
+  "description": "My Website ❤️",
   "scripts": {
-    "ng": "ng",
-    "hmr": "ng serve --configuration hmr",
-    "lint": "ng lint",
-    "start": "ng serve",
-    "build": "ng build --configuration production"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "yarn develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
-  "private": true,
   "dependencies": {
-    "@angular/animations": "~8.2.12",
-    "@angular/common": "~8.2.12",
-    "@angular/compiler": "~8.2.12",
-    "@angular/core": "~8.2.12",
-    "@angular/forms": "~8.2.12",
-    "@angular/platform-browser": "~8.2.12",
-    "@angular/platform-browser-dynamic": "~8.2.12",
-    "@angular/router": "~8.2.12",
-    "ngx-disqus": "^2.4.3",
-    "ngx-masonry": "^1.1.4",
-    "ngx-md": "^8.0.0",
-    "rxjs": "~6.4.0",
-    "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "@emotion/core": "^10.0.27",
+    "gatsby": "^2.18.12",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-react-helmet": "^3.1.18",
+    "gatsby-plugin-sass": "^2.1.26",
+    "node-sass": "^4.13.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.803.15",
-    "@angular/cli": "~8.3.15",
-    "@angular/compiler-cli": "~8.2.12",
-    "@angular/language-service": "~8.2.12",
-    "@angularclass/hmr": "^2.1.3",
-    "@types/node": "~8.9.4",
-    "codelyzer": "^5.0.0",
-    "protractor": "~5.4.0",
-    "ts-node": "~7.0.0",
-    "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "prettier": "^1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ctrleffive/ctrleffive.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/ctrleffive/ctrleffive.github.io/issues"
   }
 }
