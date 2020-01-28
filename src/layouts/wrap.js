@@ -42,8 +42,8 @@ export default class Wrap extends Component {
           css={css`
             left: 0;
           `}>
-          <a
-            routerLink="/"
+          <Link
+            to="/"
             css={css`
               letter-spacing: 0.5rem;
               text-transform: uppercase;
@@ -60,8 +60,8 @@ export default class Wrap extends Component {
             `}>
             <div className="mr-3">Chandu</div>
             <div>J S</div>
-          </a>
-          <Link to="#" className="contact-button"></Link>
+          </Link>
+          <a href="#" className="contact-button"></a>
         </div>
         <div
           className="side-bar text-right"
@@ -191,34 +191,40 @@ export default class Wrap extends Component {
                 }
               }
             `}>
-            <Link
-              to="https://dev.to/ctrleffive"
+            <a
+              href="https://dev.to/ctrleffive"
               target="_blank"
               className="social-icon"
-              alt="DEV Community"></Link>
-            <Link
-              to="https://github.com/ctrleffive"
+              rel="noreferrer"
+              alt="DEV Community"></a>
+            <a
+              href="https://github.com/ctrleffive"
               target="_blank"
               className="social-icon"
-              alt="GitHub"></Link>
-            <Link
-              to="https://instagram.com/ctrleffive"
+              rel="noreferrer"
+              alt="GitHub"></a>
+            <a
+              href="https://instagram.com/ctrleffive"
               target="_blank"
               className="social-icon"
-              alt="Instagram"></Link>
-            <Link
-              to="https://linkedin.com/in/ctrleffive"
+              rel="noreferrer"
+              alt="Instagram"></a>
+            <a
+              href="https://linkedin.com/in/ctrleffive"
               target="_blank"
               className="social-icon"
-              alt="LinkedIn"></Link>
-            <Link
-              to="https://twitter.com/ctrleffive"
+              rel="noreferrer"
+              alt="LinkedIn"></a>
+            <a
+              href="https://twitter.com/ctrleffive"
               target="_blank"
               className="social-icon"
-              alt="Twitter"></Link>
+              rel="noreferrer"
+              alt="Twitter"></a>
           </div>
         </div>
         <div className="bg-animator"></div>
+        {this.props.children}
       </div>
     )
   }
