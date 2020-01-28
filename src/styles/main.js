@@ -206,15 +206,6 @@ export const GlobalStyles = css`
     transition-property: opacity !important;
   }
 
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
   .page-bg {
     svg {
       content: '';
