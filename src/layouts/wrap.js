@@ -131,9 +131,15 @@ export default class Wrap extends Component {
                 }
               }
             `}>
-            <Link to="/works">Works</Link>
-            <Link to="/blog">Blog</Link>
-            <Link to="/about">About</Link>
+            <Link activeClassName="active" to="/works">
+              Works
+            </Link>
+            <Link activeClassName="active" to="/blog">
+              Blog
+            </Link>
+            <Link activeClassName="active" to="/about">
+              About
+            </Link>
           </nav>
           <div
             css={css`
@@ -223,8 +229,44 @@ export default class Wrap extends Component {
               alt="Twitter"></a>
           </div>
         </div>
-        <div className="bg-animator"></div>
-        {this.props.children}
+        <div
+          css={css`
+            animation: fadeIn 0.2s ease-in-out;
+
+            @keyframes fadeIn {
+              0% {
+                opacity: 0;
+                margin-top: 0.5rem;
+              }
+              100% {
+                opacity: 1;
+                margin-top: 0;
+              }
+            }
+          `}>
+          {this.props.children}
+          <img
+            src={this.props.pageBg}
+            css={css`
+              top: 50%;
+              left: 50%;
+              z-index: -1;
+              opacity: 0.2;
+              position: fixed;
+              transition-duration: 0.2s;
+              transform: translate(calc(50% - 35rem), -50%);
+              max-height: 100%;
+
+              @media screen and (max-width: 1000px) {
+                transform: translate(-50%, -50%);
+              }
+              @media screen and (max-width: 500px) {
+                transform: translate(-25%, -50%);
+              }
+            `}
+            alt=""
+          />
+        </div>
       </div>
     )
   }
