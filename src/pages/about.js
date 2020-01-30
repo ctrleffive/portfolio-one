@@ -1,14 +1,16 @@
 /** @jsx jsx */
 
 import { css, jsx } from '@emotion/core'
-import React, { Component } from 'react'
+import { Component } from 'react'
+
+import pageBg from '../assets/images/bgs/about.svg'
 
 import Wrap from '../layouts/wrap'
 
 export default class AboutPage extends Component {
   render = () => {
     return (
-      <Wrap>
+      <Wrap pageBg={pageBg}>
         <div className="content-wrap">
           <div className="h1 font-weight-bold mb-5">
             Hi.
