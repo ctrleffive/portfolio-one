@@ -10,7 +10,7 @@ import Wrap from '../layouts/wrap'
 export default class AboutPage extends Component {
   render = () => {
     return (
-      <Wrap pageBg={pageBg}>
+      <Wrap pageBg={pageBg} seoTitle="About Chandu | Chandu J S">
         <div className="content-wrap">
           <div className="h1 font-weight-bold mb-5">
             Hi.
