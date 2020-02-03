@@ -6,7 +6,7 @@ import pageBg from '../assets/images/bgs/works.svg'
 export default class WorksPage extends Component {
   render = () => {
     return (
-      <Wrap pageBg={pageBg}>
+      <Wrap pageBg={pageBg} seoTitle="Works of Chandu | Chandu J S">
         <div class="content-wrap">
           <div class="h1 font-weight-bold mb-5">
             My <span class="high">Works</span>

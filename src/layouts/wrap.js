@@ -2,6 +2,7 @@
 
 import { Link } from 'gatsby'
 import { Component } from 'react'
+import { Helmet } from 'react-helmet'
 import { Global, css, jsx } from '@emotion/core'
 import { GlobalStyles, ColorsAdvanced, Colors } from '../styles/main'
 
@@ -36,6 +37,12 @@ export default class Wrap extends Component {
             }
           }
         `}>
+        <Helmet
+          base="/"
+          defaultTitle={
+            this.props.seoTitle || 'Chandu J S 💻 Full Stack Developer'
+          }
+        />
         <Global styles={GlobalStyles} />
         <div
           className="side-bar"
@@ -131,14 +138,17 @@ export default class Wrap extends Component {
                 }
               }
             `}>
-            <Link activeClassName="active" to="/works">
+            {/* <Link activeClassName="active" to="/works">
               Works
-            </Link>
+            </Link> */}
             <Link activeClassName="active" to="/blog">
               Blog
             </Link>
             <Link activeClassName="active" to="/about">
               About
+            </Link>
+            <Link activeClassName="active" to="/uses">
+              Uses
             </Link>
           </nav>
           <div
@@ -251,11 +261,14 @@ export default class Wrap extends Component {
               top: 50%;
               left: 50%;
               z-index: -1;
-              opacity: 0.2;
+              opacity: 0.1;
               position: fixed;
-              transition-duration: 0.2s;
+              transition-duration: 0.3s;
               transform: translate(calc(50% - 35rem), -50%);
               max-height: 100%;
+              &:hover {
+                opacity: 0.3;
+              }
 
               @media screen and (max-width: 1000px) {
                 transform: translate(-50%, -50%);

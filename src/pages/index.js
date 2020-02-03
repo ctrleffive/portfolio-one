@@ -13,7 +13,7 @@ import Wrap from '../layouts/wrap'
 export default class IndexPage extends Component {
   render = () => {
     return (
-      <Wrap pageBg={pageBg} pageTitle="Home">
+      <Wrap pageBg={pageBg}>
         <div
           css={css`
             position: absolute;
