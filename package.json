@@ -17,6 +17,7 @@
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-react-helmet": "^3.1.18",
     "gatsby-plugin-sass": "^2.1.26",
+    "gatsby-source-dev": "^0.1.4",
     "node-sass": "^4.13.0",
     "polished": "^3.4.2",
     "react": "^16.12.0",
