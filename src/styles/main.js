@@ -13,7 +13,7 @@ export const ColorsAdvanced = {
   main: BrandDarken,
   mainLightsOn: MainLightsOn,
   secondary: lighten(0.6, BrandDarken),
-  secondaryLightsOn: darken(0.3, MainLightsOn),
+  secondaryLightsOn: darken(0.7, MainLightsOn),
   accentLightsOn: Colors.brand,
 }
 export const Fonts = {

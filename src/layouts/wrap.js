@@ -14,8 +14,21 @@ import twitterIcon from '../assets/images/icons/twitter.png'
 
 export default class Wrap extends Component {
   render = () => {
+    const styles = css`
+      ${GlobalStyles}
+      body {
+        color: ${this.props.lightsOn
+          ? ColorsAdvanced.secondaryLightsOn
+          : ColorsAdvanced.secondary};
+        background-color: ${this.props.lightsOn
+          ? ColorsAdvanced.mainLightsOn
+          : ColorsAdvanced.main};
+      }
+    `
+
     return (
       <div
+        className={this.props.lightsOn ? 'lights-on' : ''}
         css={css`
           .side-bar {
             position: fixed;
@@ -43,7 +56,7 @@ export default class Wrap extends Component {
             this.props.seoTitle || 'Chandu J S 💻 Full Stack Developer'
           }
         />
-        <Global styles={GlobalStyles} />
+        <Global styles={styles} />
         <div
           className="side-bar"
           css={css`
