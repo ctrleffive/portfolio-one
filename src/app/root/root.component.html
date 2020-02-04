@@ -1,9 +1,0 @@
-<app-header class="d-print-none"></app-header>
-<main [@fadeAnimation]="getRouterOutletState(o)">
-  <router-outlet (activate)="onActivate($event)" #o="outlet"></router-outlet>
-</main>
-<div class="page-bg d-print-none" [ngClass]="{'hide-page-bg': !isPageBgVisible}" [innerHTML]="pageBg"></div>
-<div *ngIf="!service.isBlogPage" class="h1 d-none d-print-block print-info text-center">
-  <div class="print-logo mb-5">🖨</div>
-  <div class="print-label">Nothing to print here..</div>
-</div>

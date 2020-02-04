@@ -1,12 +1,9 @@
 {
-  // See https://go.microsoft.com/fwlink/?LinkId=733558
-  // for the documentation about the tasks.json format
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "ng-hmr",
       "type": "shell",
-      "command": "npm run hmr",
+      "command": "BROWSER=none yarn start",
       "isBackground": true,
       "presentation": {
         "echo": true,
@@ -29,7 +26,8 @@
           "beginsPattern": "^..+$",
           "endsPattern": "^..+$"
         }
-      }
+      },
+      "label": "react"
     }
   ]
 }

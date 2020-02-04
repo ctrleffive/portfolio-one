@@ -1,3 +1,21 @@
 {
-  "files.autoSave": "off"
+  "files.autoSave": "off",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "cSpell.words": [
+    "Chandu",
+    "Raleway",
+    "chandujs",
+    "ctrleffive",
+    "disqus",
+    "hexcode",
+    "hola",
+    "linkedin",
+    "namaste",
+    "noreferrer",
+    "shortname",
+    "skillset"
+  ]
 }
