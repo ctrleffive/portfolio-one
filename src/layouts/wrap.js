@@ -174,9 +174,12 @@ export default class Wrap extends Component {
                       }
                     }
                   `}>
-                  {/* <Link activeClassName="active" to="/works">
-                  Works
-                </Link> */}
+                  <Link
+                    className={this.props.isWorkPage ? 'active' : ''}
+                    activeClassName="active"
+                    to="/works">
+                    Works
+                  </Link>
                   <Link
                     className={this.props.isBlogPage ? 'active' : ''}
                     activeClassName="active"
@@ -278,19 +281,19 @@ export default class Wrap extends Component {
                   }
                 `}>
                 {this.props.children}
-                <img
-                  src={this.props.pageBg}
+                <div
                   css={css`
                     top: 50%;
                     left: 50%;
                     z-index: -1;
                     opacity: 0.1;
                     position: fixed;
-                    transition-duration: 0.3s;
                     transform: translate(calc(50% - 35rem), -50%);
                     max-height: 100%;
-                    &:hover {
-                      opacity: 0.3;
+
+                    .lights-on & {
+                      opacity: 0.05;
+                      filter: grayscale(1);
                     }
 
                     @media screen and (max-width: 1000px) {
@@ -300,8 +303,9 @@ export default class Wrap extends Component {
                       transform: translate(-25%, -50%);
                     }
                   `}
-                  alt=""
-                />
+                  alt="">
+                  {this.props.pageBg}
+                </div>
               </div>
             </div>
           )

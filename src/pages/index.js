@@ -6,14 +6,14 @@ import { Component } from 'react'
 
 import { ColorsAdvanced, Colors } from '../styles/main'
 
-import pageBg from '../assets/images/bgs/home.svg'
+import PageBg from '../assets/images/bgs/home.svg'
 
 import Wrap from '../layouts/wrap'
 
 export default class IndexPage extends Component {
   render = () => {
     return (
-      <Wrap pageBg={pageBg}>
+      <Wrap pageBg={<PageBg />}>
         <div
           css={css`
             position: absolute;
