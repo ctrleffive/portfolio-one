@@ -278,8 +278,7 @@ export default class Wrap extends Component {
                   }
                 `}>
                 {this.props.children}
-                <img
-                  src={this.props.pageBg}
+                <div
                   css={css`
                     top: 50%;
                     left: 50%;
@@ -300,8 +299,9 @@ export default class Wrap extends Component {
                       transform: translate(-25%, -50%);
                     }
                   `}
-                  alt=""
-                />
+                  alt="">
+                  {this.props.pageBg}
+                </div>
               </div>
             </div>
           )

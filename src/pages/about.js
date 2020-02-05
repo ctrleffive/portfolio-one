@@ -3,7 +3,7 @@
 import { css, jsx } from '@emotion/core'
 import { Component } from 'react'
 
-import pageBg from '../assets/images/bgs/about.svg'
+import PageBg from '../assets/images/bgs/about.svg'
 
 import Wrap from '../layouts/wrap'
 import { StaticQuery } from 'gatsby'
@@ -11,7 +11,7 @@ import { StaticQuery } from 'gatsby'
 export default class AboutPage extends Component {
   render = () => {
     return (
-      <Wrap pageBg={pageBg} seoTitle="About Chandu | Chandu J S">
+      <Wrap pageBg={<PageBg />} seoTitle="About Chandu | Chandu J S">
         <div className="content-wrap">
           <div className="h1 font-weight-bold mb-5">
             Hi.

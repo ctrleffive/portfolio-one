@@ -4,13 +4,14 @@ import { css, jsx } from '@emotion/core'
 import Wrap from '../layouts/wrap'
 import { Component } from 'react'
 
-import pageBg from '../assets/images/bgs/blog.svg'
+import PageBg from '../assets/images/bgs/blog.svg'
+
 import { Link } from 'gatsby'
 
 export default class BlogPage extends Component {
   render = () => {
     return (
-      <Wrap lightsOn pageBg={pageBg} seoTitle="Blog of Chandu | Chandu J S">
+      <Wrap lightsOn pageBg={<PageBg />} seoTitle="Blog of Chandu | Chandu J S">
         <div className="content-wrap">
           <div className="h1 font-weight-bold mb-5">
             My <span className="high">Blog</span>
