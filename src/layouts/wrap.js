@@ -5,6 +5,7 @@ import { Component } from 'react'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import { Global, css, jsx } from '@emotion/core'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { GlobalStyles, ColorsAdvanced, Colors } from '../styles/main'
 
 import devIcon from '../assets/images/icons/dev.png'
@@ -101,9 +102,9 @@ export default class Wrap extends Component {
                   <div className="mr-3">Chandu</div>
                   <div>J S</div>
                 </Link>
-                <a
+                <OutboundLink
                   href={`mailto:${site.siteMetadata.emails[emailIndex]}@chandujs.dev`}
-                  className="contact-button"></a>
+                  className="contact-button"></OutboundLink>
               </div>
               <div
                 className="side-bar text-right"
@@ -250,14 +251,14 @@ export default class Wrap extends Component {
                     }
                   `}>
                   {site.siteMetadata.social.map(item => (
-                    <a
+                    <OutboundLink
                       href={item.url}
                       target="_blank"
                       className="social-icon"
                       rel="noreferrer"
                       alt={item.service}>
                       {item.service}
-                    </a>
+                    </OutboundLink>
                   ))}
                 </div>
               </div>

@@ -86,5 +86,11 @@ module.exports = {
         username: 'ctrleffive',
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'G-97JFNZHF9C',
+      },
+    },
   ],
 }
