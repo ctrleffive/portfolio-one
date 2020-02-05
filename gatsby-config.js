@@ -1,9 +1,3 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
   siteMetadata: {
     title: `Chandu J S 💻 Full Stack Developer`,
@@ -71,6 +65,14 @@ module.exports = {
     ],
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.svg$/,
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
