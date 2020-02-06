@@ -94,5 +94,11 @@ module.exports = {
         username: 'ctrleffive',
       },
     },
+    {
+      resolve: 'gatsby-plugin-purgecss',
+      options: {
+        purgeOnly: ['css/'],
+      },
+    },
   ],
 }
