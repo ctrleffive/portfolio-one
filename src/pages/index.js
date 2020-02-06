@@ -16,9 +16,10 @@ export default class IndexPage extends Component {
       <Wrap pageBg={<PageBg />}>
         <div
           css={css`
-            position: absolute;
             top: 50%;
             left: 25%;
+            z-index: 3;
+            position: absolute;
             transform: translate(-50%, -50%);
 
             @media print {
