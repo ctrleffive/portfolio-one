@@ -117,7 +117,7 @@ export default class Wrap extends Component {
                     right: 0;
                     bottom: initial;
                     width: initial;
-                    padding-top: 0;
+                    padding-top: 1rem !important;
                     text-align: left !important;
                     margin-bottom: -1rem;
                   }
