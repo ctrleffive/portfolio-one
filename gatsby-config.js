@@ -77,6 +77,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'G-97JFNZHF9C',
+        head: true,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -92,6 +93,12 @@ module.exports = {
       resolve: `gatsby-source-dev`,
       options: {
         username: 'ctrleffive',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-purgecss',
+      options: {
+        purgeOnly: ['css/'],
       },
     },
   ],
