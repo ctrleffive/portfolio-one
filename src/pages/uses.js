@@ -15,7 +15,9 @@ export default class UsesPage extends Component {
           </div>
           <div className="h5">
             Curious to know what I use on a daily basis? Just check it out here
-            😃
+            <span role="img" aria-label="smile">
+              😃
+            </span>
           </div>
         </div>
       </Wrap>

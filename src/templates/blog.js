@@ -27,7 +27,7 @@ export default class BlogPage extends Component {
                   display: block;
                 `}
                 className="mb-4 rounded-lg bg-white overflow-hidden">
-                {index == 0 ? (
+                {index === 0 ? (
                   <img
                     css={css`
                       margin: -2rem -2rem 2rem;
@@ -41,7 +41,7 @@ export default class BlogPage extends Component {
                 )}
                 <div
                   className={`${
-                    index == 0 ? 'h2' : 'h4'
+                    index === 0 ? 'h2' : 'h4'
                   } item-title font-weight-bold brand-light`}>
                   {item.title}
                 </div>
