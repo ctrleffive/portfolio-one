@@ -6,7 +6,7 @@ import { Component } from 'react'
 import PageBg from '../assets/images/bgs/about.svg'
 
 import Wrap from '../layouts/wrap'
-import { StaticQuery } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 
 export default class AboutPage extends Component {
   render = () => {
@@ -67,7 +67,7 @@ export default class AboutPage extends Component {
                   site.siteMetadata.skills.map((item, index) => (
                     <span>
                       <span className="high">{item}</span>
-                      {index + 1 == site.siteMetadata.skills.length
+                      {index + 1 === site.siteMetadata.skills.length
                         ? ' ...'
                         : ', '}
                     </span>
