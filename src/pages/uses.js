@@ -1,5 +1,8 @@
+/** @jsx jsx */
+
+import { css, jsx } from '@emotion/core'
 import Wrap from '../layouts/wrap'
-import React, { Component } from 'react'
+import { Component } from 'react'
 
 import PageBg from '../assets/images/bgs/uses.svg'
 
@@ -15,7 +18,12 @@ export default class UsesPage extends Component {
           </div>
           <div className="h5">
             Curious to know what I use on a daily basis? Just check it out here
-            <span role="img" aria-label="smile">
+            <span
+              css={css`
+                margin-left: 5px;
+              `}
+              role="img"
+              aria-label="smile">
               😃
             </span>
           </div>

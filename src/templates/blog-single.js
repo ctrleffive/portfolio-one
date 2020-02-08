@@ -43,14 +43,14 @@ export default class BlogSinglePage extends Component {
             </div>
           </div>
           <div className="bg-white blog-wrap rounded-lg overflow-hidden">
-            <img
-              src={data.cover_image}
-              alt={data.title}
+            <div
               css={css`
                 margin: -3rem -3rem 3rem;
                 max-width: calc(100% - -6rem);
-              `}
-            />
+                height: 420px;
+              `}>
+              <img src={data.cover_image} width="100%" alt={data.title} />
+            </div>
             <div
               css={css`
                 code,
@@ -62,7 +62,7 @@ export default class BlogSinglePage extends Component {
                   word-wrap: normal;
                   color: #90a4ae;
                   background: #fafafa;
-                  font-family: Roboto Mono, monospace;
+                  font-family: monospace;
                   font-size: 1em;
                   line-height: 1.5em;
 
