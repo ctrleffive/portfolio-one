@@ -63,6 +63,38 @@ module.exports = {
         url: `https://twitter.com/ctrleffive`,
       },
     ],
+    uses: [
+      {
+        title: `Titles`,
+        description: ``,
+        items: [
+          {
+            emoji: `🖥`,
+            name: `Full Stack Developer`,
+            description: ``,
+            link: ``,
+          },
+          {
+            emoji: `🕸`,
+            name: `Web Developer`,
+            description: ``,
+            link: ``,
+          },
+          {
+            emoji: `📝`,
+            name: `Software Developer`,
+            description: ``,
+            link: ``,
+          },
+          {
+            emoji: `📸`,
+            name: `Photographer`,
+            description: `Checkout my instagram page 😊`,
+            link: `https://instagram.com/ctrleffive`,
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     {
