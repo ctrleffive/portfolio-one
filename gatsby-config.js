@@ -89,8 +89,8 @@ module.exports = {
           {
             emoji: `📸`,
             name: `Photographer`,
-            description: ``,
-            link: ``,
+            description: `Checkout my instagram page 😊`,
+            link: `https://instagram.com/ctrleffive`,
           },
         ],
       },

@@ -97,7 +97,7 @@ export default class UsesPage extends Component {
                                 : 'inherit'};
                             `}>
                             {item.link ? (
-                              <OutboundLink href={item.link}>
+                              <OutboundLink href={item.link} target="_blank">
                                 {item.name}
                               </OutboundLink>
                             ) : (
