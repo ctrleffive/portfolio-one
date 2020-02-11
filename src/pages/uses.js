@@ -39,7 +39,7 @@ export default class UsesPage extends Component {
             Curious to know what I use on a daily basis? Just check it out here.{' '}
             <br />
             My setup will change time to time. But I will try to keep this
-            uptodate.
+            up-to-date.
             <span
               css={css`
                 margin-left: 5px;
