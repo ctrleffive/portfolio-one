@@ -231,4 +231,9 @@ export const GlobalStyles = css`
       left: 51%;
     }
   }
+
+  .no-bullets {
+    padding-left: 0.2rem;
+    list-style: none;
+  }
 `
