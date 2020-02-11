@@ -84,7 +84,10 @@ export default class UsesPage extends Component {
                             <span
                               role="img"
                               aria-label="smile"
-                              className="mr-3">
+                              css={css`
+                                display: inline-block;
+                                width: 2.3rem;
+                              `}>
                               {item.emoji}
                             </span>
                           ) : (
