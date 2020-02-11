@@ -80,9 +80,16 @@ export default class UsesPage extends Component {
                     <ul className="no-bullets">
                       {section.items.map(item => (
                         <li>
-                          <span role="img" aria-label="smile" className="mr-2">
-                            {item.emoji}
-                          </span>{' '}
+                          {item.emoji ? (
+                            <span
+                              role="img"
+                              aria-label="smile"
+                              className="mr-3">
+                              {item.emoji}
+                            </span>
+                          ) : (
+                            ''
+                          )}
                           <span
                             css={css`
                               font-weight: ${item.description
@@ -99,9 +106,10 @@ export default class UsesPage extends Component {
                           </span>
                           {item.description ? (
                             <div
-                              className="ml-4 pl-2 mb-3"
+                              className="mb-3"
                               css={css`
                                 line-height: 1.5;
+                                margin-left: 2.3rem;
                               `}>
                               {item.description}
                             </div>
