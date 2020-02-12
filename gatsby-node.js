@@ -1,4 +1,4 @@
-const request = require('request').defaults({ encoding: null })
+const fetch = require('node-fetch')
 
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
   const blogListResult = await graphql(`
@@ -30,18 +30,14 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     component: require.resolve(`./src/templates/blog.js`),
   })
 
-  blogList.forEach(blogData => {
-    request.get(blogData.cover_image, (error, response, body) => {
-      if (!error && response.statusCode == 200) {
-        blogData.cover_image = `data:${
-          response.headers['content-type']
-        };base64,${new Buffer(body).toString('base64')}`
-        createPage({
-          path: `/blog/${blogData.slug}`,
-          context: { blogData },
-          component: require.resolve(`./src/templates/blog-single.js`),
-        })
-      }
+  for (const blogData of blogList) {
+    blogData.cover_image = await fetch(blogData.cover_image)
+      .then(data => data.buffer())
+      .then(buffer => `data:image/jpeg;base64,${buffer.toString('base64')}`)
+    createPage({
+      path: `/blog/${blogData.slug}`,
+      context: { blogData },
+      component: require.resolve(`./src/templates/blog-single.js`),
     })
-  })
+  }
 }
