@@ -1,3 +1,5 @@
+const fetch = require('node-fetch')
+
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
   const blogListResult = await graphql(`
     query {
@@ -28,11 +30,14 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     component: require.resolve(`./src/templates/blog.js`),
   })
 
-  blogList.forEach(blogData => {
+  for (const blogData of blogList) {
+    blogData.cover_image = await fetch(blogData.cover_image)
+      .then(data => data.buffer())
+      .then(buffer => `data:image/jpeg;base64,${buffer.toString('base64')}`)
     createPage({
       path: `/blog/${blogData.slug}`,
       context: { blogData },
       component: require.resolve(`./src/templates/blog-single.js`),
     })
-  })
+  }
 }

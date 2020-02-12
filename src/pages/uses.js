@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { css, jsx } from '@emotion/core'
 import Wrap from '../layouts/wrap'
-import { GlobalStyles, ColorsAdvanced, Colors } from '../styles/main'
+import { ColorsAdvanced, Colors } from '../styles/main'
 import { Component } from 'react'
 
 import PageBg from '../assets/images/bgs/uses.svg'
@@ -39,7 +39,7 @@ export default class UsesPage extends Component {
             Curious to know what I use on a daily basis? Just check it out here.{' '}
             <br />
             My setup will change time to time. But I will try to keep this
-            uptodate.
+            up-to-date.
             <span
               css={css`
                 margin-left: 5px;
@@ -72,7 +72,7 @@ export default class UsesPage extends Component {
             render={({ site }) => (
               <div className="row">
                 {site.siteMetadata.uses.map(section => (
-                  <div className="col-md-6 mb-4 mt-1">
+                  <div className="col-lg-4 col-md-6 mb-4 mt-1">
                     <div className="h3 mb-2">{section.title}</div>
                     <p className={section.description ? `mb-4` : `pb-0`}>
                       {section.description}
@@ -84,7 +84,10 @@ export default class UsesPage extends Component {
                             <span
                               role="img"
                               aria-label="smile"
-                              className="mr-3">
+                              css={css`
+                                display: inline-block;
+                                width: 2.3rem;
+                              `}>
                               {item.emoji}
                             </span>
                           ) : (
