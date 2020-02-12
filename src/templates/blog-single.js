@@ -43,14 +43,14 @@ export default class BlogSinglePage extends Component {
             </div>
           </div>
           <div className="bg-white blog-wrap rounded-lg overflow-hidden">
-            <div
+            <img
               css={css`
                 margin: -3rem -3rem 3rem;
                 max-width: calc(100% - -6rem);
-                height: 420px;
-              `}>
-              <img src={data.cover_image} width="100%" alt={data.title} />
-            </div>
+              `}
+              src={data.cover_image}
+              alt={data.title}
+            />
             <div
               css={css`
                 code,
