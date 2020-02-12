@@ -75,14 +75,20 @@ module.exports = {
             link: ``,
           },
           {
-            emoji: `🕸`,
-            name: `Web Developer`,
+            emoji: `📝`,
+            name: `Software Engineer`,
             description: ``,
             link: ``,
           },
           {
-            emoji: `📝`,
-            name: `Software Developer`,
+            emoji: `📱`,
+            name: `App Developer`,
+            description: ``,
+            link: ``,
+          },
+          {
+            emoji: `🕸`,
+            name: `Web Developer`,
             description: ``,
             link: ``,
           },
@@ -94,9 +100,226 @@ module.exports = {
           },
         ],
       },
+      {
+        title: `Hardware`,
+        description: ``,
+        items: [
+          {
+            emoji: `💻`,
+            name: `Macbook Air 13"`,
+            description: `I've used windows, linux & mac both professionally and for personal use. I was a Ubuntu user for a long time, but nothing beats the ease of use and developer friendliness of a mac.`,
+            link: ``,
+          },
+          {
+            emoji: `📷`,
+            name: `Sony α6400`,
+            description: ``,
+            link: `https://www.sony.com/electronics/interchangeable-lens-cameras/ilce-6400`,
+          },
+          {
+            emoji: `📱`,
+            name: `iPhone SE`,
+            description: ``,
+            link: ``,
+          },
+          {
+            emoji: `🎧`,
+            name: `AirPods`,
+            description: ``,
+            link: `https://www.apple.com/airpods-2nd-generation/`,
+          },
+        ],
+      },
+      {
+        title: `Dev Environment`,
+        description: ``,
+        items: [
+          {
+            emoji: `✏️`,
+            name: `VS Code`,
+            description: ``,
+            link: `https://code.visualstudio.com/`,
+          },
+          {
+            emoji: `🎨`,
+            name: `Field Lights Theme`,
+            description: ``,
+            link: `https://marketplace.visualstudio.com/items?itemName=sveggiani.vscode-field-lights`,
+          },
+          {
+            emoji: `🤫`,
+            name: `NO SEMICOLON IN JAVASCRIPT!`,
+            description: ``,
+            link: ``,
+          },
+          {
+            emoji: `⌨️`,
+            name: `Mac Terminal`,
+            description: ``,
+            link: ``,
+          },
+          {
+            emoji: `🕹`,
+            name: `Oh My Zsh`,
+            description: ``,
+            link: `https://github.com/ohmyzsh/ohmyzsh`,
+          },
+        ],
+      },
+      {
+        title: `Browsers`,
+        description: ``,
+        items: [
+          {
+            emoji: `🐸`,
+            name: `Google Chrome`,
+            description: ``,
+            link: ``,
+          },
+          {
+            emoji: `🔥`,
+            name: `Firefox Developer Edition`,
+            description: ``,
+            link: ``,
+          },
+          {
+            emoji: `🐅`,
+            name: `Safari`,
+            description: ``,
+            link: ``,
+          },
+        ],
+      },
+      {
+        title: `Websites`,
+        description: ``,
+        items: [
+          {
+            emoji: `💻`,
+            name: `Dev.to`,
+            description: `My top favourite website. ❤️`,
+            link: `http://dev.to`,
+          },
+          {
+            emoji: `😂`,
+            name: `9GAG`,
+            description: `Go Fun Yourself!`,
+            link: `http://9gag.com`,
+          },
+          {
+            emoji: `🐦`,
+            name: `Twitter`,
+            description: ``,
+            link: `http://twitter.com/ctrleffive`,
+          },
+        ],
+      },
+      {
+        title: `Softwares`,
+        description: ``,
+        items: [
+          {
+            emoji: `🎨`,
+            name: `Figma`,
+            description: `For all sorts of UI design stuff`,
+            link: `https://www.figma.com`,
+          },
+          {
+            emoji: `✏️`,
+            name: `Balsamiq`,
+            description: `For sketching user interfaces`,
+            link: `https://balsamiq.com`,
+          },
+          {
+            emoji: `💡`,
+            name: `Lightroom`,
+            description: ``,
+            link: ``,
+          },
+          {
+            emoji: `🖌`,
+            name: `Photoshop`,
+            description: ``,
+            link: ``,
+          },
+        ],
+      },
+      {
+        title: `Mobile Apps`,
+        description: ``,
+        items: [
+          {
+            emoji: `🎵`,
+            name: `Apple Music`,
+            description: `I cannot live without this. ❤️`,
+            link: ``,
+          },
+          {
+            emoji: `🎤`,
+            name: `Apple Podcast`,
+            description: `My favourite podcast is StarTalk hosted by Neil Degrasse Tyson.`,
+            link: `https://podcasts.apple.com/us/podcast/startalk-radio/id325404506`,
+          },
+          {
+            emoji: `🌈`,
+            name: `Google Photos`,
+            description: `I have a shared album in the google photos account with all my experiments in photography and colour grading. Have a look 😊`,
+            link: `https://photos.app.goo.gl/UXnnwtuKt1BGHvqg7`,
+          },
+          {
+            emoji: `✔`,
+            name: `Quire`,
+            description: `For task & project management.`,
+            link: `https://quire.io`,
+          },
+          {
+            emoji: `🔭`,
+            name: `Sky Guide`,
+            description: `An awesome iOS application with rich star catalogue.`,
+            link: `https://www.fifthstarlabs.com`,
+          },
+          {
+            emoji: `📱`,
+            name: `Other Applications`,
+            description: `Reddit, Instagram, 9GAG, YouTube, Telegram, Snapseed, Unsplash, VLC, etc..`,
+            link: ``,
+          },
+        ],
+      },
+      {
+        title: `Addictions`,
+        description: ``,
+        items: [
+          {
+            emoji: `🎧`,
+            name: `Music`,
+            description: ``,
+            link: ``,
+          },
+          {
+            emoji: `☕️`,
+            name: `Coffee`,
+            description: ``,
+            link: ``,
+          },
+          {
+            emoji: `😶`,
+            name: `Perfectionism`,
+            description: ``,
+            link: ``,
+          },
+        ],
+      },
     ],
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#000000`,
+        showSpinner: false,
+      },
+    },
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
