@@ -15,6 +15,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
               positive_reactions_count
               slug
               body_html
+              url
             }
           }
         }
