@@ -72,7 +72,7 @@ export default class UsesPage extends Component {
             render={({ site }) => (
               <div className="row">
                 {site.siteMetadata.uses.map(section => (
-                  <div className="col-md-6 mb-4 mt-1">
+                  <div className="col-lg-4 col-md-6 mb-4 mt-1">
                     <div className="h3 mb-2">{section.title}</div>
                     <p className={section.description ? `mb-4` : `pb-0`}>
                       {section.description}
