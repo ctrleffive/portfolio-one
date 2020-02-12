@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { css, jsx } from '@emotion/core'
 import Wrap from '../layouts/wrap'
-import { GlobalStyles, ColorsAdvanced, Colors } from '../styles/main'
+import { ColorsAdvanced, Colors } from '../styles/main'
 import { Component } from 'react'
 
 import PageBg from '../assets/images/bgs/uses.svg'
