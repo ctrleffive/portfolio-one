@@ -112,26 +112,74 @@ module.exports = {
           },
           {
             emoji: `📷`,
-            name: `Sony α6400"`,
+            name: `Sony α6400`,
             description: ``,
             link: `https://www.sony.com/electronics/interchangeable-lens-cameras/ilce-6400`,
           },
           {
             emoji: `📱`,
-            name: `iPhone SE"`,
+            name: `iPhone SE`,
             description: ``,
             link: ``,
           },
           {
             emoji: `🎧`,
-            name: `AirPods"`,
+            name: `AirPods`,
             description: ``,
             link: `https://www.apple.com/airpods-2nd-generation/`,
           },
         ],
       },
       {
-        title: `Applications`,
+        title: `Software`,
+        description: ``,
+        items: [
+          {
+            emoji: `🔥`,
+            name: `VS Code`,
+            description: ``,
+            link: `https://code.visualstudio.com/`,
+          },
+          {
+            emoji: `🔥`,
+            name: `Figma`,
+            description: ``,
+            link: ``,
+          },
+          {
+            emoji: `🔥`,
+            name: `Lightroom`,
+            description: ``,
+            link: ``,
+          },
+          {
+            emoji: `🔥`,
+            name: `Photoshop`,
+            description: ``,
+            link: ``,
+          },
+          {
+            emoji: `🔥`,
+            name: `Google Chrom`,
+            description: ``,
+            link: ``,
+          },
+          {
+            emoji: `🔥`,
+            name: `Mozilla Firefox`,
+            description: ``,
+            link: ``,
+          },
+          {
+            emoji: `🔥`,
+            name: `Safari`,
+            description: ``,
+            link: ``,
+          },
+        ],
+      },
+      {
+        title: `Mobile Apps`,
         description: ``,
         items: [
           {
@@ -145,6 +193,18 @@ module.exports = {
             name: `Google Photos`,
             description: ``,
             link: ``,
+          },
+        ],
+      },
+      {
+        title: `Websites`,
+        description: ``,
+        items: [
+          {
+            emoji: `🔥`,
+            name: `VS Code`,
+            description: ``,
+            link: `https://code.visualstudio.com/`,
           },
         ],
       },
