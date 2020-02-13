@@ -11,7 +11,11 @@ import { StaticQuery, graphql } from 'gatsby'
 export default class AboutPage extends Component {
   render = () => {
     return (
-      <Wrap pageBg={<PageBg />} seoTitle="About Chandu | Chandu J S">
+      <Wrap
+        pageBg={<PageBg />}
+        seoTitle="About Chandu | Chandu J S"
+        seoDescription="I'm Chandu J S. I'm a full stack developer based in Trivandrum, India."
+        seoKeywords="about, ctrleffive, trivandrum, india, developer, full-stack">
         <div className="content-wrap">
           <div className="h1 font-weight-bold mb-5">
             Hi.
