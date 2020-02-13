@@ -12,7 +12,11 @@ import PageBg from '../assets/images/bgs/uses.svg'
 export default class UsesPage extends Component {
   render = () => {
     return (
-      <Wrap pageBg={<PageBg />} seoTitle="Uses | Chandu J S">
+      <Wrap
+        pageBg={<PageBg />}
+        seoTitle="Uses | Chandu J S"
+        seoDescription="Stuff I use in a daily basis."
+        seoKeywords="uses, ctrleffive">
         <div
           css={css`
             li {
@@ -100,7 +104,10 @@ export default class UsesPage extends Component {
                                 : 'inherit'};
                             `}>
                             {item.link ? (
-                              <OutboundLink href={item.link} target="_blank">
+                              <OutboundLink
+                                href={item.link}
+                                target="_blank"
+                                rel="noreferrer">
                                 {item.name}
                               </OutboundLink>
                             ) : (
