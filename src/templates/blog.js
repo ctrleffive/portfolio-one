@@ -11,7 +11,12 @@ import { Link } from 'gatsby'
 export default class BlogPage extends Component {
   render = () => {
     return (
-      <Wrap lightsOn pageBg={<PageBg />} seoTitle="Blog of Chandu | Chandu J S">
+      <Wrap
+        lightsOn
+        pageBg={<PageBg />}
+        seoTitle="Blog of Chandu | Chandu J S"
+        seoDescription="I write development articles in Dev.to"
+        seoKeywords="blog, ctrleffive, dev.to">
         <div className="content-wrap">
           <div className="h1 font-weight-bold mb-5">
             My <span className="high">Blog</span>

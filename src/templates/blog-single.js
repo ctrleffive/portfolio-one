@@ -14,7 +14,12 @@ export default class BlogSinglePage extends Component {
     const data = this.props.pageContext.blogData
 
     return (
-      <Wrap lightsOn isBlogPage seoTitle={`${data.title} | Blog | Chandu J S`}>
+      <Wrap
+        lightsOn
+        isBlogPage
+        seoTitle={`${data.title} | Blog | Chandu J S`}
+        seoDescription="I write development articles in Dev.to"
+        seoKeywords="blog, ctrleffive, dev.to">
         <div
           className="content-wrap"
           css={css`

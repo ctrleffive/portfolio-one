@@ -76,7 +76,15 @@ export default class Wrap extends Component {
               <Helmet
                 base="/"
                 defaultTitle={this.props.seoTitle || site.siteMetadata.title}
-              />
+                meta={[
+                  {
+                    name: `description`,
+                    content: this.props.seoDescription || ``,
+                  },
+                  { name: `keywords`, content: this.props.seoKeywords || `` },
+                ]}>
+                <html lang="en" />
+              </Helmet>
               <Global styles={styles} />
               <div
                 className="side-bar"
