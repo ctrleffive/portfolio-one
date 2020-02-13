@@ -1,3 +1,5 @@
+const Colors = require('./src/styles/colors.json')
+
 module.exports = {
   siteMetadata: {
     title: `Chandu J S 💻 Full Stack Developer`,
@@ -316,7 +318,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
-        color: `#000000`,
+        color: Colors.accent,
         showSpinner: false,
       },
     },
@@ -350,11 +352,20 @@ module.exports = {
         username: 'ctrleffive',
       },
     },
+    'gatsby-plugin-purgecss',
     {
-      resolve: 'gatsby-plugin-purgecss',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        purgeOnly: ['css/'],
+        name: 'Chandu J S',
+        short_name: 'Chandu',
+        start_url: '/',
+        background_color: Colors.brand,
+        theme_color: Colors.brand,
+        display: 'standalone',
+        icon: 'src/assets/images/icon.png',
+        crossOrigin: `use-credentials`,
       },
     },
+    'gatsby-plugin-offline',
   ],
 }
