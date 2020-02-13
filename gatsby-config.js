@@ -1,3 +1,5 @@
+const Colors = require('./src/styles/colors.json')
+
 module.exports = {
   siteMetadata: {
     title: `Chandu J S 💻 Full Stack Developer`,
@@ -350,19 +352,16 @@ module.exports = {
         username: 'ctrleffive',
       },
     },
-    {
-      resolve: 'gatsby-plugin-purgecss',
-      options: {
-        purgeOnly: ['css/'],
-      },
-    },
+    'gatsby-plugin-purgecss',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'Chandu J S',
         short_name: 'Chandu',
         start_url: '/',
-        display: 'browser',
+        background_color: Colors.brand,
+        theme_color: Colors.brand,
+        display: 'standalone',
         icon: 'src/assets/images/icon.png',
         crossOrigin: `use-credentials`,
       },
