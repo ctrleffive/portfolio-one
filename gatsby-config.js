@@ -356,5 +356,17 @@ module.exports = {
         purgeOnly: ['css/'],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Chandu J S',
+        short_name: 'Chandu',
+        start_url: '/',
+        display: 'browser',
+        icon: 'src/assets/images/icon.png',
+        crossOrigin: `use-credentials`,
+      },
+    },
+    'gatsby-plugin-offline',
   ],
 }
