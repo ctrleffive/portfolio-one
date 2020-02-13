@@ -66,7 +66,7 @@ export default class BlogSinglePage extends Component {
               dangerouslySetInnerHTML={{ __html: data.body_html }}
             />
           </div>
-          <OutboundLink href={data.url} target="_blank">
+          <OutboundLink href={data.url} target="_blank" rel="noreferrer">
             <img
               src={devIcon}
               alt="Dev.to"
