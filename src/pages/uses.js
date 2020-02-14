@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { StaticQuery, Link, graphql } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 import { css, jsx } from '@emotion/core'
 import Wrap from '../layouts/wrap'
 import { ColorsAdvanced, Colors } from '../styles/main'
@@ -103,12 +103,12 @@ export default class UsesPage extends Component {
                                 : 'inherit'};
                             `}>
                             {item.link ? (
-                              <Link
-                                to={item.link}
+                              <a
+                                href={item.link}
                                 target="_blank"
-                                rel="noreferrer">
+                                rel="noopener noreferrer">
                                 {item.name}
-                              </Link>
+                              </a>
                             ) : (
                               item.name
                             )}
