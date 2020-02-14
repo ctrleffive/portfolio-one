@@ -70,7 +70,7 @@ export default class WorksPage extends Component {
                       return allFile.edges.find(edge => {
                         return (
                           edge.node.relativeDirectory === item.fields.slug &&
-                          edge.node.name === 'thumbnail'
+                          edge.node.name === item.fields.slug
                         )
                       }).node
                     }
@@ -92,8 +92,7 @@ export default class WorksPage extends Component {
                               left: 0;
                               right: 0;
                               bottom: 0;
-                              background-color: ${findNode().colors
-                                .darkVibrant};
+                              background-color: ${findNode().colors.muted};
                               z-index: 1;
                               transition-duration: 0.2s;
                               opacity: 0;
