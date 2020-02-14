@@ -39,17 +39,16 @@ export default class UsesPage extends Component {
             css={css`
               line-height: 1.6;
             `}>
-            Curious to know what I use on a daily basis? Just check it out here.{' '}
-            <br />
-            My setup will change time to time. But I will try to keep this
-            up-to-date.
+            Curious to know what gear I use on a daily basis? <br />
+            My setup changes from time to time. Will try to keep this page
+            updated.
             <span
               css={css`
                 margin-left: 5px;
               `}
               role="img"
               aria-label="smile">
-              😃
+              😁
             </span>
           </div>
 
