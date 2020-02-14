@@ -31,15 +31,12 @@ export default class WorksPage extends Component {
             css={css`
               line-height: 1.6;
             `}>
-            Long tagline goes here.. help me.
-            <span
-              css={css`
-                margin-left: 5px;
-              `}
-              role="img"
-              aria-label="smile">
-              😃
-            </span>
+            I am a lover of anything and everything technology. <br />
+            But when I am not kicking{' '}
+            <span role="img" aria-label="ass">
+              🍑
+            </span>{' '}
+            with my keyboard, I make photos.
           </div>
           <div className="row">
             {data.map(item => {
