@@ -109,9 +109,9 @@ export default class Wrap extends Component {
                   <div className="mr-3">Chandu</div>
                   <div>J S</div>
                 </Link>
-                <Link
-                  to={`mailto:${site.siteMetadata.emails[emailIndex]}@chandujs.dev`}
-                  className="contact-button"></Link>
+                <a
+                  href={`mailto:${site.siteMetadata.emails[emailIndex]}@chandujs.dev`}
+                  className="contact-button"></a>
               </div>
               <div
                 className="side-bar text-right"
@@ -261,14 +261,14 @@ export default class Wrap extends Component {
                     }
                   `}>
                   {site.siteMetadata.social.map(item => (
-                    <Link
-                      to={item.url}
+                    <a
+                      href={item.url}
                       target="_blank"
                       className="social-icon"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       alt={item.service}>
                       {item.service}
-                    </Link>
+                    </a>
                   ))}
                 </div>
               </div>

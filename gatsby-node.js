@@ -63,8 +63,8 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
             frontmatter {
               title
               subTitle
-              date
               tags
+              url
             }
             fields {
               slug
