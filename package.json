@@ -16,7 +16,6 @@
     "gatsby": "^2.19.17",
     "gatsby-image": "^2.2.41",
     "gatsby-plugin-extract-image-colors": "^0.0.14",
-    "gatsby-plugin-google-analytics": "^2.1.35",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-manifest": "^2.2.41",
     "gatsby-plugin-nprogress": "^2.1.19",

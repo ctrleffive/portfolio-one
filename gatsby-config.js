@@ -330,13 +330,6 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'G-97JFNZHF9C',
-        head: true,
-      },
-    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
