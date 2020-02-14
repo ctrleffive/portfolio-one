@@ -1,4 +1,17 @@
 const fetch = require('node-fetch')
+const { createFilePath } = require(`gatsby-source-filesystem`)
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode, basePath: `works` })
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    })
+  }
+}
 
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
   const blogListResult = await graphql(`
@@ -39,6 +52,46 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
       path: `/blog/${blogData.slug}`,
       context: { blogData },
       component: require.resolve(`./src/templates/blog-single.js`),
+    })
+  }
+
+  const allData = await graphql(`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              title
+              subTitle
+              tags
+              url
+            }
+            fields {
+              slug
+            }
+            html
+          }
+        }
+      }
+    }
+  `)
+
+  const worksList = allData.data.allMarkdownRemark.edges.map(item => {
+    item.node.fields.slug = item.node.fields.slug.replace(/\\|\//g, '')
+    return item.node
+  })
+
+  createPage({
+    path: `/works`,
+    component: require.resolve(`./src/templates/works.js`),
+    context: { worksList },
+  })
+
+  for (const dataItem of worksList) {
+    createPage({
+      path: `/works/${dataItem.fields.slug}`,
+      context: { dataItem },
+      component: require.resolve(`./src/templates/work-single.js`),
     })
   }
 }

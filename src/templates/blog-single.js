@@ -3,7 +3,6 @@
 import { css, jsx } from '@emotion/core'
 import Wrap from '../layouts/wrap'
 import { Component } from 'react'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import codeStyles from '../styles/code.js'
 
@@ -20,25 +19,7 @@ export default class BlogSinglePage extends Component {
         seoTitle={`${data.title} | Blog | Chandu J S`}
         seoDescription="I write development articles in Dev.to"
         seoKeywords="blog, ctrleffive, dev.to">
-        <div
-          className="content-wrap"
-          css={css`
-            .blog-wrap {
-              padding: 3rem;
-              transition-duration: 0.3s;
-              max-width: 1000px;
-
-              @media screen and (max-width: 500px) {
-                margin-left: -3rem;
-                margin-right: -3rem;
-                border-radius: 0 !important;
-                width: calc(100% - -5rem);
-              }
-              @media print {
-                border: 1px solid;
-              }
-            }
-          `}>
+        <div className="content-wrap">
           <div className="mb-5">
             <div className="h1 font-weight-bold text-body">{data.title}</div>
             <div className="mb-3">
@@ -52,7 +33,7 @@ export default class BlogSinglePage extends Component {
               ))}
             </div>
           </div>
-          <div className="bg-white blog-wrap rounded-lg overflow-hidden">
+          <div className="bg-white pad-wrap rounded-lg overflow-hidden">
             <img
               css={css`
                 margin: -3rem -3rem 3rem;
@@ -66,7 +47,7 @@ export default class BlogSinglePage extends Component {
               dangerouslySetInnerHTML={{ __html: data.body_html }}
             />
           </div>
-          <OutboundLink href={data.url} target="_blank" rel="noreferrer">
+          <a href={data.url} target="_blank" rel="noopener noreferrer">
             <img
               src={devIcon}
               alt="Dev.to"
@@ -76,7 +57,7 @@ export default class BlogSinglePage extends Component {
                 margin-top: 1rem;
               `}
             />
-          </OutboundLink>
+          </a>
         </div>
       </Wrap>
     )
