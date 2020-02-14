@@ -354,6 +354,31 @@ module.exports = {
     },
     'gatsby-plugin-purgecss',
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `works`,
+        path: `${__dirname}/works`,
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'Chandu J S',
