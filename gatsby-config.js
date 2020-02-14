@@ -330,13 +330,6 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'G-97JFNZHF9C',
-        head: true,
-      },
-    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
@@ -353,6 +346,34 @@ module.exports = {
       },
     },
     'gatsby-plugin-purgecss',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `works`,
+        path: `${__dirname}/works`,
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1000,
+              quality: 100,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
+    },
+    'gatsby-plugin-extract-image-colors',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

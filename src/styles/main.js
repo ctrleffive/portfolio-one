@@ -55,6 +55,22 @@ export const GlobalStyles = css`
     }
   }
 
+  .pad-wrap {
+    padding: 3rem;
+    transition-duration: 0.3s;
+    max-width: 1000px;
+
+    @media screen and (max-width: 500px) {
+      margin-left: -3rem;
+      margin-right: -3rem;
+      border-radius: 0 !important;
+      width: calc(100% - -5rem);
+    }
+    @media print {
+      border: 1px solid;
+    }
+  }
+
   .blinker {
     animation: blink 1s infinite;
     margin-left: 0.2rem;

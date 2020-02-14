@@ -1,7 +1,6 @@
 /** @jsx jsx */
 
 import { StaticQuery, graphql } from 'gatsby'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { css, jsx } from '@emotion/core'
 import Wrap from '../layouts/wrap'
 import { ColorsAdvanced, Colors } from '../styles/main'
@@ -38,7 +37,7 @@ export default class UsesPage extends Component {
           <div
             className="h5 mb-4 pb-4"
             css={css`
-              line-height: 1.3;
+              line-height: 1.6;
             `}>
             Curious to know what I use on a daily basis? Just check it out here.{' '}
             <br />
@@ -104,12 +103,12 @@ export default class UsesPage extends Component {
                                 : 'inherit'};
                             `}>
                             {item.link ? (
-                              <OutboundLink
+                              <a
                                 href={item.link}
                                 target="_blank"
-                                rel="noreferrer">
+                                rel="noopener noreferrer">
                                 {item.name}
-                              </OutboundLink>
+                              </a>
                             ) : (
                               item.name
                             )}
