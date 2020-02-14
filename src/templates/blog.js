@@ -28,8 +28,9 @@ export default class BlogPage extends Component {
             css={css`
               line-height: 1.6;
             `}>
-            I post development articles in Dev.to. <br />
-            All of the post you will see here is fetched from dev.to website.
+            I like writing but as you can tell, I suck at posting consistently.
+            <br />
+            But since you're here now, I'll try to post more in here.
           </div>
           <div className="all-blogs">
             {this.props.pageContext.blogList.map((item, index) => (

@@ -1,4 +1,4 @@
-const Colors = require('./src/styles/colors.json')
+const Variables = require('./src/styles/variables.json')
 
 module.exports = {
   siteMetadata: {
@@ -318,7 +318,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
-        color: Colors.accent,
+        color: Variables.colors.accent,
         showSpinner: false,
       },
     },
@@ -335,7 +335,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Raleway\:400,700`],
+        fonts: [`${Variables.colors.font}\:400,700`],
         display: 'swap',
       },
     },
@@ -380,8 +380,8 @@ module.exports = {
         name: 'Chandu J S',
         short_name: 'Chandu',
         start_url: '/',
-        background_color: Colors.brand,
-        theme_color: Colors.brand,
+        background_color: Variables.colors.brand,
+        theme_color: Variables.colors.brand,
         display: 'standalone',
         icon: 'src/assets/images/icon.png',
         crossOrigin: `use-credentials`,
