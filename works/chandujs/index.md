@@ -5,6 +5,6 @@ tags: ['design', 'gatsby', 'react']
 url: http://chandujs.dev/
 ---
 
-![thumbnail](thumbnail.jpg)
+![Chandu J S](chandujs.jpg)
 
 # My Website!
