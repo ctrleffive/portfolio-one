@@ -37,7 +37,7 @@ export default class UsesPage extends Component {
           <div
             className="h5 mb-4 pb-4"
             css={css`
-              line-height: 1.3;
+              line-height: 1.6;
             `}>
             Curious to know what I use on a daily basis? Just check it out here.{' '}
             <br />

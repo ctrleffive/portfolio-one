@@ -18,10 +18,18 @@ export default class BlogPage extends Component {
         seoDescription="I write development articles in Dev.to"
         seoKeywords="blog, ctrleffive, dev.to">
         <div className="content-wrap">
-          <div className="h1 font-weight-bold mb-5">
+          <div className="h1 font-weight-bold mb-3">
             My <span className="high">Blog</span>
             <span className="blinker">.</span>
             <br />
+          </div>
+          <div
+            className="h5 mb-4 pb-4"
+            css={css`
+              line-height: 1.6;
+            `}>
+            I post development articles in Dev.to. <br />
+            All of the post you will see here is fetched from dev.to website.
           </div>
           <div className="all-blogs">
             {this.props.pageContext.blogList.map((item, index) => (

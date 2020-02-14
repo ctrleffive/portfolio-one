@@ -21,10 +21,25 @@ export default class WorksPage extends Component {
         seoDescription="My works"
         seoKeywords="works, ctrleffive, portfolio">
         <div className="content-wrap">
-          <div className="h1 font-weight-bold mb-5">
+          <div className="h1 font-weight-bold mb-3">
             My <span className="high">Works</span>
             <span className="blinker">.</span>
             <br />
+          </div>
+          <div
+            className="h5 mb-4 pb-4"
+            css={css`
+              line-height: 1.6;
+            `}>
+            Long tagline goes here.. help me.
+            <span
+              css={css`
+                margin-left: 5px;
+              `}
+              role="img"
+              aria-label="smile">
+              😃
+            </span>
           </div>
           <div className="row">
             {data.map(item => {
