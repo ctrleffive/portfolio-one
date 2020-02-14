@@ -35,15 +35,11 @@ export default class WorksPage extends Component {
                       allFile(filter: { extension: { eq: "jpg" } }) {
                         edges {
                           node {
+                            name
+                            relativeDirectory
                             childImageSharp {
                               fixed(width: 500, height: 300) {
-                                originalName
                                 ...GatsbyImageSharpFixed
-                              }
-                              parent {
-                                ... on File {
-                                  relativeDirectory
-                                }
                               }
                             }
                             colors {
@@ -56,17 +52,18 @@ export default class WorksPage extends Component {
                   `}
                   render={({ allFile }) => {
                     const findNode = () => {
-                      return allFile.edges.find(
-                        imageData =>
-                          imageData.node.childImageSharp.parent
-                            .relativeDirectory === item.fields.slug
-                      ).node
+                      return allFile.edges.find(edge => {
+                        return (
+                          edge.node.relativeDirectory === item.fields.slug &&
+                          edge.node.name === 'thumbnail'
+                        )
+                      }).node
                     }
                     return (
                       <div className="col-xl-4 col-md-6 mb-4">
                         <Link
                           to={`/works/${item.fields.slug}`}
-                          className="overflow-hidden"
+                          className="overflow-hidden rounded-lg"
                           css={css`
                             display: inline-block;
                             position: relative;
