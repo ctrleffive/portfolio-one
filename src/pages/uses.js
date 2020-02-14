@@ -1,7 +1,6 @@
 /** @jsx jsx */
 
-import { StaticQuery, graphql } from 'gatsby'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { StaticQuery, Link, graphql } from 'gatsby'
 import { css, jsx } from '@emotion/core'
 import Wrap from '../layouts/wrap'
 import { ColorsAdvanced, Colors } from '../styles/main'
@@ -104,12 +103,12 @@ export default class UsesPage extends Component {
                                 : 'inherit'};
                             `}>
                             {item.link ? (
-                              <OutboundLink
-                                href={item.link}
+                              <Link
+                                to={item.link}
                                 target="_blank"
                                 rel="noreferrer">
                                 {item.name}
-                              </OutboundLink>
+                              </Link>
                             ) : (
                               item.name
                             )}

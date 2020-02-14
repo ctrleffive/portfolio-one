@@ -3,11 +3,11 @@
 import { css, jsx } from '@emotion/core'
 import Wrap from '../layouts/wrap'
 import { Component } from 'react'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import codeStyles from '../styles/code.js'
 
 import devIcon from '../assets/images/icons/dev.png'
+import { Link } from 'gatsby'
 
 export default class BlogSinglePage extends Component {
   render = () => {
@@ -66,7 +66,7 @@ export default class BlogSinglePage extends Component {
               dangerouslySetInnerHTML={{ __html: data.body_html }}
             />
           </div>
-          <OutboundLink href={data.url} target="_blank" rel="noreferrer">
+          <Link to={data.url} target="_blank" rel="noreferrer">
             <img
               src={devIcon}
               alt="Dev.to"
@@ -76,7 +76,7 @@ export default class BlogSinglePage extends Component {
                 margin-top: 1rem;
               `}
             />
-          </OutboundLink>
+          </Link>
         </div>
       </Wrap>
     )
