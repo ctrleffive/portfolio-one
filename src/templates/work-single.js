@@ -64,6 +64,10 @@ export default class WorkSinglePage extends Component {
                 margin-top: -3rem;
                 margin-bottom: 2rem;
                 width: 1000px;
+
+                @media screen and (max-width: 1000px) {
+                  width: calc(100% + 6rem);
+                }
               }
               > p:last-child .gatsby-resp-image-wrapper {
                 margin-bottom: -4rem;
