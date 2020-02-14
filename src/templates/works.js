@@ -26,7 +26,7 @@ export default class WorksPage extends Component {
             <span className="blinker">.</span>
             <br />
           </div>
-          <div className="row no-gutters">
+          <div className="row">
             {data.map(item => {
               return (
                 <StaticQuery
@@ -39,6 +39,11 @@ export default class WorksPage extends Component {
                               fixed(width: 500, height: 300) {
                                 originalName
                                 ...GatsbyImageSharpFixed
+                              }
+                              parent {
+                                ... on File {
+                                  relativeDirectory
+                                }
                               }
                             }
                             colors {
@@ -53,12 +58,12 @@ export default class WorksPage extends Component {
                     const findNode = () => {
                       return allFile.edges.find(
                         imageData =>
-                          imageData.node.childImageSharp.fixed.originalName ===
-                          `${item.fields.slug}.jpg`
+                          imageData.node.childImageSharp.parent
+                            .relativeDirectory === item.fields.slug
                       ).node
                     }
                     return (
-                      <div className="col-xl-4 col-md-6">
+                      <div className="col-xl-4 col-md-6 mb-4">
                         <Link
                           to={`/works/${item.fields.slug}`}
                           className="overflow-hidden"
@@ -68,7 +73,6 @@ export default class WorksPage extends Component {
                             z-index: 0;
                             height: 300px;
                             width: 100%;
-                            margin-bottom: -7px;
                             &:before {
                               content: '';
                               position: absolute;
@@ -76,7 +80,8 @@ export default class WorksPage extends Component {
                               left: 0;
                               right: 0;
                               bottom: 0;
-                              background-color: ${findNode().colors.vibrant};
+                              background-color: ${findNode().colors
+                                .darkVibrant};
                               z-index: 1;
                               transition-duration: 0.2s;
                               opacity: 0;
