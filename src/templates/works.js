@@ -2,10 +2,9 @@
 
 import { css, jsx } from '@emotion/core'
 import Wrap from '../layouts/wrap'
-import { Link } from 'gatsby'
+import { StaticQuery, Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import { Component } from 'react'
-
-import { Colors } from '../styles/main'
 
 import PageBg from '../assets/images/bgs/works.svg'
 
@@ -27,100 +26,122 @@ export default class WorksPage extends Component {
             <span className="blinker">.</span>
             <br />
           </div>
-          <div className="all-works">
-            {data.map(item => (
-              <Link
-                to={`/works${item.fields.slug}`}
-                className="overflow-hidden"
-                css={css`
-                  padding: 2rem;
-                  display: inline-block;
-                  position: relative;
-                  z-index: 0;
-                  background-color: ${Colors.brand};
-                  &:before,
-                  &:after {
-                    content: '';
-                    position: absolute;
-                    background-size: cover;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                  }
-                  &:before {
-                    background-image: url(${item.thumbnail.fixed.base64});
-                    left: -1rem;
-                    right: -1rem;
-                    top: -1rem;
-                    bottom: -1rem;
-                    filter: blur(1rem);
-                    z-index: -1;
-                  }
-                  &:after {
-                    background-image: url(${item.thumbnail.fluid.src});
-                    left: 0;
-                    right: 0;
-                    top: 0;
-                    bottom: 0;
-                    z-index: 0;
-                  }
-                  &:hover {
-                    .item-details {
-                      bottom: 1.6rem;
+          <div className="row no-gutters">
+            {data.map(item => {
+              return (
+                <StaticQuery
+                  query={graphql`
+                    query {
+                      allFile(filter: { extension: { eq: "jpg" } }) {
+                        edges {
+                          node {
+                            childImageSharp {
+                              fixed(width: 500, height: 300) {
+                                originalName
+                                ...GatsbyImageSharpFixed
+                              }
+                            }
+                            colors {
+                              ...GatsbyImageColors
+                            }
+                          }
+                        }
+                      }
                     }
-                    .item-tagline {
-                      opacity: 1;
-                    }
-                    &:after {
-                      opacity: 0;
-                    }
-                    &:before {
-                      opacity: 0.5;
-                    }
-                  }
-                `}>
-                <div
-                  css={css`
-                    position: absolute;
-                    z-index: 1;
-                    mix-blend-mode: color-dodge;
-                    bottom: -1rem;
-                    left: 2rem;
-                    transition-duration: 0.2s;
                   `}
-                  className="item-details">
-                  <div
-                    css={css`
-                      font-weight: bold;
-                      font-size: 2rem;
-                      color: #969696;
-                      margin-bottom: 0rem;
-                    `}>
-                    {item.frontmatter.title}
-                  </div>
-                  <div>
-                    {['design', 'photo', 'code'].map(tag => (
-                      <span
-                        css={css`
-                          color: #fff;
-                          margin-right: 2rem;
-                        `}>
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <div
-                    css={css`
-                      color: rgba(255, 255, 255, 0.7);
-                      margin-top: 1rem;
-                      transition-duration: 0.2s;
-                      opacity: 0;
-                    `}
-                    className="item-tagline">
-                    Tagline goes here..
-                  </div>
-                </div>
-              </Link>
-            ))}
+                  render={({ allFile }) => {
+                    const findNode = () => {
+                      return allFile.edges.find(
+                        imageData =>
+                          imageData.node.childImageSharp.fixed.originalName ===
+                          `${item.fields.slug}.jpg`
+                      ).node
+                    }
+                    return (
+                      <div className="col-xl-4 col-md-6">
+                        <Link
+                          to={`/works/${item.fields.slug}`}
+                          className="overflow-hidden"
+                          css={css`
+                            display: inline-block;
+                            position: relative;
+                            z-index: 0;
+                            height: 300px;
+                            width: 100%;
+                            margin-bottom: -7px;
+                            &:before {
+                              content: '';
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                              right: 0;
+                              bottom: 0;
+                              background-color: ${findNode().colors.vibrant};
+                              z-index: 1;
+                              transition-duration: 0.2s;
+                              opacity: 0;
+                            }
+                            &:hover {
+                              &:before {
+                                opacity: 0.95;
+                              }
+                              .item-details {
+                                bottom: 1.6rem;
+                              }
+                              .item-tagline {
+                                opacity: 1;
+                              }
+                            }
+                          `}>
+                          <Img fixed={findNode().childImageSharp.fixed} />
+                          <div
+                            css={css`
+                              position: absolute;
+                              z-index: 1;
+                              mix-blend-mode: color-dodge;
+                              bottom: -1rem;
+                              left: 2rem;
+                              transition-duration: 0.2s;
+                            `}
+                            className="item-details">
+                            <div
+                              css={css`
+                                font-weight: bold;
+                                font-size: 2rem;
+                                color: #969696;
+                                margin-bottom: 0rem;
+                              `}>
+                              {item.frontmatter.title}
+                            </div>
+                            <div>
+                              {item.frontmatter.tags.map(tag => (
+                                <span
+                                  css={css`
+                                    color: #fff;
+                                    margin-right: 1.5rem;
+                                  `}>
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                            <div
+                              css={css`
+                                color: rgba(255, 255, 255, 0.7);
+                                margin-top: 1rem;
+                                transition-duration: 0.2s;
+                                opacity: 0;
+                              `}
+                              className="item-tagline">
+                              {item.frontmatter.subTitle}
+                            </div>
+                          </div>
+                        </Link>
+                      </div>
+                    )
+                  }}
+                />
+              )
+            })}
           </div>
         </div>
       </Wrap>

@@ -378,6 +378,7 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-extract-image-colors',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
