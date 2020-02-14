@@ -335,7 +335,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`${Variables.colors.font}\:400,700`],
+        fonts: [`${Variables.font}\:400,700`],
         display: 'swap',
       },
     },
