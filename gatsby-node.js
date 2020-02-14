@@ -62,8 +62,9 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
           node {
             frontmatter {
               title
+              subTitle
               date
-              categoryName
+              tags
             }
             fields {
               slug
@@ -75,28 +76,10 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     }
   `)
 
-  const worksList = []
-  for (const item of allData.data.allMarkdownRemark.edges) {
-    const data = item.node
-    const imagePath = item.node.fields.slug.substr(1)
-    const imageData = await graphql(`
-      query {
-        file(relativePath: { eq: "${imagePath}thumb.jpg" }) {
-          childImageSharp {
-            fixed(width: 5, height: 5) {
-              base64
-            }
-            fluid(maxHeight: 500, maxWidth: 500, quality: 100) {
-              aspectRatio
-              src
-            }
-          }
-        }
-      }
-    `)
-    data.thumbnail = imageData.data.file.childImageSharp
-    worksList.push(data)
-  }
+  const worksList = allData.data.allMarkdownRemark.edges.map(item => {
+    item.node.fields.slug = item.node.fields.slug.replace(/\\|\//g, '')
+    return item.node
+  })
 
   createPage({
     path: `/works`,
@@ -106,7 +89,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 
   for (const dataItem of worksList) {
     createPage({
-      path: `/works${dataItem.fields.slug}`,
+      path: `/works/${dataItem.fields.slug}`,
       context: { dataItem },
       component: require.resolve(`./src/templates/work-single.js`),
     })
