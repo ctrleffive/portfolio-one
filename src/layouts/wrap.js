@@ -183,7 +183,7 @@ export default class Wrap extends Component {
                     }
                   `}>
                   <Link
-                    className={this.props.isWorkPage ? 'active' : ''}
+                    className={this.props.isWorksPage ? 'active' : ''}
                     activeClassName="active"
                     to="/works">
                     Works
