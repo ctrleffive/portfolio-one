@@ -1,8 +1,8 @@
 import { css } from '@emotion/core'
 import { darken, lighten } from 'polished'
-import * as colorsData from './colors.json'
+import * as variables from './variables.json'
 
-export const Colors = colorsData.default
+export const Colors = variables.default.colors
 
 const BrandDarken = darken(0.3, Colors.brand)
 const MainLightsOn = `#ececec`
@@ -15,7 +15,7 @@ export const ColorsAdvanced = {
   accentLightsOn: Colors.brand,
 }
 export const Fonts = {
-  body: `Raleway`,
+  body: variables.default.font,
 }
 
 export const GlobalStyles = css`
