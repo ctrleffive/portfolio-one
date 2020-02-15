@@ -166,6 +166,12 @@ module.exports = {
             description: ``,
             link: `https://github.com/ohmyzsh/ohmyzsh`,
           },
+          {
+            emoji: `📦`,
+            name: `Yarn`,
+            description: ``,
+            link: `https://yarnpkg.com/`,
+          },
         ],
       },
       {

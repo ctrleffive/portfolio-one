@@ -125,7 +125,7 @@ export const GlobalStyles = css`
   .content-wrap {
     position: absolute;
     margin: 8rem 12rem 0;
-    padding-bottom: 8rem;
+    padding-bottom: 3rem;
     max-width: calc(100% - 16rem);
 
     @media screen and (max-width: 1000px) {
