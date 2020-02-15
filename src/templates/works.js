@@ -38,7 +38,14 @@ export default class WorksPage extends Component {
             </span>{' '}
             with my keyboard, I make photos.
           </div>
-          <div className="row no-gutters">
+          <div
+            className="row no-gutters"
+            css={css`
+              @media screen and (max-width: 766px) {
+                margin-left: -2rem;
+                margin-right: -2rem;
+              }
+            `}>
             {data.map(item => {
               return (
                 <StaticQuery
@@ -122,7 +129,7 @@ export default class WorksPage extends Component {
                               position: absolute;
                               z-index: 1;
                               mix-blend-mode: difference;
-                              bottom: -3rem;
+                              bottom: -3.38rem;
                               right: 0;
                               left: 0;
                               opacity: 0;
@@ -131,6 +138,10 @@ export default class WorksPage extends Component {
                               padding-bottom: 2.2rem;
                               transition-duration: 0.2s;
                               color: ${findNode().colors.muted};
+
+                              @media screen and (max-width: 766px) {
+                                opacity: 1;
+                              }
                             `}
                             className="item-details">
                             <div
