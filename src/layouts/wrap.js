@@ -64,7 +64,7 @@ export default class Wrap extends Component {
                   justify-content: space-between;
                   z-index: 2;
 
-                  @media screen and (max-width: 500px) {
+                  @media screen and (max-width: 766px) {
                     position: initial;
                     display: block;
                     width: 100%;
@@ -100,7 +100,7 @@ export default class Wrap extends Component {
                     position: relative;
                     top: -0.6rem;
                     > div {
-                      @media screen and (max-width: 500px) {
+                      @media screen and (max-width: 766px) {
                         display: inline;
                         white-space: nowrap;
                       }
@@ -118,7 +118,7 @@ export default class Wrap extends Component {
                 css={css`
                   right: 0;
                   width: 8rem;
-                  @media screen and (max-width: 500px) {
+                  @media screen and (max-width: 766px) {
                     position: initial;
                     top: 0;
                     right: 0;
@@ -174,7 +174,7 @@ export default class Wrap extends Component {
                           transform: translateY(0rem);
                         }
                       }
-                      @media screen and (max-width: 500px) {
+                      @media screen and (max-width: 766px) {
                         margin-right: 2rem;
                         margin-bottom: 1rem;
                         margin-top: 0rem;
@@ -205,7 +205,7 @@ export default class Wrap extends Component {
                     right: 2rem;
                     bottom: 2rem;
                     position: absolute;
-                    @media screen and (max-width: 500px) {
+                    @media screen and (max-width: 766px) {
                       position: absolute;
                       left: 0;
                       right: 0;
@@ -227,7 +227,7 @@ export default class Wrap extends Component {
                       opacity: 0.5;
                       transition-duration: 0.2s;
                       font-size: 0;
-                      @media screen and (max-width: 500px) {
+                      @media screen and (max-width: 766px) {
                         display: inline-block;
                       }
                       .lights-on & {
@@ -306,7 +306,7 @@ export default class Wrap extends Component {
                     @media screen and (max-width: 1000px) {
                       transform: translate(-50%, -50%);
                     }
-                    @media screen and (max-width: 500px) {
+                    @media screen and (max-width: 766px) {
                       transform: translate(-25%, -50%);
                     }
                   `}
