@@ -38,7 +38,7 @@ export default class WorksPage extends Component {
             </span>{' '}
             with my keyboard, I make photos.
           </div>
-          <div className="row">
+          <div className="row no-gutters">
             {data.map(item => {
               return (
                 <StaticQuery
@@ -72,10 +72,14 @@ export default class WorksPage extends Component {
                       }).node
                     }
                     return (
-                      <div className="col-xl-4 col-md-6 mb-4">
+                      <div
+                        className="col-xl-4 col-md-6"
+                        css={css`
+                          margin-bottom: -7px;
+                        `}>
                         <Link
                           to={`/works/${item.fields.slug}`}
-                          className="overflow-hidden rounded-lg"
+                          className="overflow-hidden"
                           css={css`
                             display: inline-block;
                             position: relative;
@@ -89,7 +93,8 @@ export default class WorksPage extends Component {
                               left: 0;
                               right: 0;
                               bottom: 0;
-                              background-color: ${findNode().colors.muted};
+                              background-color: ${findNode().colors
+                                .lightVibrant};
                               z-index: 1;
                               transition-duration: 0.2s;
                               opacity: 0;
@@ -99,10 +104,8 @@ export default class WorksPage extends Component {
                                 opacity: 0.95;
                               }
                               .item-details {
-                                bottom: -0.6rem;
-                              }
-                              .item-tagline {
                                 opacity: 1;
+                                bottom: -0.6rem;
                               }
                             }
                             .gatsby-image-wrapper {
@@ -118,19 +121,16 @@ export default class WorksPage extends Component {
                             css={css`
                               position: absolute;
                               z-index: 1;
-                              mix-blend-mode: overlay;
+                              mix-blend-mode: difference;
                               bottom: -3rem;
                               right: 0;
                               left: 0;
+                              opacity: 0;
                               padding-top: 10rem;
                               padding-left: 2rem;
                               padding-bottom: 2.2rem;
                               transition-duration: 0.2s;
-                              color: #fff;
-                              background: linear-gradient(
-                                transparent,
-                                rgba(0, 0, 0, 0.5)
-                              );
+                              color: ${findNode().colors.muted};
                             `}
                             className="item-details">
                             <div
@@ -154,8 +154,6 @@ export default class WorksPage extends Component {
                             <div
                               css={css`
                                 margin-top: 1rem;
-                                transition-duration: 0.2s;
-                                opacity: 0;
                               `}
                               className="item-tagline">
                               {item.frontmatter.subTitle}
