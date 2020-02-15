@@ -50,7 +50,7 @@ export default class WorksPage extends Component {
                             name
                             relativeDirectory
                             childImageSharp {
-                              fixed(width: 500, height: 300) {
+                              fixed(width: 500, height: 300, quality: 100) {
                                 ...GatsbyImageSharpFixed
                               }
                             }
