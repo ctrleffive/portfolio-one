@@ -5,8 +5,10 @@ tags: ['design', 'angularjs', 'app']
 url: http://www.purefm.sc/
 ---
 
-![PureFM](purefm.jpg)
+![PureFM Home](purefm-home.jpg)
 
 PureFM is a radio station in Seychelles.
 
-NOTE: PAGE UNDER CONSTRUCTION
+# Look, I made a cock!
+
+![Shows Clock](show-clock.jpg)
