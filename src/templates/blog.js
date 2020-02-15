@@ -38,7 +38,8 @@ export default class BlogPage extends Component {
                 to={`/blog/${item.slug}`}
                 css={css`
                   padding: 2rem;
-                  display: block;
+                  display: inline-block;
+                  max-width: 100%;
                 `}
                 className="mb-4 rounded-lg bg-white overflow-hidden">
                 <div
@@ -52,7 +53,13 @@ export default class BlogPage extends Component {
                 </div>
                 <div className="item-tags text-lowercase mt-2">
                   {item.tags.map(tag => (
-                    <span className="mr-3">#{tag}</span>
+                    <span
+                      css={css`
+                        display: inline-block;
+                      `}
+                      className="mr-3">
+                      #{tag}
+                    </span>
                   ))}
                 </div>
               </Link>

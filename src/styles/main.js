@@ -60,7 +60,7 @@ export const GlobalStyles = css`
     transition-duration: 0.3s;
     max-width: 1000px;
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 766px) {
       margin-left: -3rem;
       margin-right: -3rem;
       border-radius: 0 !important;
@@ -133,7 +133,7 @@ export const GlobalStyles = css`
       margin-right: 8.5rem;
       width: calc(100% - 17rem);
     }
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 766px) {
       margin-left: 2rem;
       margin-right: 2rem;
       width: calc(100% - 4rem);
@@ -185,7 +185,7 @@ export const GlobalStyles = css`
       transform: translate(-50%, -50%) rotate(45deg);
       margin-top: -5px;
     }
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 766px) {
       display: none;
     }
   }
@@ -226,7 +226,7 @@ export const GlobalStyles = css`
       @media screen and (max-width: 1000px) {
         transform: translate(-50%, -50%);
       }
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 766px) {
         transform: translate(-25%, -50%);
       }
     }
