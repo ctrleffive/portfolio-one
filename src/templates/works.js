@@ -105,6 +105,10 @@ export default class WorksPage extends Component {
                               z-index: 1;
                               transition-duration: 0.2s;
                               opacity: 0;
+
+                              @media screen and (max-width: 766px) {
+                                opacity: 0.9;
+                              }
                             }
                             &:hover {
                               &:before {
@@ -129,7 +133,7 @@ export default class WorksPage extends Component {
                               position: absolute;
                               z-index: 1;
                               mix-blend-mode: difference;
-                              bottom: -3.38rem;
+                              bottom: -3rem;
                               right: 0;
                               left: 0;
                               opacity: 0;
@@ -141,6 +145,7 @@ export default class WorksPage extends Component {
 
                               @media screen and (max-width: 766px) {
                                 opacity: 1;
+                                bottom: -0.6rem;
                               }
                             `}
                             className="item-details">
