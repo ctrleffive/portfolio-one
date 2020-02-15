@@ -31,7 +31,7 @@ export default class IndexPage extends Component {
             @media screen and (max-width: 1000px) {
               left: 50%;
             }
-            @media screen and (max-width: 500px) {
+            @media screen and (max-width: 766px) {
               left: initial;
               width: initial;
               top: initial;

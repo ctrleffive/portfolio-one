@@ -48,7 +48,7 @@ export default class AboutPage extends Component {
                 @media screen and (max-width: 1000px) {
                   width: 75%;
                 }
-                @media screen and (max-width: 500px) {
+                @media screen and (max-width: 766px) {
                   width: 100%;
                 }
 
