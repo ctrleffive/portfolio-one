@@ -3,7 +3,7 @@
 import { css, jsx } from '@emotion/core'
 import Wrap from '../layouts/wrap'
 import { StaticQuery, Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import Img from 'gatsby-image/withIEPolyfill'
 import { Component } from 'react'
 
 import PageBg from '../assets/images/bgs/works.svg'
@@ -105,8 +105,15 @@ export default class WorksPage extends Component {
                                 opacity: 1;
                               }
                             }
+                            .gatsby-image-wrapper {
+                              width: 100% !important;
+                            }
                           `}>
-                          <Img fixed={findNode().childImageSharp.fixed} />
+                          <Img
+                            fixed={findNode().childImageSharp.fixed}
+                            objectFit="cover"
+                            objectPosition="50% 50%"
+                          />
                           <div
                             css={css`
                               position: absolute;
