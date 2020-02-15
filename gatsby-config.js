@@ -2,7 +2,7 @@ const Variables = require('./src/styles/variables.json')
 
 module.exports = {
   siteMetadata: {
-    title: `Chandu J S 💻 Full Stack Developer`,
+    title: `💻 Chandu J S | Full Stack Developer`,
     emails: [
       'hello',
       'hola',

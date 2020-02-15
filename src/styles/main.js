@@ -60,7 +60,7 @@ export const GlobalStyles = css`
     transition-duration: 0.3s;
     max-width: 1000px;
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 766px) {
       margin-left: -3rem;
       margin-right: -3rem;
       border-radius: 0 !important;
@@ -124,24 +124,19 @@ export const GlobalStyles = css`
 
   .content-wrap {
     position: absolute;
-    margin: 8rem 12rem 0;
+    margin: 8rem 10rem 0;
     padding-bottom: 3rem;
-    max-width: calc(100% - 16rem);
+    width: calc(100% - 20rem);
 
     @media screen and (max-width: 1000px) {
-      margin-left: 6.5rem;
-      margin-right: 6.5rem;
-      max-width: calc(100% - 13rem);
+      margin-left: 8.5rem;
+      margin-right: 8.5rem;
+      width: calc(100% - 17rem);
     }
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 766px) {
       margin-left: 2rem;
       margin-right: 2rem;
-      max-width: calc(100% - 4rem);
-    }
-    @media print {
-      margin: 0;
-      padding: 2rem;
-      position: initial;
+      width: calc(100% - 4rem);
     }
   }
 
@@ -190,7 +185,7 @@ export const GlobalStyles = css`
       transform: translate(-50%, -50%) rotate(45deg);
       margin-top: -5px;
     }
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 766px) {
       display: none;
     }
   }
@@ -216,10 +211,6 @@ export const GlobalStyles = css`
     }
   }
 
-  .ngxMasonryItem {
-    transition-property: opacity !important;
-  }
-
   .page-bg {
     svg {
       content: '';
@@ -235,7 +226,7 @@ export const GlobalStyles = css`
       @media screen and (max-width: 1000px) {
         transform: translate(-50%, -50%);
       }
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 766px) {
         transform: translate(-25%, -50%);
       }
     }
