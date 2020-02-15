@@ -33,7 +33,7 @@ export default css`
   }
 
   .highlight {
-    background: #212529;
+    background: linear-gradient(#373737, #212529);
     color: #f8f8f2;
     border-radius: 5px;
   }

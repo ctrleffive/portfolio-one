@@ -99,7 +99,7 @@ export default class WorksPage extends Component {
                                 opacity: 0.95;
                               }
                               .item-details {
-                                bottom: 1.6rem;
+                                bottom: -0.6rem;
                               }
                               .item-tagline {
                                 opacity: 1;
@@ -118,17 +118,25 @@ export default class WorksPage extends Component {
                             css={css`
                               position: absolute;
                               z-index: 1;
-                              mix-blend-mode: color-dodge;
-                              bottom: -1rem;
-                              left: 2rem;
+                              mix-blend-mode: overlay;
+                              bottom: -3rem;
+                              right: 0;
+                              left: 0;
+                              padding-top: 10rem;
+                              padding-left: 2rem;
+                              padding-bottom: 2.2rem;
                               transition-duration: 0.2s;
+                              color: #fff;
+                              background: linear-gradient(
+                                transparent,
+                                rgba(0, 0, 0, 0.5)
+                              );
                             `}
                             className="item-details">
                             <div
                               css={css`
                                 font-weight: bold;
                                 font-size: 2rem;
-                                color: #969696;
                                 margin-bottom: 0rem;
                               `}>
                               {item.frontmatter.title}
@@ -137,7 +145,6 @@ export default class WorksPage extends Component {
                               {item.frontmatter.tags.map(tag => (
                                 <span
                                   css={css`
-                                    color: #fff;
                                     margin-right: 1.5rem;
                                   `}>
                                   {tag}
@@ -146,7 +153,6 @@ export default class WorksPage extends Component {
                             </div>
                             <div
                               css={css`
-                                color: rgba(255, 255, 255, 0.7);
                                 margin-top: 1rem;
                                 transition-duration: 0.2s;
                                 opacity: 0;
