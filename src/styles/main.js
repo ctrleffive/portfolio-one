@@ -124,24 +124,19 @@ export const GlobalStyles = css`
 
   .content-wrap {
     position: absolute;
-    margin: 8rem 12rem 0;
+    margin: 8rem 10rem 0;
     padding-bottom: 3rem;
-    max-width: calc(100% - 16rem);
+    width: calc(100% - 20rem);
 
     @media screen and (max-width: 1000px) {
-      margin-left: 6.5rem;
-      margin-right: 6.5rem;
-      max-width: calc(100% - 13rem);
+      margin-left: 8.5rem;
+      margin-right: 8.5rem;
+      width: calc(100% - 17rem);
     }
     @media screen and (max-width: 500px) {
       margin-left: 2rem;
       margin-right: 2rem;
-      max-width: calc(100% - 4rem);
-    }
-    @media print {
-      margin: 0;
-      padding: 2rem;
-      position: initial;
+      width: calc(100% - 4rem);
     }
   }
 
@@ -214,10 +209,6 @@ export const GlobalStyles = css`
     p {
       font-size: 1.2rem;
     }
-  }
-
-  .ngxMasonryItem {
-    transition-property: opacity !important;
   }
 
   .page-bg {
