@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: ctrleffive/ctrleffive.github.io
+
+publish_mode: editorial_workflow
+
+media_folder: content/uploads
+public_folder: content/uploads
+
+collections:
+  - name: works
+    label: Works
+    folder: content/works
+    create: true
+    fields:
+      - { name: thumbnail, label: Thumbnail, widget: image }
+      - { name: title, label: Title }
+      - { name: subTitle, label: Sub Title }
+      - { name: tags, label: Tags, widget: list }
+      - { name: body, label: Body, widget: markdown }
