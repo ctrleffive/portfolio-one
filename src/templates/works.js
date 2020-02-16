@@ -72,10 +72,7 @@ export default class WorksPage extends Component {
                   render={({ allFile }) => {
                     const findNode = () => {
                       return allFile.edges.find(edge => {
-                        return (
-                          edge.node.relativeDirectory === item.fields.slug &&
-                          edge.node.name === item.fields.slug
-                        )
+                        return edge.node.name === item.fields.slug
                       }).node
                     }
                     return (
