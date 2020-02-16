@@ -75,28 +75,32 @@ export default class WorkSinglePage extends Component {
             `}
             className="bg-white pad-wrap rounded-lg overflow-hidden"
             dangerouslySetInnerHTML={{ __html: data.html }}></div>
-          <a
-            href={data.frontmatter.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            alt={data.frontmatter.title}
-            css={css`
-              padding: 1rem 2rem;
-              border-radius: 5px;
-              background-color: ${Colors.accent};
-              color: #212529;
-              font-weight: bold;
-              text-transform: uppercase;
-              margin-top: 3rem;
-              display: inline-block;
-              transition-duration: 0.2s;
-              box-shadow: transparent 0 0 0px;
-              &:hover {
-                box-shadow: rgba(0, 0, 0, 0.3) 0 0 0 2px inset;
-              }
-            `}>
-            GoTo Project
-          </a>
+          {data.frontmatter.url ? (
+            <a
+              href={data.frontmatter.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              alt={data.frontmatter.title}
+              css={css`
+                padding: 1rem 2rem;
+                border-radius: 5px;
+                background-color: ${Colors.accent};
+                color: #212529;
+                font-weight: bold;
+                text-transform: uppercase;
+                margin-top: 3rem;
+                display: inline-block;
+                transition-duration: 0.2s;
+                box-shadow: transparent 0 0 0px;
+                &:hover {
+                  box-shadow: rgba(0, 0, 0, 0.3) 0 0 0 2px inset;
+                }
+              `}>
+              GoTo Project
+            </a>
+          ) : (
+            ''
+          )}
         </div>
       </Wrap>
     )
