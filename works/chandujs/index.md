@@ -2,7 +2,7 @@
 title: My Website
 subTitle: This same website made in gatsby
 tags: ['design', 'gatsby', 'react']
-url: http://chandujs.dev/
+url: https://github.com/ctrleffive/ctrleffive.github.io
 ---
 
 ![Website Home](website-home.jpg)
