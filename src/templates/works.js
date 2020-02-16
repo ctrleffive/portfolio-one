@@ -54,8 +54,7 @@ export default class WorksPage extends Component {
                       allFile(filter: { extension: { eq: "jpg" } }) {
                         edges {
                           node {
-                            name
-                            relativeDirectory
+                            relativePath
                             childImageSharp {
                               fixed(width: 500, height: 300, quality: 100) {
                                 ...GatsbyImageSharpFixed
@@ -72,7 +71,10 @@ export default class WorksPage extends Component {
                   render={({ allFile }) => {
                     const findNode = () => {
                       return allFile.edges.find(edge => {
-                        return edge.node.name === item.fields.slug
+                        return (
+                          item.frontmatter.thumbnail ===
+                          `content/${edge.node.relativePath}`
+                        )
                       }).node
                     }
                     return (

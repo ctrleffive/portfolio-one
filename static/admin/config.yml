@@ -13,8 +13,9 @@ collections:
     folder: content/works
     create: true
     fields:
-      - { name: thumbnail, label: Thumbnail, widget: image }
       - { name: title, label: Title }
       - { name: subTitle, label: Sub Title }
+      - { name: thumbnail, label: Thumbnail, widget: image }
+      - { name: url, label: URL }
       - { name: tags, label: Tags, widget: list }
       - { name: body, label: Body, widget: markdown }

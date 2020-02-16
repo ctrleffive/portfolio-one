@@ -65,6 +65,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
               subTitle
               tags
               url
+              thumbnail
             }
             fields {
               slug
