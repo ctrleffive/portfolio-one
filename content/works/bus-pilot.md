@@ -1,8 +1,12 @@
 ---
 title: Bus Pilot
 subTitle: Bus Tracking App
-tags: ['design', 'flutter', 'app']
+thumbnail: content/uploads/bus-pilot.jpg
 url: https://play.google.com/
+tags:
+  - design
+  - flutter
+  - app
 ---
 
 ![Bus Pilot](bus-pilot.jpg)

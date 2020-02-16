@@ -321,6 +321,7 @@ module.exports = {
     ],
   },
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
@@ -355,8 +356,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `works`,
-        path: `${__dirname}/works`,
+        name: `content`,
+        path: `${__dirname}/content`,
       },
     },
     `gatsby-plugin-sharp`,

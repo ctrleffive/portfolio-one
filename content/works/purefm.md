@@ -1,8 +1,12 @@
 ---
 title: PureFM
 subTitle: Radio Station in Seychelles
-tags: ['design', 'angularjs', 'app']
+thumbnail: content/uploads/purefm.jpg
 url: http://www.purefm.sc/
+tags:
+  - design
+  - angularjs
+  - app
 ---
 
 ![PureFM Home](purefm-home.jpg)

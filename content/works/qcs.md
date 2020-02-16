@@ -1,8 +1,12 @@
 ---
 title: QCS
 subTitle: Quality Control System
-tags: ['design', 'flutter', 'app']
+thumbnail: content/uploads/qcs.jpg
 url: https://play.google.com/store/apps/details?id=com.inometrics.qcs
+tags:
+  - design
+  - flutter
+  - app
 ---
 
 ![QCS](qcs.jpg)

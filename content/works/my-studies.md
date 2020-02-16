@@ -1,8 +1,11 @@
 ---
 title: 🎨 Studies
 subTitle: My photo & color studies
-tags: ['photography', 'camera']
+thumbnail: content/uploads/my-studies.jpg
 url: https://photos.app.goo.gl/UXnnwtuKt1BGHvqg7
+tags:
+  - photography
+  - camera
 ---
 
 ![Studies](my-studies.jpg)
