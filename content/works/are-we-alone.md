@@ -1,8 +1,11 @@
 ---
 title: Are We Alone
 subTitle: Astrophotography collection
-tags: ['photography', 'camera']
+thumbnail: content/uploads/are-we-alone.jpg
 url: https://photos.app.goo.gl/kWnSeLuYdWdAGJpD8
+tags:
+  - photography
+  - camera
 ---
 
 ![Are We Alone](are-we-alone.jpg)

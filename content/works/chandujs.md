@@ -1,8 +1,12 @@
 ---
 title: My Website
 subTitle: This same website made in gatsby
-tags: ['design', 'gatsby', 'react']
+thumbnail: content/uploads/chandujs.jpg
 url: https://github.com/ctrleffive/ctrleffive.github.io
+tags:
+  - design
+  - gatsby
+  - react
 ---
 
 ![Website Home](website-home.jpg)
