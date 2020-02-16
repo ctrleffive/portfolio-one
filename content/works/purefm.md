@@ -13,6 +13,6 @@ tags:
 
 PureFM is a radio station in Seychelles.
 
-# Look, I made a cock!
+# Look, I made a clock!
 
 ![Shows Clock](show-clock.jpg)
