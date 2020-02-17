@@ -8,6 +8,6 @@ tags:
   - camera
 ---
 
-![Studies](my-studies.jpg)
+![Studies](content/uploads/my-studies.jpg)
 
 Google Photos shared album with all my clicks & color grading experiments.

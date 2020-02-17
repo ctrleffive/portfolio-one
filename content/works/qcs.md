@@ -9,10 +9,10 @@ tags:
   - app
 ---
 
-![QCS](qcs.jpg)
+![QCS](content/uploads/qcs.jpg)
 
 Anyone working in the healthcare domain can easily use this well arranged and designed application as an IP Observation Tool.
 
 NOTE: PAGE UNDER CONSTRUCTION
 
-![App Screens](screens.jpg)
+![App Screens](content/uploads/screens.jpg)

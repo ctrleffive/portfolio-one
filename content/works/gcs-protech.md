@@ -1,7 +1,7 @@
 ---
 title: GCS Protech
 subTitle: Industrial Website
-thumbnail: content/uploads/gcs-logo.jpg
+thumbnail: content/uploads/gcs.png
 url: 'http://www.gcsprotech.com'
 tags:
   - website
@@ -9,6 +9,8 @@ tags:
   - html
 ---
 
-![GCS](content/uploads/gcs-home-page.jpg 'GCS')
+![GCS](content/uploads/gcs-responsive.png)
 
 GCS Protech Engineering
+
+![GCS](content/uploads/gcs-home.png)

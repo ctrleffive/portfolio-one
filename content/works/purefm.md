@@ -1,7 +1,7 @@
 ---
 title: PureFM
 subTitle: Radio Station in Seychelles
-thumbnail: content/uploads/purefm.jpg
+thumbnail: content/uploads/purefm.png
 url: http://www.purefm.sc/
 tags:
   - design
@@ -9,10 +9,10 @@ tags:
   - app
 ---
 
-![PureFM Home](purefm-home.jpg)
+![PureFM Home](content/uploads/purefm-home.png)
 
 PureFM is a radio station in Seychelles.
 
 # Look, I made a clock!
 
-![Shows Clock](show-clock.jpg)
+![Shows Clock](content/uploads/purefm-show-clock.png)

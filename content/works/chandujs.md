@@ -1,7 +1,7 @@
 ---
 title: My Website
-subTitle: This same website made in gatsby
-thumbnail: content/uploads/chandujs.jpg
+subTitle: My website made in gatsby
+thumbnail: content/uploads/chandujs.png
 url: https://github.com/ctrleffive/ctrleffive.github.io
 tags:
   - design
@@ -9,8 +9,10 @@ tags:
   - react
 ---
 
-![Website Home](website-home.jpg)
+![Mobile Screens](content/uploads/chandujs-responsive.png)
 
 # My Website!
 
-Checkout this project in [github](https://github.com/ctrleffive/ctrleffive.github.io)
+Checkout this project in github [here](https://github.com/ctrleffive/ctrleffive.github.io).
+
+![Website Home](content/uploads/chandujs-home.png)
