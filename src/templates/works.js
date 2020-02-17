@@ -51,7 +51,9 @@ export default class WorksPage extends Component {
                 <StaticQuery
                   query={graphql`
                     query {
-                      allFile(filter: { extension: { eq: "jpg" } }) {
+                      allFile(
+                        filter: { relativeDirectory: { eq: "uploads" } }
+                      ) {
                         edges {
                           node {
                             relativePath
