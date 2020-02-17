@@ -38,7 +38,7 @@ export default class BlogPage extends Component {
                 to={`/blog/${item.slug}`}
                 css={css`
                   padding: 2rem;
-                  display: inline-block;
+                  display: table;
                   max-width: 100%;
                 `}
                 className="mb-4 rounded-lg bg-white overflow-hidden">
