@@ -27,7 +27,7 @@ export default class BlogSinglePage extends Component {
             </div>
             <div className="tags">
               {data.tags.map(tag => (
-                <span className="badge badge-pill badge-brand mb-2 mr-2 ng-star-inserted py-1">
+                <span className="badge badge-pill badge-brand mb-2 mr-2 py-1">
                   #{tag}
                 </span>
               ))}
