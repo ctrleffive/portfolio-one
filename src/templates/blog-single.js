@@ -34,14 +34,18 @@ export default class BlogSinglePage extends Component {
             </div>
           </div>
           <div className="bg-white pad-wrap rounded-lg overflow-hidden">
-            <img
-              css={css`
-                margin: -3rem -3rem 3rem;
-                max-width: calc(100% - -6rem);
-              `}
-              src={data.cover_image}
-              alt={data.title}
-            />
+            {data.cover_image ? (
+              <img
+                css={css`
+                  margin: -3rem -3rem 3rem;
+                  max-width: calc(100% - -6rem);
+                `}
+                src={data.cover_image}
+                alt={data.title}
+              />
+            ) : (
+              ''
+            )}
             <div
               css={codeStyles}
               dangerouslySetInnerHTML={{ __html: data.body_html }}
