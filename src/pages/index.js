@@ -19,7 +19,7 @@ export default class IndexPage extends Component {
         seoKeywords="home, ctrleffive, website">
         <div
           css={css`
-            top: 50%;
+            top: 47%;
             left: 25%;
             z-index: 3;
             position: absolute;
@@ -39,7 +39,6 @@ export default class IndexPage extends Component {
               position: absolute;
               margin: 8rem 2rem 0;
               transform: initial;
-              margin-top: 7rem;
             }
           `}
           className="welcome-wrap">
