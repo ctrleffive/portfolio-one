@@ -84,6 +84,13 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     return item.node
   })
 
+  for (let i = worksList.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * i)
+    const temp = worksList[i]
+    worksList[i] = worksList[j]
+    worksList[j] = temp
+  }
+
   createPage({
     path: `/works`,
     component: require.resolve(`./src/templates/works.js`),
