@@ -119,7 +119,7 @@ export default class Wrap extends Component {
                     display: block;
                     position: relative;
                     transition: background-color 0.5s;
-                    color: transparent;
+                    color: transparent !important;
                     .lights-on & {
                       background-color: ${ColorsAdvanced.accentLightsOn};
                     }
