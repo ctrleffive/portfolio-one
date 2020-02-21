@@ -45,9 +45,11 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
   })
 
   for (const blogData of blogList) {
-    blogData.cover_image = await fetch(blogData.cover_image)
-      .then(data => data.buffer())
-      .then(buffer => `data:image/jpeg;base64,${buffer.toString('base64')}`)
+    if (blogData.cover_image) {
+      blogData.cover_image = await fetch(blogData.cover_image)
+        .then(data => data.buffer())
+        .then(buffer => `data:image/jpeg;base64,${buffer.toString('base64')}`)
+    }
     createPage({
       path: `/blog/${blogData.slug}`,
       context: { blogData },
