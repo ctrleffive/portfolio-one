@@ -111,7 +111,50 @@ export default class Wrap extends Component {
                 </Link>
                 <a
                   href={`mailto:${site.siteMetadata.emails[emailIndex]}@chandujs.dev`}
-                  className="contact-button"></a>
+                  css={css`
+                    border-radius: 100%;
+                    background-color: ${Colors.accent};
+                    width: 3rem;
+                    height: 3rem;
+                    display: block;
+                    position: relative;
+                    transition: background-color 0.5s;
+                    color: transparent;
+                    .lights-on & {
+                      background-color: ${ColorsAdvanced.accentLightsOn};
+                    }
+                    &:before,
+                    &:after {
+                      content: '';
+                      border: 1px solid rgba(0, 0, 0, 0.6);
+                      position: absolute;
+                      left: 50%;
+                      top: 50%;
+                      transform: translate(-50%, -50%);
+                      transition: border-color 0.5s;
+                      .lights-on & {
+                        border-color: rgba(255, 255, 255, 0.9);
+                      }
+                    }
+                    &:before {
+                      width: 1.5rem;
+                      height: 1.1rem;
+                      border-radius: 3px;
+                    }
+                    &:after {
+                      width: 1rem;
+                      height: 1rem;
+                      border-left: 0;
+                      border-top: 0;
+                      transform: translate(-50%, -50%) rotate(45deg);
+                      margin-top: -5px;
+                    }
+                    @media screen and (max-width: 766px) {
+                      display: none;
+                    }
+                  `}>
+                  email
+                </a>
               </div>
               <div
                 className="side-bar text-right"
