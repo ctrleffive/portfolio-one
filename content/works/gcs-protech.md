@@ -9,8 +9,8 @@ tags:
   - html
 ---
 
-![GCS](content/uploads/gcs-responsive.png)
+![GCS](content/uploads/gcs-home.png)
 
 GCS Protech Engineering
 
-![GCS](content/uploads/gcs-home.png)
+![GCS](content/uploads/gcs-responsive.png)
