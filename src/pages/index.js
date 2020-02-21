@@ -56,39 +56,35 @@ export default class IndexPage extends Component {
             to="/works"
             className="mt-4"
             css={css`
-              padding: 1rem;
-              display: block;
-              border: 1px solid rgba(255, 255, 255, 0.1);
-              border-radius: 100%;
+              display: inline-block;
               transition-duration: 0.2s;
               cursor: pointer;
-              width: 3rem;
-              height: 3rem;
-              position: relative;
-              top: 0;
-              &:before {
-                content: '';
-                border: 2px solid ${Colors.accent};
-                width: 0.7rem;
-                height: 0.7rem;
-                display: block;
-                border-left: 0;
-                border-top: 0;
-                position: absolute;
-                top: 46%;
-                left: 50%;
-                transform: translate(-50%, -50%) rotate(45deg);
-              }
+              top: 0px;
+              padding: 0.5rem 1.3rem;
+              border-width: 0;
+              border-style: solid;
+              border-image: initial;
+              border-radius: 2rem;
+              font-weight: bold;
+              text-transform: uppercase;
+              font-size: 0.8rem;
+              background-color: ${Colors.brand};
+              color: #fff;
               .lights-on & {
-                border-color: rgba(0, 0, 0, 0.1);
-                &:before {
-                  border-color: ${ColorsAdvanced.accentLightsOn};
-                }
+                background-color: ${Colors.accent};
+                color: ${ColorsAdvanced.main};
               }
               &:hover {
-                top: 0.5rem;
+                background-color: ${Colors.accent};
+                color: ${ColorsAdvanced.main};
+                .lights-on & {
+                  background-color: ${Colors.brand};
+                  color: #fff;
+                }
               }
-            `}></Link>
+            `}>
+            GoTo Works
+          </Link>
         </div>
       </Wrap>
     )
