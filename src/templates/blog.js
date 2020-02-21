@@ -35,19 +35,23 @@ export default class BlogPage extends Component {
           <div
             className="all-blogs"
             css={css`
-              margin-right: -2rem;
+              margin-right: -1.9rem;
             `}>
-            {this.props.pageContext.blogList.map((item, index) => (
+            {this.props.pageContext.blogList.map(item => (
               <Link
                 to={`/blog/${item.slug}`}
                 css={css`
                   padding: 2rem;
                   display: inline-block;
-                  margin-right: 2rem;
+                  margin-right: 1.9rem;
                   max-width: 100%;
                 `}
                 className="mb-4 rounded-lg bg-white overflow-hidden">
-                <div className="item-title font-weight-bold brand-light h4">
+                <div
+                  css={css`
+                    line-height: 2rem;
+                  `}
+                  className="item-title font-weight-bold brand-light h4">
                   {item.title}
                 </div>
                 <div className="mb-3 text-muted item-date">
