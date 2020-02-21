@@ -32,24 +32,26 @@ export default class BlogPage extends Component {
             <br />
             But since you're here now, I'll try to post more in here.
           </div>
-          <div className="all-blogs">
+          <div
+            className="all-blogs"
+            css={css`
+              margin-right: -2rem;
+            `}>
             {this.props.pageContext.blogList.map((item, index) => (
               <Link
                 to={`/blog/${item.slug}`}
                 css={css`
                   padding: 2rem;
-                  display: table;
+                  display: inline-block;
+                  margin-right: 2rem;
                   max-width: 100%;
                 `}
                 className="mb-4 rounded-lg bg-white overflow-hidden">
-                <div
-                  className={`${
-                    index === 0 ? 'h2' : 'h4'
-                  } item-title font-weight-bold brand-light`}>
+                <div className="item-title font-weight-bold brand-light h4">
                   {item.title}
                 </div>
-                <div className="{font-weight-bold text-muted item-date}">
-                  {item.readable_publish_date}
+                <div className="mb-3 text-muted item-date">
+                  Published On: <strong>{item.readable_publish_date}</strong>
                 </div>
                 <div className="item-tags text-lowercase mt-2">
                   {item.tags.map(tag => (
@@ -57,7 +59,7 @@ export default class BlogPage extends Component {
                       css={css`
                         display: inline-block;
                       `}
-                      className="mr-3">
+                      className="badge badge-pill badge-brand mr-3">
                       #{tag}
                     </span>
                   ))}

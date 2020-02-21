@@ -1,6 +1,16 @@
 import { css } from '@emotion/core'
+import { Colors } from './main.js'
 
 export default css`
+  .ltag__link {
+    display: none;
+  }
+
+  a {
+    font-weight: bold;
+    color: ${Colors.brand};
+  }
+
   img {
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 3px;
