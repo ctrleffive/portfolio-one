@@ -36,6 +36,10 @@ export default class BlogPage extends Component {
             className="all-blogs"
             css={css`
               margin-right: -1.9rem;
+
+              @media screen and (max-width: 766px) {
+                margin: 0 -2rem;
+              }
             `}>
             {this.props.pageContext.blogList.map(item => (
               <Link
@@ -45,8 +49,15 @@ export default class BlogPage extends Component {
                   display: inline-block;
                   margin-right: 1.9rem;
                   max-width: 100%;
+                  border-radius: 0.3rem;
+
+                  @media screen and (max-width: 766px) {
+                    margin: 0;
+                    border-radius: 0;
+                    display: block;
+                  }
                 `}
-                className="mb-4 rounded-lg bg-white overflow-hidden">
+                className="mb-4 bg-white overflow-hidden">
                 <div
                   css={css`
                     line-height: 2rem;
