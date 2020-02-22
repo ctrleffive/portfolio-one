@@ -4,7 +4,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `works` })
+    const slug = createFilePath({ node, getNode, basePath: `work` })
     createNodeField({
       node,
       name: `slug`,
@@ -79,27 +79,27 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     }
   `)
 
-  const worksList = allData.data.allMarkdownRemark.edges.map(item => {
+  const workList = allData.data.allMarkdownRemark.edges.map(item => {
     item.node.fields.slug = item.node.fields.slug.replace(/\\|\//g, '')
     return item.node
   })
 
-  for (let i = worksList.length - 1; i > 0; i--) {
+  for (let i = workList.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * i)
-    const temp = worksList[i]
-    worksList[i] = worksList[j]
-    worksList[j] = temp
+    const temp = workList[i]
+    workList[i] = workList[j]
+    workList[j] = temp
   }
 
   createPage({
-    path: `/works`,
-    component: require.resolve(`./src/templates/works.js`),
-    context: { worksList },
+    path: `/work`,
+    component: require.resolve(`./src/templates/work.js`),
+    context: { workList },
   })
 
-  for (const dataItem of worksList) {
+  for (const dataItem of workList) {
     createPage({
-      path: `/works/${dataItem.fields.slug}`,
+      path: `/work/${dataItem.fields.slug}`,
       context: { dataItem },
       component: require.resolve(`./src/templates/work-single.js`),
     })

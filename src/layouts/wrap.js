@@ -225,10 +225,10 @@ export default class Wrap extends Component {
                     }
                   `}>
                   <Link
-                    className={this.props.isWorksPage ? 'active' : ''}
+                    className={this.props.isWorkPage ? 'active' : ''}
                     activeClassName="active"
-                    to="/works">
-                    Works
+                    to="/work">
+                    Work
                   </Link>
                   <Link
                     className={this.props.isBlogPage ? 'active' : ''}

@@ -6,23 +6,23 @@ import { StaticQuery, Link, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 import { Component } from 'react'
 
-import PageBg from '../assets/images/bgs/works.svg'
+import PageBg from '../assets/images/bgs/work.svg'
 
-export default class WorksPage extends Component {
+export default class WorkPage extends Component {
   render = () => {
-    const data = this.props.pageContext.worksList
+    const data = this.props.pageContext.workList
 
     return (
       <Wrap
         lightsOn
-        isWorksPage
+        isWorkPage
         pageBg={<PageBg />}
-        seoTitle="Works of Chandu | Chandu J S"
-        seoDescription="My works"
-        seoKeywords="works, ctrleffive, portfolio">
+        seoTitle="Work of Chandu | Chandu J S"
+        seoDescription="My work"
+        seoKeywords="work, ctrleffive, portfolio">
         <div className="content-wrap">
           <div className="h1 font-weight-bold mb-3">
-            My <span className="high">Works</span>
+            My <span className="high">Work</span>
             <span className="blinker">.</span>
             <br />
           </div>
@@ -86,7 +86,7 @@ export default class WorksPage extends Component {
                           margin-bottom: -7px;
                         `}>
                         <Link
-                          to={`/works/${item.fields.slug}`}
+                          to={`/work/${item.fields.slug}`}
                           className="overflow-hidden"
                           css={css`
                             display: inline-block;
