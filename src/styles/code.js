@@ -6,6 +6,10 @@ export default css`
     display: none;
   }
 
+  ul {
+    padding-left: 1.25rem;
+  }
+
   a {
     font-weight: bold;
     color: ${Colors.brand};
