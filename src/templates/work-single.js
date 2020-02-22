@@ -5,7 +5,7 @@ import Wrap from '../layouts/wrap'
 import { Colors } from '../styles/main'
 import { Component } from 'react'
 
-import PageBg from '../assets/images/bgs/works.svg'
+import PageBg from '../assets/images/bgs/work.svg'
 
 export default class WorkSinglePage extends Component {
   splitTitle = title => {
@@ -27,11 +27,11 @@ export default class WorkSinglePage extends Component {
     return (
       <Wrap
         lightsOn
-        isWorksPage
+        isWorkPage
         pageBg={<PageBg />}
-        seoTitle={`${data.frontmatter.title} | Works | Chandu J S`}
-        seoDescription="My works"
-        seoKeywords="works, ctrleffive, portfolio">
+        seoTitle={`${data.frontmatter.title} | Work | Chandu J S`}
+        seoDescription="My work"
+        seoKeywords="work, ctrleffive, portfolio">
         <div className="content-wrap">
           <div className="mb-5">
             <div className="h1 font-weight-bold text-body">

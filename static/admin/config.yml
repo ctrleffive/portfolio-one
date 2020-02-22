@@ -6,9 +6,9 @@ media_folder: content/uploads
 public_folder: content/uploads
 
 collections:
-  - name: works
-    label: Works
-    folder: content/works
+  - name: work
+    label: Work
+    folder: content/work
     create: true
     fields:
       - { name: title, label: Title }

@@ -52,7 +52,7 @@ export default class IndexPage extends Component {
             </div>
           </h1>
           <Link
-            to="/works"
+            to="/work"
             className="mt-4"
             css={css`
               display: inline-block;
@@ -82,7 +82,7 @@ export default class IndexPage extends Component {
                 }
               }
             `}>
-            GoTo Works
+            GoTo Work
           </Link>
         </div>
       </Wrap>
