@@ -42,7 +42,7 @@ export default class IndexPage extends Component {
             }
           `}
           className="welcome-wrap">
-          <div className="h1 m-0 font-weight-bold text-left">
+          <h1 className="h1 m-0 font-weight-bold text-left">
             <div className="text-break">
               I'm <span className="high">a</span>
             </div>
@@ -50,7 +50,7 @@ export default class IndexPage extends Component {
               full stack <span className="high">developer</span>
               <span className="blinker">.</span>
             </div>
-          </div>
+          </h1>
           <Link
             to="/works"
             className="mt-4"
