@@ -72,6 +72,15 @@ export default class WorkSinglePage extends Component {
               > p:last-child .gatsby-resp-image-wrapper {
                 margin-bottom: -4rem;
               }
+
+              ul {
+                padding-left: 1.25rem;
+              }
+
+              a {
+                font-weight: bold;
+                color: ${Colors.brand};
+              }
             `}
             className="bg-white pad-wrap rounded-lg overflow-hidden"
             dangerouslySetInnerHTML={{ __html: data.html }}></div>
