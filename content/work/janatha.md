@@ -1,8 +1,8 @@
 ---
 title: Janatha
-subTitle: Digital Thermostats Website
+subTitle: Mobile App for Public
 thumbnail: content/uploads/janatha.png
-url: https://play.google.com/store/apps/details?id=com.inometrics.janatha
+url: 'https://play.google.com/store/apps/details?id=com.inometrics.janatha'
 tags:
   - app
   - flutter
