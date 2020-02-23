@@ -1,6 +1,6 @@
 ---
 title: Are We Alone
-subTitle: Astrophotography collection
+subTitle: Astrophotography Collection
 thumbnail: content/uploads/are-we-alone.jpg
 url: https://photos.app.goo.gl/kWnSeLuYdWdAGJpD8
 tags:
@@ -8,7 +8,7 @@ tags:
   - camera
 ---
 
-![Are We Alone](content/uploads/are-we-alone.jpg)
+![Are We Alone](content/uploads/carina-nebula.jpg)
 
 ## A Sky Full of Stars
 

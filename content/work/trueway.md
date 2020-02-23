@@ -9,8 +9,8 @@ tags:
   - php
 ---
 
-![GCS](content/uploads/trueway-home.png)
+![Trueway Home](content/uploads/trueway-home.png)
 
 Trueway Middle East based company manufacturing and delivering Digital Thermostats, Modulating Thermostats, and all Modern Thermostat for Air Conditioning
 
-![GCS](content/uploads/trueway-responsive.png)
+![Trueway](content/uploads/trueway-responsive.png)
