@@ -59,15 +59,18 @@ export default class WorkSinglePage extends Component {
                 margin-left: -3rem !important;
                 margin-right: -3rem !important;
                 width: calc(100% + 6rem);
+
+                @media screen and (max-width: 766px) {
+                  width: calc(100% + 5rem) !important;
+                  margin-left: -2rem !important;
+                  margin-right: -2rem !important;
+                }
               }
               > p:first-child .gatsby-resp-image-wrapper {
                 margin-top: -3rem;
                 margin-bottom: 2rem;
                 width: 1000px;
-
-                @media screen and (max-width: 1000px) {
-                  width: calc(100% + 6rem);
-                }
+                max-width: calc(100% + 6rem) !important;
               }
               > p:last-child .gatsby-resp-image-wrapper {
                 margin-bottom: -4rem;
