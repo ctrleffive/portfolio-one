@@ -223,6 +223,10 @@ export default class Wrap extends Component {
                         margin-top: 0rem;
                       }
                     }
+                    @media screen and (min-width: 766px) and (max-height: 610px) {
+                      right: 3.8rem;
+                      position: relative;
+                    }
                   `}>
                   <Link
                     className={this.props.isWorkPage ? 'active' : ''}
@@ -258,6 +262,11 @@ export default class Wrap extends Component {
                       width: 100%;
                       display: block;
                       padding-left: 1.6rem;
+                    }
+                    @media screen and (min-width: 766px) and (max-height: 610px) {
+                      bottom: initial;
+                      top: 0.7rem;
+                      right: 1.8rem;
                     }
                     a {
                       display: block;
