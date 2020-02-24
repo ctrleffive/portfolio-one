@@ -25,9 +25,6 @@ export default class IndexPage extends Component {
             position: absolute;
             transform: translate(-50%, -50%);
 
-            @media print {
-              display: none;
-            }
             @media screen and (max-width: 1000px) {
               left: 50%;
             }
@@ -37,7 +34,7 @@ export default class IndexPage extends Component {
               top: initial;
               bottom: initial;
               position: absolute;
-              margin: 8rem 2rem 0;
+              margin: 8rem 2rem 4rem;
               transform: initial;
             }
           `}

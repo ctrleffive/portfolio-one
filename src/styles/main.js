@@ -28,6 +28,11 @@ export const GlobalStyles = css`
   ::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.2);
   }
+  ::selection,
+  mark {
+    background-color: ${Colors.accent};
+    color: ${ColorsAdvanced.main};
+  }
   body {
     overflow-y: scroll;
   }
@@ -53,6 +58,10 @@ export const GlobalStyles = css`
     @media print {
       background-color: #fff !important;
     }
+  }
+
+  .highlight {
+    user-select: text;
   }
 
   .pad-wrap {
