@@ -11,7 +11,9 @@ module.exports = {
       'hallo',
       'ciao',
       'namaste',
-      'salaam',
+      'hey',
+      'yo',
+      'mail',
     ],
     skills: [
       'Better Googling Skill',
