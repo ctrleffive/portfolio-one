@@ -1,4 +1,4 @@
-name: GitHub Deploy
+name: github-deploy
 
 on:
   push:
@@ -11,16 +11,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup Node
+      - name: Setup node
         uses: actions/setup-node@v1
         with:
           node-version: '10.x'
 
-      - name: Get Yarn Cache
+      - name: Get yarn cache
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
-      - name: Cache Dependencies
+      - name: Cache dependencies
         uses: actions/cache@v1
         with:
           path: ${{ steps.yarn-cache.outputs.dir }}
