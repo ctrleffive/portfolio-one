@@ -9,6 +9,7 @@
     "start": "yarn develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "deploy": "yarn build && gh-pages -d public",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
@@ -41,6 +42,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "gh-pages": "^2.2.0",
     "prettier": "^1.19.1"
   },
   "repository": {
