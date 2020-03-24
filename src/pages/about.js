@@ -24,8 +24,7 @@ export default class AboutPage extends Component {
             <span className="blinker">.</span>
             <br />A <span className="high">full stack developer</span>
             <br /> based in
-            <span className="brand-light"> Trivandrum, India</span>.<br />
-            Currently living in <span className="high">Seychelles</span>
+            <span className="brand-light"> Trivandrum, India</span>.
           </div>
           <div className="brand-light h3">
             Interested in
