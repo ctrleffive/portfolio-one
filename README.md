@@ -1,6 +1,6 @@
 # My Website
 
-![Netlify Status](https://api.netlify.com/api/v1/badges/e5f445ee-4cf3-4bc3-bbac-eb34a7ed2ace/deploy-status)
+![Build Status](https://github.com/ctrleffive/chandujs.dev/workflows/Github%20Deploy/badge.svg)
 ![Version](https://img.shields.io/static/v1?label=Version&message=2.2.0&color=greeen)
 ![Code Size](https://img.shields.io/github/languages/code-size/ctrleffive/ctrleffive?label=Code%20Size)
 ![License](https://img.shields.io/github/license/ctrleffive/ctrleffive?label=License)
