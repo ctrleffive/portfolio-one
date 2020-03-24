@@ -16,7 +16,7 @@ module.exports = {
       'mail',
     ],
     skills: [
-      'Better Googling Skill',
+      'Better Search Skills',
       'JavaScript',
       'Dart & Flutter',
       'CSS3',
