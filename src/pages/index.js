@@ -47,6 +47,9 @@ export default class IndexPage extends Component {
               full stack <span className="high">developer</span>
               <span className="blinker">.</span>
             </div>
+            <mark className="text-break text-dangerd-inline-block font-weight-bold h5 mb-0 mt-3 p-3 rounded text-break text-danger text-uppercase">
+              Stay Home, Stay Safe Everyone!
+            </mark>
           </h1>
           <Link
             to="/work"
