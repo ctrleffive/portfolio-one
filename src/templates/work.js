@@ -39,7 +39,7 @@ export default class WorkPage extends Component {
             with my keyboard, I make photos.
           </div>
           <div
-            className="row no-gutters"
+            className="row"
             css={css`
               @media screen and (max-width: 766px) {
                 margin-left: -2rem;
@@ -83,7 +83,10 @@ export default class WorkPage extends Component {
                       <div
                         className="col-xl-4 col-md-6"
                         css={css`
-                          margin-bottom: -7px;
+                          margin-bottom: 1.4rem;
+                          @media screen and (max-width: 766px) {
+                            margin-bottom: 0.8rem;
+                          }
                         `}>
                         <Link
                           to={`/work/${item.fields.slug}`}
@@ -94,6 +97,8 @@ export default class WorkPage extends Component {
                             z-index: 0;
                             height: 300px;
                             width: 100%;
+                            border-radius: 5px;
+                            box-shadow: rgba(0, 0, 0, 0.05) 0 1px 2px;
                             &:before {
                               content: '';
                               position: absolute;
