@@ -16,7 +16,7 @@ export default class IndexPage extends Component {
       <Wrap
         pageBg={<PageBg />}
         description="Welcome to my website"
-        cover={`${this.props.location.origin}/assets/meta/home.png`}>
+        cover="assets/meta/home.png">
         <div
           css={css`
             top: 47%;

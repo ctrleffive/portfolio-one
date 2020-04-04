@@ -15,7 +15,7 @@ export default class UsesPage extends Component {
         pageBg={<PageBg />}
         title="Uses | Chandu J S"
         description="Stuff I use in a daily basis."
-        cover={`${this.props.location.origin}/assets/meta/uses.png`}>
+        cover="assets/meta/uses.png">
         <div
           css={css`
             li {

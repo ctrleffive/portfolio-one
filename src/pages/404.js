@@ -7,7 +7,7 @@ export default class UsesPage extends Component {
       <Wrap
         title="404 | Page Not Found | Chandu J S"
         description="Page Not Found"
-        cover={`${this.props.location.origin}/assets/meta/home.png`}>
+        cover="assets/meta/home.png">
         <div className="content-wrap">
           <div className="h1 font-weight-bold mb-5">
             Page <span className="high">Not</span> Found 😕

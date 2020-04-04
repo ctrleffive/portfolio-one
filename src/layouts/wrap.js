@@ -53,6 +53,9 @@ export default class Wrap extends Component {
             description: this.props.description || ``,
             cover: this.props.cover || ``,
           }
+          if (!metaTags.cover.includes('http')) {
+            metaTags.cover = `${global.location.protocol}//${global.location.host}/${metaTags.cover}`
+          }
           return (
             <div
               className={this.props.lightsOn ? 'lights-on' : ''}
