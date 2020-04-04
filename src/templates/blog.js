@@ -14,9 +14,8 @@ export default class BlogPage extends Component {
       <Wrap
         lightsOn
         pageBg={<PageBg />}
-        seoTitle="Blog of Chandu | Chandu J S"
-        seoDescription="I write development articles in Dev.to"
-        seoKeywords="blog, ctrleffive, dev.to">
+        title="Blog of Chandu | Chandu J S"
+        description="I write development articles in Dev.to">
         <div className="content-wrap">
           <div className="h1 font-weight-bold mb-3">
             My <span className="high">Blog</span>

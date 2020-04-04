@@ -29,9 +29,8 @@ export default class WorkSinglePage extends Component {
         lightsOn
         isWorkPage
         pageBg={<PageBg />}
-        seoTitle={`${data.frontmatter.title} | Work | Chandu J S`}
-        seoDescription="My work"
-        seoKeywords="work, ctrleffive, portfolio">
+        title={`${data.frontmatter.title} | Work | Chandu J S`}
+        description="My work">
         <div className="content-wrap">
           <div className="mb-5">
             <div className="h1 font-weight-bold text-body">

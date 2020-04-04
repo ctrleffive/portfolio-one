@@ -16,9 +16,8 @@ export default class BlogSinglePage extends Component {
       <Wrap
         lightsOn
         isBlogPage
-        seoTitle={`${data.title} | Blog | Chandu J S`}
-        seoDescription="I write development articles in Dev.to"
-        seoKeywords="blog, ctrleffive, dev.to">
+        title={`${data.title} | Blog | Chandu J S`}
+        description="I write development articles in Dev.to">
         <div className="content-wrap">
           <div className="mb-5">
             <div className="h1 font-weight-bold text-body">{data.title}</div>
