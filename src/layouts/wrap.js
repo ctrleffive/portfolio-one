@@ -54,7 +54,7 @@ export default class Wrap extends Component {
             cover: this.props.cover || ``,
           }
           if (!metaTags.cover.includes('http')) {
-            metaTags.cover = `${global.location.protocol}//${global.location.host}/${metaTags.cover}`
+            metaTags.cover = `${site.siteMetadata}/${metaTags.cover}`
           }
           return (
             <div
