@@ -14,8 +14,7 @@ export default class UsesPage extends Component {
       <Wrap
         pageBg={<PageBg />}
         title="Uses | Chandu J S"
-        description="Stuff I use in a daily basis."
-        cover="assets/meta/uses.png">
+        description="Stuff I use in a daily basis.">
         <div
           css={css`
             li {

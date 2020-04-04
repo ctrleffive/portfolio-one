@@ -30,8 +30,7 @@ export default class WorkSinglePage extends Component {
         isWorkPage
         pageBg={<PageBg />}
         title={`${data.frontmatter.title} | Work | Chandu J S`}
-        description="My work"
-        cover="assets/meta/work.png">
+        description="My work">
         <div className="content-wrap">
           <div className="mb-5">
             <div className="h1 font-weight-bold text-body">

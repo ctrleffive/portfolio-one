@@ -51,11 +51,8 @@ export default class Wrap extends Component {
           const metaTags = {
             title: this.props.title || site.siteMetadata.title,
             description: this.props.description || ``,
-            cover: this.props.cover || ``,
           }
-          if (!metaTags.cover.includes('http')) {
-            metaTags.cover = `${site.siteMetadata}/${metaTags.cover}`
-          }
+          const cover = `${site.siteMetadata.siteURL}/cover.png`
           return (
             <div
               className={this.props.lightsOn ? 'lights-on' : ''}
@@ -89,14 +86,14 @@ export default class Wrap extends Component {
                   // <!-- Google / Search Engine Tags -->
                   { itemprop: 'name', content: metaTags.title },
                   { itemprop: 'description', content: metaTags.description },
-                  { itemprop: 'image', content: metaTags.cover },
+                  { itemprop: 'image', content: cover },
 
                   // <!-- Facebook Meta Tags -->
                   { property: 'og:type', content: 'website' },
                   { property: 'og:url', content: 'https://chandujs.dev' },
                   { property: 'og:title', content: metaTags.title },
                   { property: 'og:description', content: metaTags.description },
-                  { property: 'og:image', content: metaTags.cover },
+                  { property: 'og:image', content: cover },
 
                   // <!-- Twitter Meta Tags -->
                   { name: 'twitter:card', content: 'summary_large_image' },
@@ -105,7 +102,7 @@ export default class Wrap extends Component {
                     name: 'twitter:description',
                     content: metaTags.description,
                   },
-                  { name: 'twitter:image', content: metaTags.cover },
+                  { name: 'twitter:image', content: cover },
                 ]}>
                 <html lang="en" />
               </Helmet>

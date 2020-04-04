@@ -18,8 +18,7 @@ export default class WorkPage extends Component {
         isWorkPage
         pageBg={<PageBg />}
         title="Work of Chandu | Chandu J S"
-        description="My work"
-        cover="assets/meta/work.png">
+        description="My work">
         <div className="content-wrap">
           <div className="h1 font-weight-bold mb-3">
             My <span className="high">Work</span>
