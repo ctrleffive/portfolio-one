@@ -17,10 +17,7 @@ export default class BlogSinglePage extends Component {
         lightsOn
         isBlogPage
         title={`${data.title} | Blog | Chandu J S`}
-        cover={
-          data.cover_image_url ||
-          `${this.props.location.origin}/assets/meta/blog.png`
-        }
+        cover={data.cover_image_url || 'assets/meta/blog.png'}
         description="I write development articles in Dev.to">
         <div className="content-wrap">
           <div className="mb-5">

@@ -31,7 +31,7 @@ export default class WorkSinglePage extends Component {
         pageBg={<PageBg />}
         title={`${data.frontmatter.title} | Work | Chandu J S`}
         description="My work"
-        cover={`${this.props.location.origin}/assets/meta/work.png`}>
+        cover="assets/meta/work.png">
         <div className="content-wrap">
           <div className="mb-5">
             <div className="h1 font-weight-bold text-body">

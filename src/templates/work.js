@@ -19,7 +19,7 @@ export default class WorkPage extends Component {
         pageBg={<PageBg />}
         title="Work of Chandu | Chandu J S"
         description="My work"
-        cover={`${this.props.location.origin}/assets/meta/work.png`}>
+        cover="assets/meta/work.png">
         <div className="content-wrap">
           <div className="h1 font-weight-bold mb-3">
             My <span className="high">Work</span>
