@@ -14,7 +14,8 @@ export default class AboutPage extends Component {
       <Wrap
         pageBg={<PageBg />}
         title="About Chandu | Chandu J S"
-        description="I'm Chandu J S. I'm a full stack developer based in Trivandrum, India.">
+        description="I'm Chandu J S. I'm a full stack developer based in Trivandrum, India."
+        cover={`${this.props.location.origin}/assets/meta/about.png`}>
         <div className="content-wrap">
           <div className="h1 font-weight-bold mb-5">
             Hi.
