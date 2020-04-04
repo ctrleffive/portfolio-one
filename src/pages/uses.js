@@ -13,9 +13,8 @@ export default class UsesPage extends Component {
     return (
       <Wrap
         pageBg={<PageBg />}
-        seoTitle="Uses | Chandu J S"
-        seoDescription="Stuff I use in a daily basis."
-        seoKeywords="uses, ctrleffive">
+        title="Uses | Chandu J S"
+        description="Stuff I use in a daily basis.">
         <div
           css={css`
             li {

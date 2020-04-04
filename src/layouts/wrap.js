@@ -48,6 +48,11 @@ export default class Wrap extends Component {
           const emailIndex = Math.ceil(
             Math.random() * (site.siteMetadata.emails.length - 1 - 0) + 0
           )
+          const metaTags = {
+            title: this.props.title || site.siteMetadata.title,
+            description: this.props.description || ``,
+            cover: this.props.cover || ``,
+          }
           return (
             <div
               className={this.props.lightsOn ? 'lights-on' : ''}
@@ -74,13 +79,30 @@ export default class Wrap extends Component {
               `}>
               <Helmet
                 base="/"
-                defaultTitle={this.props.seoTitle || site.siteMetadata.title}
+                defaultTitle={metaTags.title}
                 meta={[
+                  { name: `description`, content: metaTags.description },
+
+                  // <!-- Google / Search Engine Tags -->
+                  { itemprop: 'name', content: metaTags.title },
+                  { itemprop: 'description', content: metaTags.description },
+                  { itemprop: 'image', content: metaTags.cover },
+
+                  // <!-- Facebook Meta Tags -->
+                  { property: 'og:type', content: 'website' },
+                  { property: 'og:url', content: 'https://chandujs.dev' },
+                  { property: 'og:title', content: metaTags.title },
+                  { property: 'og:description', content: metaTags.description },
+                  { property: 'og:image', content: metaTags.cover },
+
+                  // <!-- Twitter Meta Tags -->
+                  { name: 'twitter:card', content: 'summary_large_image' },
+                  { name: 'twitter:title', content: metaTags.title },
                   {
-                    name: `description`,
-                    content: this.props.seoDescription || ``,
+                    name: 'twitter:description',
+                    content: metaTags.description,
                   },
-                  { name: `keywords`, content: this.props.seoKeywords || `` },
+                  { name: 'twitter:image', content: metaTags.cover },
                 ]}>
                 <html lang="en" />
               </Helmet>

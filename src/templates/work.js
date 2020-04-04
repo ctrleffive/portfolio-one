@@ -17,9 +17,8 @@ export default class WorkPage extends Component {
         lightsOn
         isWorkPage
         pageBg={<PageBg />}
-        seoTitle="Work of Chandu | Chandu J S"
-        seoDescription="My work"
-        seoKeywords="work, ctrleffive, portfolio">
+        title="Work of Chandu | Chandu J S"
+        description="My work">
         <div className="content-wrap">
           <div className="h1 font-weight-bold mb-3">
             My <span className="high">Work</span>
