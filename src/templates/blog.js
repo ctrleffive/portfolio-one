@@ -15,8 +15,7 @@ export default class BlogPage extends Component {
         lightsOn
         pageBg={<PageBg />}
         title="Blog of Chandu | Chandu J S"
-        description="I write development articles in Dev.to"
-        cover="assets/meta/blog.png">
+        description="I write development articles in Dev.to">
         <div className="content-wrap">
           <div className="h1 font-weight-bold mb-3">
             My <span className="high">Blog</span>
