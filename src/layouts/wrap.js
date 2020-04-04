@@ -35,6 +35,7 @@ export default class Wrap extends Component {
             site {
               siteMetadata {
                 title
+                siteURL
                 social {
                   service
                   url
@@ -90,7 +91,7 @@ export default class Wrap extends Component {
 
                   // <!-- Facebook Meta Tags -->
                   { property: 'og:type', content: 'website' },
-                  { property: 'og:url', content: 'https://chandujs.dev' },
+                  { property: 'og:url', content: site.siteMetadata.siteURL },
                   { property: 'og:title', content: metaTags.title },
                   { property: 'og:description', content: metaTags.description },
                   { property: 'og:image', content: cover },
