@@ -136,7 +136,7 @@ export default class ResumePage extends Component {
                 background-attachment: fixed;
                 background-size: cover;
                 background-position: center;
-                background-color: #37474f;
+                background-color: ${ColorsAdvanced.main};
                 padding: 5rem 3rem 3rem;
                 color: #fff;
               `}>
@@ -227,6 +227,7 @@ export default class ResumePage extends Component {
                           css={css`
                             font-weight: bold;
                             font-size: 1.1rem;
+                            color: ${ColorsAdvanced.main};
                           `}>
                           {item.company ? `${item.company} | ` : ''}
                           {item.position}
@@ -246,6 +247,30 @@ export default class ResumePage extends Component {
                         {item.description.map(desc => (
                           <p>{desc}</p>
                         ))}
+                      </div>
+                      <div
+                        css={css`
+                          margin-top: 1.5rem;
+                        `}>
+                        <div
+                          className="text-muted"
+                          css={css`
+                            margin-bottom: 1rem;
+                          `}>
+                          My Responsibilities
+                        </div>
+                        <ul
+                          css={css`
+                            margin-bottom: 0;
+                            padding-left: 1.2rem;
+                            li {
+                              margin-bottom: 0.5rem;
+                            }
+                          `}>
+                          {item.responsibilities.map(resp => (
+                            <li>{resp}</li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   ))}
