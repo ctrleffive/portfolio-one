@@ -35,6 +35,8 @@ export default class BlogPage extends Component {
             className="all-blogs"
             css={css`
               margin-right: -1.9rem;
+              display: flex;
+              flex-wrap: wrap;
 
               @media screen and (max-width: 766px) {
                 margin: 0 -2rem;
@@ -44,6 +46,7 @@ export default class BlogPage extends Component {
               <Link
                 to={`/blog/${item.slug}`}
                 css={css`
+                  flex-grow: 1;
                   padding: 2rem;
                   display: inline-block;
                   margin-right: 1.9rem;
