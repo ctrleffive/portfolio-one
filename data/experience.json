@@ -1,12 +1,68 @@
 [
   {
     "company": null,
-    "location": "Trivandrum, Kerala, India",
-    "duration": "2013 - Present",
     "position": "Software Engineer",
+    "location": "Trivandrum, Kerala, India",
+    "duration": "Aug 2013 – Present",
+    "description": ["I've been working as a freelancer since 2013"],
+    "responsibilities": []
+  },
+  {
+    "company": "Dots Advertising",
+    "position": "Full Stack Developer",
+    "location": "Victoria, Seychelles",
+    "duration": "May 2019 – Mar 2020",
     "description": [
-      "lorem ipsum dolor sit amet...",
-      "lorem ipsum dolor sit amet..."
+      "Technologies: NodeJS (Express), PHP (Codeigniter), MySQL, MongoDB, HTML5, CSS3, JavaScript (jQuery, Angular, Electron, React, Gatsby), Dart (Flutter)"
+    ],
+    "responsibilities": [
+      "UI Designing & Development",
+      "Product Engineering",
+      "Back-End Development",
+      "Server Maintenance"
+    ]
+  },
+  {
+    "company": "Inometrics Technology Systems Pvt. Ltd.",
+    "position": "Full Stack Developer",
+    "location": "Technopark, Trivandrum",
+    "duration": "Dec 2017 – Apr 2019",
+    "description": [
+      "Joined as a Full Stack Developer and involved myself with various phases of a project right from ideation, prototype, production to launch.",
+      "Key projects are in IOT, Home Automation, Embedded & Cloud based domains.",
+      "Technologies: NodeJS (Express), PHP (Codeigniter), MySQL, MongoDB, HTML5, CSS3, JavaScript (jQuery, AngularJS, Angular, Electron), Dart (Flutter), Java (Android)"
+    ],
+    "responsibilities": [
+      "UI Designing & Development",
+      "Product Engineering",
+      "Back-End Development",
+      "Server Maintenance",
+      "Team Handling"
+    ]
+  },
+  {
+    "company": "Trueway Infotech",
+    "position": "Full Stack Developer",
+    "location": "Technopark, Trivandrum",
+    "duration": "Feb 2016 – Dec 2017",
+    "description": [
+      "Involved with the development of high scale multi disciplinary web applications for accounting, sales, inventory based projects. Clients were based out of the Middle East, Seychelles. Interacted with clients for project handling, ideation and execution.",
+      "Technologies Used: PHP (Codeigniter), MySQL, HTML5, CSS3, JavaScript (jQuery, AngularJS)"
+    ],
+    "responsibilities": [
+      "UI/UX Designing & Development",
+      "Back-End Development",
+      "Server Maintenance"
+    ]
+  },
+  {
+    "company": "Trueway FZE",
+    "position": "Web Developer",
+    "location": "Trivandrum, Kerala, India",
+    "duration": "Jun 2014 – Feb 2016",
+    "description": [
+      "Started off my career as an enthusiastic Web Developer with PHP, HTML, JavaScript, CSS. Familiarised with frontend frameworks including Bootstrap, Foundation & backend frameworks like Codeigniter. Involved in the design and development of multi industry websites in the areas of Machinery, ERP, Film Making, Artists in the Middle East, UK & the US",
+      "Technologies Used: PHP (Codeigniter), MySQL, HTML5, CSS3, JavaScript"
     ],
     "responsibilities": [
       "UI/UX Designing & Development",
