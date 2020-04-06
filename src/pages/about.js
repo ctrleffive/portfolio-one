@@ -2,11 +2,12 @@
 
 import { css, jsx } from '@emotion/core'
 import { Component } from 'react'
+import { Colors } from '../styles/main'
 
 import PageBg from '../assets/images/bgs/about.svg'
 
 import Wrap from '../layouts/wrap'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 
 export default class AboutPage extends Component {
   render = () => {
@@ -33,6 +34,27 @@ export default class AboutPage extends Component {
             Feel free to contact me
             <br /> for any project or collaboration.
           </div>
+          <Link
+            to="/resume"
+            alt="My Resume"
+            css={css`
+              padding: 0.8rem 1.3rem 0.55rem;
+              border-radius: 5px;
+              background-color: ${Colors.accent};
+              color: #212529;
+              font-weight: bold;
+              text-transform: uppercase;
+              margin-top: 1rem;
+              display: inline-block;
+              transition-duration: 0.2s;
+              box-shadow: transparent 0 0 0px;
+              &:hover {
+                color: #212529;
+                box-shadow: rgba(0, 0, 0, 0.3) 0 0 0 2px inset;
+              }
+            `}>
+            View My Resume
+          </Link>
           <div className="mt-5 h5">
             My skillset and interests includes:
             <div
