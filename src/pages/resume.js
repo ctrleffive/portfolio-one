@@ -102,6 +102,16 @@ export default class ResumePage extends Component {
               font-size: 16px;
               background-color: #dcdcdc;
             }
+            p {
+              line-height: 1.7;
+              text-align: justify;
+              &:first-child {
+                margin-top: -0.1rem;
+              }
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
           `}
         />
         <Helmet
@@ -196,16 +206,42 @@ export default class ResumePage extends Component {
               </div>
               <div className="col-md-8">
                 <InfoSection title="Professional Profile">
-                  {person.proProfile}
+                  {person.proProfile.map(item => (
+                    <p>{item}</p>
+                  ))}
                 </InfoSection>
                 <InfoSection title="Employment History">
                   {experience.map(item => (
-                    <div>
-                      <div>
-                        {item.company} | {item.position}
+                    <div
+                      css={css`
+                        margin-bottom: 1.5rem;
+                        &:last-child {
+                          margin-bottom: 0;
+                        }
+                      `}>
+                      <div
+                        css={css`
+                          margin-bottom: 0.3rem;
+                        `}>
+                        <span
+                          css={css`
+                            font-weight: bold;
+                            font-size: 1.1rem;
+                          `}>
+                          {item.company ? `${item.company} | ` : ''}
+                          {item.position}
+                        </span>
+                        <span className="float-right text-muted">
+                          {item.duration}
+                        </span>
                       </div>
-                      <div>{item.location}</div>
-                      <div>{item.duration}</div>
+                      <div
+                        css={css`
+                          margin-bottom: 1.5rem;
+                        `}
+                        className="text-muted">
+                        {item.location}
+                      </div>
                       <div>
                         {item.description.map(desc => (
                           <p>{desc}</p>
