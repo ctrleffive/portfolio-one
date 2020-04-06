@@ -6,7 +6,7 @@ import { Component } from 'react'
 
 import codeStyles from '../styles/code.js'
 
-import devIcon from '../assets/images/icons/dev.png'
+import devIcon from '../../static/images/icons/dev.png'
 
 export default class BlogSinglePage extends Component {
   render = () => {
