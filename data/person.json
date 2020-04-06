@@ -8,5 +8,23 @@
   "location": "Trivandrum, Kerala, India",
   "phone": "+91 9497851381",
   "email": "app.coder@outlook.in",
-  "proProfile": "lorem ipsum dolor sit amet..."
+  "proProfile": "lorem ipsum dolor sit amet...",
+  "languages": [
+    {
+      "name": "Malayalam",
+      "proficiency": "Native"
+    },
+    {
+      "name": "English",
+      "proficiency": "Professional"
+    },
+    {
+      "name": "Tamil",
+      "proficiency": "Elementary"
+    },
+    {
+      "name": "Hindi",
+      "proficiency": "Elementary"
+    }
+  ]
 }
