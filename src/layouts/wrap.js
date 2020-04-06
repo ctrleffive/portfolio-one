@@ -36,6 +36,7 @@ export default class Wrap extends Component {
                 }
                 siteURL
                 social {
+                  icon
                   service
                   url
                 }
@@ -53,7 +54,7 @@ export default class Wrap extends Component {
             title: this.props.title || siteMetadata.title,
             description: this.props.description || ``,
           }
-          const cover = `${siteMetadata.siteURL}/cover.png`
+          const cover = `${siteMetadata.siteURL}/images/cover.png`
           return (
             <div
               className={this.props.lightsOn ? 'lights-on' : ''}
@@ -317,19 +318,21 @@ export default class Wrap extends Component {
                       }
                     }
                   `}>
-                  {siteMetadata.social.map(item => (
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      className="social-icon"
-                      rel="noopener noreferrer"
-                      alt={item.service}
-                      css={css`
-                        background-image: url('../assets/images/icons/${item.icon}.png');
-                      `}>
-                      {item.service}
-                    </a>
-                  ))}
+                  {siteMetadata.social.map(item => {
+                    return (
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        className="social-icon"
+                        rel="noopener noreferrer"
+                        alt={item.service}
+                        css={css`
+                          background-image: url('images/icons/${item.icon}.png');
+                        `}>
+                        {item.service}
+                      </a>
+                    )
+                  })}
                 </div>
               </div>
               <div
