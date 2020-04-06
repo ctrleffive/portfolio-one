@@ -7,13 +7,6 @@ import { Helmet } from 'react-helmet'
 import { Global, css, jsx } from '@emotion/core'
 import { GlobalStyles, ColorsAdvanced, Colors } from '../styles/main'
 
-import devIcon from '../assets/images/icons/dev.png'
-import telegramIcon from '../assets/images/icons/telegram.png'
-import githubIcon from '../assets/images/icons/github.png'
-import instagramIcon from '../assets/images/icons/instagram.png'
-import linkedinIcon from '../assets/images/icons/linkedin.png'
-import twitterIcon from '../assets/images/icons/twitter.png'
-
 export default class Wrap extends Component {
   render = () => {
     const styles = css`
@@ -35,6 +28,12 @@ export default class Wrap extends Component {
             site {
               siteMetadata {
                 title
+                person {
+                  name {
+                    first
+                    last
+                  }
+                }
                 siteURL
                 social {
                   service
@@ -46,14 +45,15 @@ export default class Wrap extends Component {
           }
         `}
         render={({ site }) => {
+          const { siteMetadata } = site
           const emailIndex = Math.ceil(
-            Math.random() * (site.siteMetadata.emails.length - 1 - 0) + 0
+            Math.random() * (siteMetadata.emails.length - 1 - 0) + 0
           )
           const metaTags = {
-            title: this.props.title || site.siteMetadata.title,
+            title: this.props.title || siteMetadata.title,
             description: this.props.description || ``,
           }
-          const cover = `${site.siteMetadata.siteURL}/cover.png`
+          const cover = `${siteMetadata.siteURL}/cover.png`
           return (
             <div
               className={this.props.lightsOn ? 'lights-on' : ''}
@@ -91,7 +91,7 @@ export default class Wrap extends Component {
 
                   // <!-- Facebook Meta Tags -->
                   { property: 'og:type', content: 'website' },
-                  { property: 'og:url', content: site.siteMetadata.siteURL },
+                  { property: 'og:url', content: siteMetadata.siteURL },
                   { property: 'og:title', content: metaTags.title },
                   { property: 'og:description', content: metaTags.description },
                   { property: 'og:image', content: cover },
@@ -129,11 +129,11 @@ export default class Wrap extends Component {
                       }
                     }
                   `}>
-                  <div className="mr-3">Chandu</div>
-                  <div>J S</div>
+                  <div className="mr-3">{siteMetadata.person.name.first}</div>
+                  <div>{siteMetadata.person.name.last}</div>
                 </Link>
                 <a
-                  href={`mailto:${site.siteMetadata.emails[emailIndex]}@chandujs.dev`}
+                  href={`mailto:${siteMetadata.emails[emailIndex]}@chandujs.dev`}
                   css={css`
                     border-radius: 100%;
                     background-color: ${Colors.accent};
@@ -315,33 +315,18 @@ export default class Wrap extends Component {
                       &:hover {
                         opacity: 1;
                       }
-                      &[alt='DEV Community'] {
-                        background-image: url(${devIcon});
-                      }
-                      &[alt='Telegram'] {
-                        background-image: url(${telegramIcon});
-                      }
-                      &[alt='GitHub'] {
-                        background-image: url(${githubIcon});
-                      }
-                      &[alt='Instagram'] {
-                        background-image: url(${instagramIcon});
-                      }
-                      &[alt='LinkedIn'] {
-                        background-image: url(${linkedinIcon});
-                      }
-                      &[alt='Twitter'] {
-                        background-image: url(${twitterIcon});
-                      }
                     }
                   `}>
-                  {site.siteMetadata.social.map(item => (
+                  {siteMetadata.social.map(item => (
                     <a
                       href={item.url}
                       target="_blank"
                       className="social-icon"
                       rel="noopener noreferrer"
-                      alt={item.service}>
+                      alt={item.service}
+                      css={css`
+                        background-image: url('../assets/images/icons/${item.icon}.png');
+                      `}>
                       {item.service}
                     </a>
                   ))}
