@@ -3,6 +3,10 @@
     "first": "Chandu",
     "last": "J S"
   },
-  "designation": "Full Stack Developer",
-  "website": "https://chandujs.dev"
+  "position": "Full Stack Developer",
+  "website": "chandujs.dev",
+  "location": "Trivandrum, Kerala, India",
+  "phone": "+91 9497851381",
+  "email": "app.coder@outlook.in",
+  "proProfile": "lorem ipsum dolor sit amet..."
 }

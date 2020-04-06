@@ -8,8 +8,8 @@ const uses = require('./data/uses.json')
 
 module.exports = {
   siteMetadata: {
-    title: `💻 ${person.name.first} ${person.name.last} | ${person.designation}`,
-    siteURL: person.website,
+    title: `💻 ${person.name.first} ${person.name.last} | ${person.position}`,
+    siteURL: `https://${person.website}`,
     person,
     emails,
     skills,
