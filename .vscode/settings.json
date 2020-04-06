@@ -3,21 +3,5 @@
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  },
-  "cSpell.words": [
-    "Chandu",
-    "JFNZHF",
-    "Raleway",
-    "chandujs",
-    "ctrleffive",
-    "disqus",
-    "hexcode",
-    "hola",
-    "linkedin",
-    "monospace",
-    "namaste",
-    "noreferrer",
-    "shortname",
-    "skillset"
-  ]
+  }
 }

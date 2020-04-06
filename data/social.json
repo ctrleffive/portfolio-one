@@ -1,0 +1,32 @@
+[
+  {
+    "icon": "dev",
+    "service": "DEV Community",
+    "url": "https://dev.to/ctrleffive"
+  },
+  {
+    "icon": "telegram",
+    "service": "Telegram",
+    "url": "https://t.me/ctrleffive"
+  },
+  {
+    "icon": "github",
+    "service": "GitHub",
+    "url": "https://github.com/ctrleffive"
+  },
+  {
+    "icon": "instagram",
+    "service": "Instagram",
+    "url": "https://instagram.com/ctrleffive"
+  },
+  {
+    "icon": "linkedin",
+    "service": "LinkedIn",
+    "url": "https://linkedin.com/in/ctrleffive"
+  },
+  {
+    "icon": "twitter",
+    "service": "Twitter",
+    "url": "https://twitter.com/ctrleffive"
+  }
+]
