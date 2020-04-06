@@ -214,7 +214,7 @@ export default class ResumePage extends Component {
                   {experience.map(item => (
                     <div
                       css={css`
-                        margin-bottom: 1.5rem;
+                        margin-bottom: 4rem;
                         &:last-child {
                           margin-bottom: 0;
                         }
@@ -248,30 +248,34 @@ export default class ResumePage extends Component {
                           <p>{desc}</p>
                         ))}
                       </div>
-                      <div
-                        css={css`
-                          margin-top: 1.5rem;
-                        `}>
+                      {item.responsibilities.length ? (
                         <div
-                          className="text-muted"
                           css={css`
-                            margin-bottom: 1rem;
+                            margin-top: 1.5rem;
                           `}>
-                          My Responsibilities
+                          <div
+                            className="text-muted"
+                            css={css`
+                              margin-bottom: 1rem;
+                            `}>
+                            My Responsibilities
+                          </div>
+                          <ul
+                            css={css`
+                              margin-bottom: 0;
+                              padding-left: 1.2rem;
+                              li {
+                                margin-bottom: 0.5rem;
+                              }
+                            `}>
+                            {item.responsibilities.map(resp => (
+                              <li>{resp}</li>
+                            ))}
+                          </ul>
                         </div>
-                        <ul
-                          css={css`
-                            margin-bottom: 0;
-                            padding-left: 1.2rem;
-                            li {
-                              margin-bottom: 0.5rem;
-                            }
-                          `}>
-                          {item.responsibilities.map(resp => (
-                            <li>{resp}</li>
-                          ))}
-                        </ul>
-                      </div>
+                      ) : (
+                        ''
+                      )}
                     </div>
                   ))}
                 </InfoSection>
