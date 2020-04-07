@@ -1,4 +1,5 @@
 ---
+sort: 0
 title: AMT IT Solutions
 subTitle: AMT Networking
 thumbnail: content/uploads/amt.png

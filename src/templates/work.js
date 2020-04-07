@@ -45,148 +45,150 @@ export default class WorkPage extends Component {
                 margin-right: -2rem;
               }
             `}>
-            {data.map(item => {
-              return (
-                <StaticQuery
-                  query={graphql`
-                    query {
-                      allFile(
-                        filter: { relativeDirectory: { eq: "uploads" } }
-                      ) {
-                        edges {
-                          node {
-                            relativePath
-                            childImageSharp {
-                              fixed(width: 500, height: 300, quality: 100) {
-                                ...GatsbyImageSharpFixed
+            {data
+              .sort((a, b) => b.frontmatter.sort - a.frontmatter.sort)
+              .map(item => {
+                return (
+                  <StaticQuery
+                    query={graphql`
+                      query {
+                        allFile(
+                          filter: { relativeDirectory: { eq: "uploads" } }
+                        ) {
+                          edges {
+                            node {
+                              relativePath
+                              childImageSharp {
+                                fixed(width: 500, height: 300, quality: 100) {
+                                  ...GatsbyImageSharpFixed
+                                }
                               }
-                            }
-                            colors {
-                              ...GatsbyImageColors
+                              colors {
+                                ...GatsbyImageColors
+                              }
                             }
                           }
                         }
                       }
-                    }
-                  `}
-                  render={({ allFile }) => {
-                    const findNode = () => {
-                      return allFile.edges.find(edge => {
-                        return (
-                          item.frontmatter.thumbnail ===
-                          `content/${edge.node.relativePath}`
-                        )
-                      }).node
-                    }
-                    return (
-                      <div
-                        className="col-xl-4 col-md-6"
-                        css={css`
-                          margin-bottom: 1.4rem;
-                          @media screen and (max-width: 766px) {
-                            margin-bottom: 0.8rem;
-                          }
-                        `}>
-                        <Link
-                          to={`/work/${item.fields.slug}`}
-                          className="overflow-hidden"
+                    `}
+                    render={({ allFile }) => {
+                      const findNode = () => {
+                        return allFile.edges.find(edge => {
+                          return (
+                            item.frontmatter.thumbnail ===
+                            `content/${edge.node.relativePath}`
+                          )
+                        }).node
+                      }
+                      return (
+                        <div
+                          className="col-xl-4 col-md-6"
                           css={css`
-                            display: inline-block;
-                            position: relative;
-                            z-index: 0;
-                            height: 300px;
-                            width: 100%;
-                            border-radius: 5px;
-                            box-shadow: rgba(0, 0, 0, 0.05) 0 1px 2px;
-                            &:before {
-                              content: '';
-                              position: absolute;
-                              top: 0;
-                              left: 0;
-                              right: 0;
-                              bottom: 0;
-                              background-color: ${findNode().colors
-                                .lightVibrant};
-                              z-index: 1;
-                              transition-duration: 0.2s;
-                              opacity: 0;
-
-                              @media screen and (max-width: 766px) {
-                                opacity: 0.9;
-                              }
-                            }
-                            &:hover {
-                              &:before {
-                                opacity: 0.95;
-                              }
-                              .item-details {
-                                opacity: 1;
-                                bottom: -0.6rem;
-                              }
-                            }
-                            .gatsby-image-wrapper {
-                              width: 100% !important;
+                            margin-bottom: 1.4rem;
+                            @media screen and (max-width: 766px) {
+                              margin-bottom: 0.8rem;
                             }
                           `}>
-                          <Img
-                            fixed={findNode().childImageSharp.fixed}
-                            objectFit="cover"
-                            objectPosition="50% 50%"
-                          />
-                          <div
+                          <Link
+                            to={`/work/${item.fields.slug}`}
+                            className="overflow-hidden"
                             css={css`
-                              position: absolute;
-                              z-index: 1;
-                              mix-blend-mode: difference;
-                              bottom: -3rem;
-                              right: 0;
-                              left: 0;
-                              opacity: 0;
-                              padding-top: 10rem;
-                              padding-left: 2rem;
-                              padding-bottom: 2.2rem;
-                              transition-duration: 0.2s;
-                              color: ${findNode().colors.muted};
+                              display: inline-block;
+                              position: relative;
+                              z-index: 0;
+                              height: 300px;
+                              width: 100%;
+                              border-radius: 5px;
+                              box-shadow: rgba(0, 0, 0, 0.05) 0 1px 2px;
+                              &:before {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                background-color: ${findNode().colors
+                                  .lightVibrant};
+                                z-index: 1;
+                                transition-duration: 0.2s;
+                                opacity: 0;
 
-                              @media screen and (max-width: 766px) {
-                                opacity: 1;
-                                bottom: -0.6rem;
+                                @media screen and (max-width: 766px) {
+                                  opacity: 0.9;
+                                }
                               }
-                            `}
-                            className="item-details">
+                              &:hover {
+                                &:before {
+                                  opacity: 0.95;
+                                }
+                                .item-details {
+                                  opacity: 1;
+                                  bottom: -0.6rem;
+                                }
+                              }
+                              .gatsby-image-wrapper {
+                                width: 100% !important;
+                              }
+                            `}>
+                            <Img
+                              fixed={findNode().childImageSharp.fixed}
+                              objectFit="cover"
+                              objectPosition="50% 50%"
+                            />
                             <div
                               css={css`
-                                font-weight: bold;
-                                font-size: 2rem;
-                                margin-bottom: 0rem;
-                              `}>
-                              {item.frontmatter.title}
-                            </div>
-                            <div>
-                              {item.frontmatter.tags.map(tag => (
-                                <span
-                                  css={css`
-                                    margin-right: 1.5rem;
-                                  `}>
-                                  {tag}
-                                </span>
-                              ))}
-                            </div>
-                            <div
-                              css={css`
-                                margin-top: 1rem;
+                                position: absolute;
+                                z-index: 1;
+                                mix-blend-mode: difference;
+                                bottom: -3rem;
+                                right: 0;
+                                left: 0;
+                                opacity: 0;
+                                padding-top: 10rem;
+                                padding-left: 2rem;
+                                padding-bottom: 2.2rem;
+                                transition-duration: 0.2s;
+                                color: ${findNode().colors.muted};
+
+                                @media screen and (max-width: 766px) {
+                                  opacity: 1;
+                                  bottom: -0.6rem;
+                                }
                               `}
-                              className="item-tagline">
-                              {item.frontmatter.subTitle}
+                              className="item-details">
+                              <div
+                                css={css`
+                                  font-weight: bold;
+                                  font-size: 2rem;
+                                  margin-bottom: 0rem;
+                                `}>
+                                {item.frontmatter.title}
+                              </div>
+                              <div>
+                                {item.frontmatter.tags.map(tag => (
+                                  <span
+                                    css={css`
+                                      margin-right: 1.5rem;
+                                    `}>
+                                    {tag}
+                                  </span>
+                                ))}
+                              </div>
+                              <div
+                                css={css`
+                                  margin-top: 1rem;
+                                `}
+                                className="item-tagline">
+                                {item.frontmatter.subTitle}
+                              </div>
                             </div>
-                          </div>
-                        </Link>
-                      </div>
-                    )
-                  }}
-                />
-              )
-            })}
+                          </Link>
+                        </div>
+                      )
+                    }}
+                  />
+                )
+              })}
           </div>
         </div>
       </Wrap>

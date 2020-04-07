@@ -1,4 +1,5 @@
 ---
+sort: 0
 title: Caya Property
 subTitle: Rental Services Website
 thumbnail: content/uploads/cayaproperty.png

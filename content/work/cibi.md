@@ -1,4 +1,5 @@
 ---
+sort: 0
 title: CIBI Cotton
 subTitle: Textiles Website Design
 thumbnail: content/uploads/cibi.png

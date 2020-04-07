@@ -1,4 +1,5 @@
 ---
+sort: 0
 title: Protech
 subTitle: Industrial Website Design
 thumbnail: content/uploads/protech.png

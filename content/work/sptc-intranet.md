@@ -1,4 +1,5 @@
 ---
+sort: 0
 title: SPTC Intranet
 subTitle: Intranet Software
 thumbnail: content/uploads/sptc-intranet.png

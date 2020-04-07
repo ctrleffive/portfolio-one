@@ -1,4 +1,5 @@
 ---
+sort: 0
 title: Smyrna Mission Trust
 subTitle: Church Website Design
 thumbnail: content/uploads/smyrna.png

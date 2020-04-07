@@ -1,4 +1,5 @@
 ---
+sort: 0
 title: GCS Protech
 subTitle: Industrial Website
 thumbnail: content/uploads/gcs.png

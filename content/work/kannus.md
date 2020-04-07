@@ -1,4 +1,5 @@
 ---
+sort: 0
 title: Kannus
 subTitle: Supermarket Website Design
 thumbnail: content/uploads/kannus.png

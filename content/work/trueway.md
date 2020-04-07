@@ -1,4 +1,5 @@
 ---
+sort: 0
 title: Trueway
 subTitle: Digital Thermostats Website
 thumbnail: content/uploads/trueway.png

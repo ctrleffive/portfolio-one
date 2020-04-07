@@ -1,4 +1,5 @@
 ---
+sort: 0
 title: MSH UAE
 subTitle: Equipments Trading Website
 thumbnail: content/uploads/msh.png

@@ -1,4 +1,5 @@
 ---
+sort: 0
 title: QCS
 subTitle: Quality Control System
 thumbnail: content/uploads/qcs.png

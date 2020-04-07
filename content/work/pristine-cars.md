@@ -1,4 +1,5 @@
 ---
+sort: 0
 title: Pristine Cars
 subTitle: Car Rental Website
 thumbnail: content/uploads/pristinecars.png

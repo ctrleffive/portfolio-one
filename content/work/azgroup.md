@@ -1,4 +1,5 @@
 ---
+sort: 0
 title: AZ Group
 subTitle: Technical Services Website
 thumbnail: content/uploads/azgroup.png

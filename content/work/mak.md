@@ -1,4 +1,5 @@
 ---
+sort: 0
 title: MAK Machinery
 subTitle: Industrial Website
 thumbnail: content/uploads/mak.png

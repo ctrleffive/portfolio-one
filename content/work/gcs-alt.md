@@ -1,4 +1,5 @@
 ---
+sort: 0
 title: GCS
 subTitle: Industrial Website Design
 thumbnail: content/uploads/gcs-alt.png
