@@ -1,5 +1,5 @@
 ---
-sort: 0
+sort: 29
 title: Are We Alone
 subTitle: Astrophotography Collection
 thumbnail: content/uploads/are-we-alone.jpg

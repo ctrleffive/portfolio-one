@@ -1,5 +1,5 @@
 ---
-sort: 0
+sort: 26
 title: My Website
 subTitle: My website made in gatsby
 thumbnail: content/uploads/chandujs.png

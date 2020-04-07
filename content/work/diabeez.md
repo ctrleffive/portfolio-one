@@ -1,5 +1,5 @@
 ---
-sort: 0
+sort: 26
 title: Diabeez
 subTitle: Diabetics Monitoring Apps
 thumbnail: content/uploads/diabeez.png

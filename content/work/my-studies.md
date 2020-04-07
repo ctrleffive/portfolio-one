@@ -1,5 +1,5 @@
 ---
-sort: 0
+sort: 31
 title: 🎨 Studies
 subTitle: My photo & color studies
 thumbnail: content/uploads/my-studies.jpg

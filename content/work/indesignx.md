@@ -1,5 +1,5 @@
 ---
-sort: 0
+sort: 24
 title: Indesignx
 subTitle: Creative Agency Website
 thumbnail: content/uploads/indesignx.png

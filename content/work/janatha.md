@@ -1,5 +1,5 @@
 ---
-sort: 0
+sort: 23
 title: Janatha
 subTitle: Mobile App for Public
 thumbnail: content/uploads/janatha.png

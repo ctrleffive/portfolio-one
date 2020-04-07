@@ -1,5 +1,5 @@
 ---
-sort: 0
+sort: 22
 title: PureFM
 subTitle: Radio Station in Seychelles
 thumbnail: content/uploads/purefm.png

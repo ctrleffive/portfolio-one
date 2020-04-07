@@ -1,5 +1,5 @@
 ---
-sort: 1
+sort: 30
 title: Alto's
 subTitle: Restaurant Mobile App
 thumbnail: content/uploads/altos.png

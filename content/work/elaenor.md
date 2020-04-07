@@ -1,5 +1,5 @@
 ---
-sort: 0
+sort: 25
 title: Elaenor
 subTitle: Home Automation System
 thumbnail: content/uploads/elaenor.png

@@ -1,5 +1,5 @@
 ---
-sort: 0
+sort: 27
 title: Bus Pilot
 subTitle: Bus Tracking App
 thumbnail: content/uploads/bus-pilot.png
