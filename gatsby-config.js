@@ -1,15 +1,20 @@
 const Variables = require('./src/styles/variables.json')
 
+const uses = require('./data/uses.json')
 const emails = require('./data/emails.json')
 const skills = require('./data/skills.json')
 const social = require('./data/social.json')
 const person = require('./data/person.json')
-const uses = require('./data/uses.json')
+const experience = require('./data/experience.json')
+const education = require('./data/education.json')
 
 module.exports = {
+  pathPrefix: '/',
   siteMetadata: {
     title: `💻 ${person.name.first} ${person.name.last} | ${person.position}`,
     siteURL: `https://${person.website}`,
+    experience,
+    education,
     person,
     emails,
     skills,

@@ -80,7 +80,6 @@ export default class Wrap extends Component {
                 }
               `}>
               <Helmet
-                base="/"
                 defaultTitle={metaTags.title}
                 meta={[
                   { name: `description`, content: metaTags.description },
@@ -327,7 +326,7 @@ export default class Wrap extends Component {
                         rel="noopener noreferrer"
                         alt={item.service}
                         css={css`
-                          background-image: url('images/icons/${item.icon}.png');
+                          background-image: url('/images/icons/${item.icon}.png');
                         `}>
                         {item.service}
                       </a>
