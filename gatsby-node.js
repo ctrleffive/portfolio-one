@@ -63,6 +63,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
         edges {
           node {
             frontmatter {
+              sort
               title
               subTitle
               tags
@@ -83,13 +84,6 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     item.node.fields.slug = item.node.fields.slug.replace(/\\|\//g, '')
     return item.node
   })
-
-  for (let i = workList.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * i)
-    const temp = workList[i]
-    workList[i] = workList[j]
-    workList[j] = temp
-  }
 
   createPage({
     path: `/work`,
