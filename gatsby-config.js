@@ -23,6 +23,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-151971254-1',
+      },
+    },
+    {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         color: Variables.colors.accent,
