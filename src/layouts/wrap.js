@@ -6,6 +6,7 @@ import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import { Global, css, jsx } from '@emotion/core'
 import { GlobalStyles, ColorsAdvanced, Colors } from '../styles/main'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 export default class Wrap extends Component {
   render = () => {
@@ -132,7 +133,7 @@ export default class Wrap extends Component {
                   <div className="mr-3">{siteMetadata.person.name.first}</div>
                   <div>{siteMetadata.person.name.last}</div>
                 </Link>
-                <a
+                <OutboundLink
                   href={`mailto:${siteMetadata.emails[emailIndex]}@chandujs.dev`}
                   css={css`
                     border-radius: 100%;
@@ -177,7 +178,7 @@ export default class Wrap extends Component {
                     }
                   `}>
                   email
-                </a>
+                </OutboundLink>
               </div>
               <div
                 className="side-bar text-right"
@@ -319,7 +320,7 @@ export default class Wrap extends Component {
                   `}>
                   {siteMetadata.social.map(item => {
                     return (
-                      <a
+                      <OutboundLink
                         href={item.url}
                         target="_blank"
                         className="social-icon"
@@ -329,7 +330,7 @@ export default class Wrap extends Component {
                           background-image: url('/images/icons/${item.icon}.png');
                         `}>
                         {item.service}
-                      </a>
+                      </OutboundLink>
                     )
                   })}
                 </div>

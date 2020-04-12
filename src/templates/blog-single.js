@@ -3,6 +3,7 @@
 import { css, jsx } from '@emotion/core'
 import Wrap from '../layouts/wrap'
 import { Component } from 'react'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import codeStyles from '../styles/code.js'
 
@@ -50,7 +51,10 @@ export default class BlogSinglePage extends Component {
               dangerouslySetInnerHTML={{ __html: data.body_html }}
             />
           </div>
-          <a href={data.url} target="_blank" rel="noopener noreferrer">
+          <OutboundLink
+            href={data.url}
+            target="_blank"
+            rel="noopener noreferrer">
             <img
               src={devIcon}
               alt="Dev.to"
@@ -60,7 +64,7 @@ export default class BlogSinglePage extends Component {
                 margin-top: 1rem;
               `}
             />
-          </a>
+          </OutboundLink>
         </div>
       </Wrap>
     )
