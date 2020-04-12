@@ -4,6 +4,7 @@ import { css, jsx } from '@emotion/core'
 import Wrap from '../layouts/wrap'
 import { Colors } from '../styles/main'
 import { Component } from 'react'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import PageBg from '../assets/images/bgs/work.svg'
 
@@ -87,7 +88,7 @@ export default class WorkSinglePage extends Component {
             className="bg-white pad-wrap rounded-lg overflow-hidden"
             dangerouslySetInnerHTML={{ __html: data.html }}></div>
           {data.frontmatter.url ? (
-            <a
+            <OutboundLink
               href={data.frontmatter.url}
               target="_blank"
               rel="noopener noreferrer"
@@ -108,7 +109,7 @@ export default class WorkSinglePage extends Component {
                 }
               `}>
               GoTo Project
-            </a>
+            </OutboundLink>
           ) : (
             ''
           )}
