@@ -103,6 +103,7 @@ export default class UsesPage extends Component {
                             `}>
                             {item.link ? (
                               <OutboundLink
+                                eventLabel={`Uses (${item.name})`}
                                 href={item.link}
                                 target="_blank"
                                 rel="noopener noreferrer">

@@ -89,6 +89,7 @@ export default class WorkSinglePage extends Component {
             dangerouslySetInnerHTML={{ __html: data.html }}></div>
           {data.frontmatter.url ? (
             <OutboundLink
+              eventLabel="Project Visit"
               href={data.frontmatter.url}
               target="_blank"
               rel="noopener noreferrer"
