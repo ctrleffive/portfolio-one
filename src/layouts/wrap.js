@@ -134,6 +134,7 @@ export default class Wrap extends Component {
                   <div>{siteMetadata.person.name.last}</div>
                 </Link>
                 <OutboundLink
+                  eventLabel="Contact"
                   href={`mailto:${siteMetadata.emails[emailIndex]}@chandujs.dev`}
                   css={css`
                     border-radius: 100%;
@@ -321,6 +322,7 @@ export default class Wrap extends Component {
                   {siteMetadata.social.map(item => {
                     return (
                       <OutboundLink
+                        eventLabel="Social Media Visit"
                         href={item.url}
                         target="_blank"
                         className="social-icon"

@@ -52,6 +52,7 @@ export default class BlogSinglePage extends Component {
             />
           </div>
           <OutboundLink
+            eventLabel="DEV Blog Visit"
             href={data.url}
             target="_blank"
             rel="noopener noreferrer">
