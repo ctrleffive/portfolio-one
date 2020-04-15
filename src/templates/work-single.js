@@ -84,6 +84,14 @@ export default class WorkSinglePage extends Component {
                 font-weight: bold;
                 color: ${Colors.brand};
               }
+
+              iframe {
+                border: none;
+                background-color: #eee;
+                width: 100%;
+                margin-top: 1rem;
+                border-radius: 3px;
+              }
             `}
             className="bg-white pad-wrap rounded-lg overflow-hidden"
             dangerouslySetInnerHTML={{ __html: data.html }}></div>
