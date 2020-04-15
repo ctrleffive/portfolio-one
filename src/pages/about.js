@@ -38,14 +38,15 @@ export default class AboutPage extends Component {
             to="/resume"
             alt="My Resume"
             css={css`
-              padding: 0.8rem 1.3rem 0.55rem;
               border-radius: 5px;
               background-color: ${Colors.accent};
               color: #212529;
               font-weight: bold;
               text-transform: uppercase;
-              margin-top: 1rem;
               display: inline-block;
+              padding: 0.8rem 1.3rem;
+              height: 2.9rem;
+              margin-top: 1.5rem;
               transition-duration: 0.2s;
               box-shadow: transparent 0 0 0px;
               &:hover {
