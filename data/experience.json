@@ -4,7 +4,10 @@
     "position": "Software Engineer",
     "location": "Trivandrum, Kerala, India",
     "duration": "Aug 2013 – Present",
-    "description": ["I've been working as a freelancer since 2013"],
+    "description": [
+      "I've been working as a freelancer since 2013",
+      "Technologies Worked With: NodeJS (Express), PHP (Codeigniter), MySQL, MongoDB, HTML5, CSS3, JavaScript (React, jQuery, AngularJS, Angular, Electron), Dart (Flutter), Java (Android), Swift (iOS)"
+    ],
     "responsibilities": []
   },
   {
