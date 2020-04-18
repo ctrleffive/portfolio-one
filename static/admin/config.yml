@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: ctrleffive/chandujs.dev
+
+media_folder: content/uploads
+public_folder: content/uploads
+
+collections:
+  - name: work
+    label: Work
+    folder: content/work
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: subTitle, label: Sub Title }
+      - { name: thumbnail, label: Thumbnail, widget: image }
+      - { name: url, label: URL }
+      - { name: tags, label: Tags, widget: list }
+      - { name: body, label: Body, widget: markdown }
