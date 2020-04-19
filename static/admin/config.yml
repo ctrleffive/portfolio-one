@@ -1,6 +1,9 @@
 backend:
   name: github
+  branch: master
   repo: ctrleffive/chandujs.dev
+  base_url: https://netlify-cms-oauth.now.sh
+  auth_endpoint: api/begin
 
 media_folder: content/uploads
 public_folder: content/uploads
