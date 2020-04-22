@@ -191,15 +191,15 @@
     "items": [
       {
         "emoji": "🎵",
-        "name": "Apple Music",
-        "description": "I cannot live without this. ❤️",
-        "link": ""
+        "name": "Spotify",
+        "description": "I cannot live without music. ❤️",
+        "link": "https://open.spotify.com/playlist/5rDrcAXAde9kIqzlCxXARs?si=O9reA5wkQUG_cqFCOnZ0Mg"
       },
       {
         "emoji": "🎤",
-        "name": "Apple Podcast",
+        "name": "Spotify (Podcast)",
         "description": "My favourite podcast is StarTalk hosted by Neil Degrasse Tyson.",
-        "link": "https://podcasts.apple.com/us/podcast/startalk-radio/id325404506"
+        "link": "https://open.spotify.com/show/1mNsuXfG95Lf76YQeVMuo1?si=C50rUXZfSROHE7WtDjAgGw"
       },
       {
         "emoji": "🌈",
