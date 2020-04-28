@@ -9,7 +9,7 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import PageBg from '../assets/images/bgs/work.svg'
 
 export default class WorkSinglePage extends Component {
-  splitTitle = title => {
+  splitTitle = (title) => {
     const spaceIndex = title.indexOf(' ')
     if (spaceIndex === -1) return <span>{title}</span>
     const partOne = title.slice(0, spaceIndex).trim()
@@ -45,7 +45,7 @@ export default class WorkSinglePage extends Component {
               {data.frontmatter.subTitle}
             </div>
             <div className="tags">
-              {data.frontmatter.tags.map(tag => (
+              {data.frontmatter.tags.map((tag) => (
                 <span className="badge badge-pill badge-brand mb-2 mr-2 ng-star-inserted py-1">
                   #{tag}
                 </span>
@@ -58,6 +58,7 @@ export default class WorkSinglePage extends Component {
                 margin-top: 2rem;
                 margin-left: -3rem !important;
                 margin-right: -3rem !important;
+                margin-bottom: 2rem;
                 width: calc(100% + 6rem);
 
                 @media screen and (max-width: 766px) {
