@@ -83,6 +83,7 @@ export default class Wrap extends Component {
               <Helmet
                 defaultTitle={metaTags.title}
                 meta={[
+                  { name: `theme-color`, content: ColorsAdvanced.main },
                   { name: `description`, content: metaTags.description },
 
                   // <!-- Google / Search Engine Tags -->
@@ -319,7 +320,7 @@ export default class Wrap extends Component {
                       }
                     }
                   `}>
-                  {siteMetadata.social.map(item => {
+                  {siteMetadata.social.map((item) => {
                     return (
                       <OutboundLink
                         eventLabel="Social Media Visit"
