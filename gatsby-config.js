@@ -87,19 +87,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-extract-image-colors',
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `${person.name.first} ${person.name.last}`,
-        short_name: person.name.first,
-        start_url: '/',
-        background_color: Variables.colors.brand,
-        theme_color: Variables.colors.brand,
-        display: 'standalone',
-        icon: 'src/assets/images/icon.png',
-        crossOrigin: `use-credentials`,
-      },
-    },
-    'gatsby-plugin-offline',
+    `gatsby-plugin-remove-serviceworker`,
   ],
 }
