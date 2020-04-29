@@ -174,7 +174,15 @@ export default class ResumePage extends Component {
               education,
             } = site.siteMetadata
             return (
-              <div className="container">
+              <div
+                css={css`
+                  @media (max-width: 1200px) {
+                    width: 100%;
+                    max-width: 100%;
+                    padding: 0;
+                  }
+                `}
+                className="container">
                 <div
                   css={css`
                     background-color: #fff;
@@ -218,7 +226,7 @@ export default class ResumePage extends Component {
                         <ListItem title="Website">{person.website}</ListItem>
                       </InfoSection>
                       <InfoSection title="Social">
-                        {social.map(item => {
+                        {social.map((item) => {
                           const usernameSplits = item.url.split('/')
                           const username =
                             usernameSplits[usernameSplits.length - 1]
@@ -235,13 +243,13 @@ export default class ResumePage extends Component {
                             margin: -0.1rem;
                             display: inline-block;
                           `}>
-                          {skills.map(item => (
+                          {skills.map((item) => (
                             <ListItem skill>{item}</ListItem>
                           ))}
                         </div>
                       </InfoSection>
                       <InfoSection title="Education">
-                        {education.map(item => (
+                        {education.map((item) => (
                           <ListItem title={item.degree}>
                             <div>{item.duration}</div>
                             <div>{item.institute}</div>
@@ -249,7 +257,7 @@ export default class ResumePage extends Component {
                         ))}
                       </InfoSection>
                       <InfoSection title="Languages">
-                        {person.languages.map(item => (
+                        {person.languages.map((item) => (
                           <ListItem title={item.name}>
                             {item.proficiency}
                           </ListItem>
@@ -258,12 +266,12 @@ export default class ResumePage extends Component {
                     </div>
                     <div className="col-md-8">
                       <InfoSection title="Professional Profile">
-                        {person.proProfile.map(item => (
+                        {person.proProfile.map((item) => (
                           <p>{item}</p>
                         ))}
                       </InfoSection>
                       <InfoSection title="Employment History">
-                        {experience.map(item => (
+                        {experience.map((item) => (
                           <div
                             css={css`
                               margin-bottom: 4rem;
@@ -296,7 +304,7 @@ export default class ResumePage extends Component {
                               {item.location}
                             </div>
                             <div>
-                              {item.description.map(desc => (
+                              {item.description.map((desc) => (
                                 <p>{desc}</p>
                               ))}
                             </div>
@@ -320,7 +328,7 @@ export default class ResumePage extends Component {
                                       margin-bottom: 0.5rem;
                                     }
                                   `}>
-                                  {item.responsibilities.map(resp => (
+                                  {item.responsibilities.map((resp) => (
                                     <li>{resp}</li>
                                   ))}
                                 </ul>
