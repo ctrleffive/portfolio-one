@@ -35,14 +35,12 @@ export default class BlogPage extends Component {
             className="all-blogs"
             css={css`
               margin-right: -1.9rem;
-              display: flex;
-              flex-wrap: wrap;
 
               @media screen and (max-width: 766px) {
                 margin: 0 -2rem;
               }
             `}>
-            {this.props.pageContext.blogList.map(item => (
+            {this.props.pageContext.blogList.map((item) => (
               <Link
                 to={`/blog/${item.slug}`}
                 css={css`
@@ -71,7 +69,7 @@ export default class BlogPage extends Component {
                   Published On: <strong>{item.readable_publish_date}</strong>
                 </div>
                 <div className="item-tags text-lowercase mt-2">
-                  {item.tags.map(tag => (
+                  {item.tags.map((tag) => (
                     <span
                       css={css`
                         display: inline-block;
