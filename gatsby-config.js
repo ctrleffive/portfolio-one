@@ -88,5 +88,6 @@ module.exports = {
     },
     'gatsby-plugin-extract-image-colors',
     `gatsby-plugin-remove-serviceworker`,
+    `gatsby-plugin-sitemap`,
   ],
 }
