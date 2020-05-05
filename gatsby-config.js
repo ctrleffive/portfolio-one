@@ -12,7 +12,7 @@ module.exports = {
   pathPrefix: '/',
   siteMetadata: {
     title: `💻 ${person.name.first} ${person.name.last} | ${person.position}`,
-    siteURL: `https://${person.website}`,
+    siteUrl: `https://${person.website}`,
     experience,
     education,
     person,

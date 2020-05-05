@@ -35,7 +35,7 @@ export default class Wrap extends Component {
                     last
                   }
                 }
-                siteURL
+                siteUrl
                 social {
                   icon
                   service
@@ -55,7 +55,7 @@ export default class Wrap extends Component {
             title: this.props.title || siteMetadata.title,
             description: this.props.description || ``,
           }
-          const cover = `${siteMetadata.siteURL}/images/cover.png`
+          const cover = `${siteMetadata.siteUrl}/images/cover.png`
           return (
             <div
               className={this.props.lightsOn ? 'lights-on' : ''}
@@ -93,7 +93,7 @@ export default class Wrap extends Component {
 
                   // <!-- Facebook Meta Tags -->
                   { property: 'og:type', content: 'website' },
-                  { property: 'og:url', content: siteMetadata.siteURL },
+                  { property: 'og:url', content: siteMetadata.siteUrl },
                   { property: 'og:title', content: metaTags.title },
                   { property: 'og:description', content: metaTags.description },
                   { property: 'og:image', content: cover },
