@@ -2,7 +2,7 @@
 
 import { Component } from 'react'
 import { Helmet } from 'react-helmet'
-import { StaticQuery } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 import { Global, css, jsx } from '@emotion/core'
 
 import { ColorsAdvanced } from '../styles/main'
