@@ -1,101 +1,94 @@
 const fetch = require('node-fetch')
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const { createRemoteFileNode } = require('gatsby-source-filesystem')
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
+exports.onCreateNode = async ({
+  node,
+  getNode,
+  actions: { createNode, createNodeField },
+  store,
+  cache,
+  createNodeId,
+}) => {
+  // creating item slug for work
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `work` })
     createNodeField({
       node,
       name: `slug`,
-      value: slug,
+      value: slug.replace(/\//g, ''),
     })
+  }
+
+  // creating featured image for blog
+  if (node.internal.type === `DevArticles` && node.article.cover_image) {
+    const url = node.article.cover_image
+    const parentNodeId = node.id
+    let fileNode = await createRemoteFileNode({
+      url,
+      store,
+      cache,
+      createNode,
+      createNodeId,
+      parentNodeId,
+    })
+    if (fileNode) {
+      node.cover_image___NODE = fileNode.id
+    }
   }
 }
 
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
+  // populating blog
   const blogListResult = await graphql(`
     query {
       allDevArticles {
         edges {
           node {
             article {
-              id
-              title
-              readable_publish_date
-              tags
-              cover_image
-              positive_reactions_count
               slug
-              body_html
-              url
             }
           }
         }
       }
     }
   `)
-  const blogList = blogListResult.data.allDevArticles.edges.map(
-    item => item.node.article
-  )
-  createPage({
-    path: `/blog`,
-    context: { blogList },
-    component: require.resolve(`./src/templates/blog.js`),
+  const blogSlugList = blogListResult.data.allDevArticles.edges.map((item) => {
+    return item.node.article.slug
   })
-
-  for (const blogData of blogList) {
-    if (blogData.cover_image) {
-      blogData.cover_image = await fetch(blogData.cover_image)
-        .then(data => data.buffer())
-        .then(buffer => `data:image/jpeg;base64,${buffer.toString('base64')}`)
-    }
+  for (const slug of blogSlugList) {
     createPage({
-      path: `/blog/${blogData.slug}`,
-      context: { blogData },
-      component: require.resolve(`./src/templates/blog-single.js`),
+      path: `/blog/${slug}`,
+      context: { slug },
+      component: require.resolve(`./src/templates/blog.js`),
     })
   }
 
-  const allData = await graphql(`
+  // populating work
+  const workListResult = await graphql(`
     query {
       allMarkdownRemark {
         edges {
           node {
-            frontmatter {
-              sort
-              title
-              subTitle
-              tags
-              url
-              thumbnail
-            }
             fields {
               slug
             }
-            html
           }
         }
       }
     }
   `)
 
-  const workList = allData.data.allMarkdownRemark.edges.map(item => {
-    item.node.fields.slug = item.node.fields.slug.replace(/\\|\//g, '')
-    return item.node
-  })
-
-  createPage({
-    path: `/work`,
-    component: require.resolve(`./src/templates/work.js`),
-    context: { workList },
-  })
-
-  for (const dataItem of workList) {
+  const workSlugList = workListResult.data.allMarkdownRemark.edges.map(
+    (item) => {
+      return item.node.fields.slug
+    }
+  )
+  for (const slug of workSlugList) {
     createPage({
-      path: `/work/${dataItem.fields.slug}`,
-      context: { dataItem },
-      component: require.resolve(`./src/templates/work-single.js`),
+      path: `/work/${slug}`,
+      context: { slug },
+      component: require.resolve(`./src/templates/work.js`),
     })
   }
 }
