@@ -289,7 +289,7 @@ export default class ResumePage extends Component {
                                   font-size: 1.1rem;
                                   color: ${ColorsAdvanced.main};
                                 `}>
-                                {item.company ? `${item.company} | ` : ''}
+                                {item.company ? `${item.company} - ` : ''}
                                 {item.position}
                               </span>
                               <span className="float-right text-muted">

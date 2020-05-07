@@ -5,10 +5,10 @@ export default class UsesPage extends Component {
   render = () => {
     return (
       <Wrap
-        title="404 | Page Not Found | Chandu J S"
+        title="404 - Page Not Found - Chandu J S"
         description="Page Not Found">
         <div className="content-wrap">
-          <div className="h1 font-weight-bold mb-5">
+          <div className="h1 font-weight-bold mb-3">
             Page <span className="high">Not</span> Found 😕
             <span className="blinker">.</span>
             <br />
