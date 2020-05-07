@@ -34,8 +34,8 @@ export default class BlogPage extends Component {
             <Wrap
               lightsOn
               pageBg={<PageBg />}
-              title="Blog of Chandu - Chandu J S"
-              description="I write development articles in Dev.to">
+              title="Blog - Chandu J S"
+              description="I write development tips & articles often.">
               <div className="content-wrap">
                 <div className="h1 font-weight-bold mb-3">
                   My <span className="high">Blog</span>
