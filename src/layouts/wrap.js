@@ -55,7 +55,12 @@ export default class Wrap extends Component {
             title: this.props.title || siteMetadata.title,
             description: this.props.description || ``,
           }
-          const cover = `${siteMetadata.siteUrl}/images/cover.png`
+          let cover
+          if (this.props.cover) {
+            cover = siteMetadata.siteUrl + this.props.cover
+          } else {
+            cover = `${siteMetadata.siteUrl}/images/cover.png`
+          }
           return (
             <div
               className={this.props.lightsOn ? 'lights-on' : ''}

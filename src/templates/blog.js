@@ -3,86 +3,114 @@
 import { css, jsx } from '@emotion/core'
 import Wrap from '../layouts/wrap'
 import { Component } from 'react'
+import { StaticQuery, graphql } from 'gatsby'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import Img from 'gatsby-image/withIEPolyfill'
 
-import PageBg from '../assets/images/bgs/blog.svg'
+import codeStyles from '../styles/code.js'
 
-import { Link } from 'gatsby'
+import devIcon from '../../static/images/icons/dev.png'
 
-export default class BlogPage extends Component {
+export default class BlogSinglePage extends Component {
   render = () => {
+    const { slug } = this.props.pageContext
     return (
-      <Wrap
-        lightsOn
-        pageBg={<PageBg />}
-        title="Blog of Chandu | Chandu J S"
-        description="I write development articles in Dev.to">
-        <div className="content-wrap">
-          <div className="h1 font-weight-bold mb-3">
-            My <span className="high">Blog</span>
-            <span className="blinker">.</span>
-            <br />
-          </div>
-          <div
-            className="h5 mb-4 pb-4"
-            css={css`
-              line-height: 1.6;
-            `}>
-            I like writing but as you can tell, I suck at posting consistently.
-            <br />
-            But since you're here now, I'll try to post more in here.
-          </div>
-          <div
-            className="all-blogs"
-            css={css`
-              margin-right: -1.9rem;
-
-              @media screen and (max-width: 766px) {
-                margin: 0 -2rem;
-              }
-            `}>
-            {this.props.pageContext.blogList.map((item) => (
-              <Link
-                to={`/blog/${item.slug}`}
-                css={css`
-                  padding: 2rem;
-                  display: inline-block;
-                  margin-right: 1.9rem;
-                  max-width: 100%;
-                  border-radius: 0.3rem;
-
-                  @media screen and (max-width: 766px) {
-                    margin: 0;
-                    border-radius: 0;
-                    display: block;
+      <StaticQuery
+        query={graphql`
+          query {
+            allDevArticles {
+              edges {
+                node {
+                  article {
+                    title
+                    slug
+                    description
+                    tags
+                    readable_publish_date
+                    body_html
+                    url
                   }
-                `}
-                className="mb-4 bg-white overflow-hidden">
-                <div
-                  css={css`
-                    line-height: 2rem;
-                  `}
-                  className="item-title font-weight-bold brand-light h4">
-                  {item.title}
+                  cover_image {
+                    childImageSharp {
+                      fixed(width: 1000, quality: 100) {
+                        ...GatsbyImageSharpFixed
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        `}
+        render={({ allDevArticles }) => {
+          const data = allDevArticles.edges
+            .map((item) => {
+              item.node.article.cover_image = item.node.cover_image
+              return item.node.article
+            })
+            .find((item) => item.slug === slug)
+          return (
+            <Wrap
+              lightsOn
+              isBlogPage
+              title={`${data.title} | Blog | Chandu J S`}
+              cover={data.cover_image?.childImageSharp.fixed.src}
+              description={data.description}>
+              <div className="content-wrap">
+                <div className="mb-5">
+                  <div className="h1 font-weight-bold text-body">
+                    {data.title}
+                  </div>
+                  <div className="mb-3">
+                    Published On: {data.readable_publish_date}
+                  </div>
+                  <div className="tags">
+                    {data.tags.map((tag) => (
+                      <span className="badge badge-pill badge-brand mb-2 mr-2 py-1">
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <div className="mb-3 text-muted item-date">
-                  Published On: <strong>{item.readable_publish_date}</strong>
-                </div>
-                <div className="item-tags text-lowercase mt-2">
-                  {item.tags.map((tag) => (
-                    <span
+                <div className="bg-white pad-wrap rounded-lg overflow-hidden">
+                  {data.cover_image ? (
+                    <Img
                       css={css`
-                        display: inline-block;
+                        margin: -3rem -3rem 3rem;
+                        max-width: calc(100% - -6rem);
                       `}
-                      className="badge badge-pill badge-brand mr-3">
-                      #{tag}
-                    </span>
-                  ))}
+                      fixed={data.cover_image.childImageSharp.fixed}
+                      objectFit="cover"
+                      objectPosition="50% 50%"
+                    />
+                  ) : (
+                    ''
+                  )}
+                  <div
+                    css={codeStyles}
+                    dangerouslySetInnerHTML={{ __html: data.body_html }}
+                  />
                 </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </Wrap>
+                <OutboundLink
+                  eventLabel="DEV Blog Visit"
+                  href={data.url}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <img
+                    src={devIcon}
+                    alt="Dev.to"
+                    css={css`
+                      filter: invert(1);
+                      margin-left: -5px;
+                      margin-top: 1rem;
+                    `}
+                  />
+                </OutboundLink>
+              </div>
+            </Wrap>
+          )
+        }}
+      />
     )
   }
 }
