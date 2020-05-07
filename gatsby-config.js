@@ -88,6 +88,11 @@ module.exports = {
     },
     'gatsby-plugin-extract-image-colors',
     `gatsby-plugin-remove-serviceworker`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/resume`],
+      },
+    },
   ],
 }
