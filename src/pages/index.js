@@ -13,7 +13,9 @@ import Wrap from '../layouts/wrap'
 export default class IndexPage extends Component {
   render = () => {
     return (
-      <Wrap pageBg={<PageBg />} description="Welcome to my website">
+      <Wrap
+        pageBg={<PageBg />}
+        description="Hi! 👋 I'm Chandu J S. I'm a full stack developer from Trivandrum">
         <div
           css={css`
             top: 47%;

@@ -112,7 +112,7 @@ export default class ResumePage extends Component {
           `}
         />
         <Helmet
-          defaultTitle={'Resume'}
+          defaultTitle={'Resume - Chandu J S'}
           meta={[
             {
               name: 'robots',

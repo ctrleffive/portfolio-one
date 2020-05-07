@@ -45,8 +45,8 @@ export default class WorkPage extends Component {
               lightsOn
               isWorkPage
               pageBg={<PageBg />}
-              title="Work of Chandu - Chandu J S"
-              description="My work">
+              title="Work - Chandu J S"
+              description="Here is the listing of some of my work.">
               <div className="content-wrap">
                 <div className="h1 font-weight-bold mb-3">
                   My <span className="high">Work</span>
