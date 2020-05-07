@@ -84,7 +84,7 @@ export default class WorkSinglePage extends Component {
               isWorkPage
               pageBg={<PageBg />}
               cover={this.getCover(data.htmlAst)}
-              title={`${data.title} | Work | Chandu J S`}
+              title={`${data.title} - Work - Chandu J S`}
               description={data.excerpt}>
               <div className="content-wrap">
                 <div className="mb-5">

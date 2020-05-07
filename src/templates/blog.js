@@ -53,7 +53,7 @@ export default class BlogSinglePage extends Component {
             <Wrap
               lightsOn
               isBlogPage
-              title={`${data.title} | Blog | Chandu J S`}
+              title={`${data.title} - Blog - Chandu J S`}
               cover={data.cover_image?.childImageSharp.fixed.src}
               description={data.description}>
               <div className="content-wrap">
