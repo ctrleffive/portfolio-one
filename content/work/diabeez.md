@@ -7,7 +7,7 @@ url: https://play.google.com/store/apps/developer?id=Diabeez
 tags:
   - design
   - flutter
-  - app
+  - mobile-app
 ---
 
 ![Diabeez](content/uploads/diabeez-screens.png)

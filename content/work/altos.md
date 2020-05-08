@@ -7,7 +7,7 @@ url: null
 tags:
   - design
   - flutter
-  - app
+  - mobile-app
 ---
 
 ![Altos](content/uploads/altos-screens.png)

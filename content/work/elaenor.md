@@ -6,7 +6,7 @@ thumbnail: content/uploads/elaenor.png
 url: https://play.google.com/store/apps/details?id=com.inometrics.elaenor
 tags:
   - design
-  - app
+  - mobile-app
   - flutter
   - server
 ---

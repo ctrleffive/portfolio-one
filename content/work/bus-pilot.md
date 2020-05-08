@@ -7,7 +7,7 @@ url: https://play.google.com/
 tags:
   - design
   - flutter
-  - app
+  - mobile-app
 ---
 
 Bus tracking mobile application.

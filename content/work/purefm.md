@@ -8,7 +8,7 @@ tags:
   - design
   - angularjs
   - flutter
-  - app
+  - mobile-app
 ---
 
 ![PureFM Home](content/uploads/purefm-app-screens.png)

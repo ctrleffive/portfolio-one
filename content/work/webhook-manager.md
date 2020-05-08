@@ -7,7 +7,7 @@ url: https://github.com/ctrleffive/webhook-manager
 tags:
   - case-study
   - flutter
-  - app
+  - mobile-app
 ---
 
 ![Webhook Manager](content/uploads/webhook-manager-screens.png)

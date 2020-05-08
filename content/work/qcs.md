@@ -7,7 +7,7 @@ url: https://play.google.com/store/apps/details?id=com.inometrics.qcs
 tags:
   - design
   - flutter
-  - app
+  - mobile-app
 ---
 
 ![App Screens](content/uploads/qcs-intro.png)
