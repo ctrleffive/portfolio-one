@@ -1,5 +1,5 @@
 ---
-sort: 33
+sort: 30
 title: Tranz
 subTitle: Flutter Challenge
 thumbnail: content/uploads/tranz.png
