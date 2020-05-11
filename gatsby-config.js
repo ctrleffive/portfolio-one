@@ -1,7 +1,6 @@
 const Variables = require('./src/styles/variables.json')
 
 const uses = require('./data/uses.json')
-const emails = require('./data/emails.json')
 const skills = require('./data/skills.json')
 const social = require('./data/social.json')
 const person = require('./data/person.json')
@@ -16,7 +15,6 @@ module.exports = {
     experience,
     education,
     person,
-    emails,
     skills,
     social,
     uses,
