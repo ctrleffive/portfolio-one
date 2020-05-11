@@ -3,7 +3,7 @@ sort: 26
 title: My Website
 subTitle: My website made in gatsby
 thumbnail: content/uploads/chandujs.png
-url: https://github.com/ctrleffive/ctrleffive.github.io
+url: https://github.com/ctrleffive/chandujs.dev
 tags:
   - design
   - gatsby
@@ -14,6 +14,6 @@ tags:
 
 # My Website!
 
-Checkout this project in github [here](https://github.com/ctrleffive/ctrleffive.github.io).
+Checkout this project in github [here](https://github.com/ctrleffive/chandujs.dev).
 
 ![Website Home](content/uploads/chandujs-home.png)
