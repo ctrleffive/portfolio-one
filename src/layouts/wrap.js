@@ -34,6 +34,7 @@ export default class Wrap extends Component {
                     first
                     last
                   }
+                  email
                 }
                 siteUrl
                 social {
@@ -41,16 +42,12 @@ export default class Wrap extends Component {
                   service
                   url
                 }
-                emails
               }
             }
           }
         `}
         render={({ site }) => {
           const { siteMetadata } = site
-          const emailIndex = Math.ceil(
-            Math.random() * (siteMetadata.emails.length - 1 - 0) + 0
-          )
           const metaTags = {
             title: this.props.title || siteMetadata.title,
             description: this.props.description || ``,
@@ -141,7 +138,7 @@ export default class Wrap extends Component {
                 </Link>
                 <OutboundLink
                   eventLabel="Contact"
-                  href={`mailto:${siteMetadata.emails[emailIndex]}@chandujs.dev`}
+                  href={`mailto:${siteMetadata.person.email}`}
                   css={css`
                     border-radius: 100%;
                     background-color: ${Colors.accent};
@@ -328,7 +325,7 @@ export default class Wrap extends Component {
                   {siteMetadata.social.map((item) => {
                     return (
                       <OutboundLink
-                        eventLabel="Social Media Visit"
+                        eventLabel={`Social Media (${item.service})`}
                         href={item.url}
                         target="_blank"
                         className="social-icon"
