@@ -15,7 +15,7 @@ export default class IndexPage extends Component {
     return (
       <Wrap
         pageBg={<PageBg />}
-        description="Hi! 👋 I'm Chandu J S. I'm a full stack developer from Trivandrum">
+        description="Hi! 👋 I'm Chandu J S. I'm a full stack developer from Trivandrum. This is my portfolio website. Here you can see some of my work, articles & other information about me.">
         <div
           css={css`
             top: 47%;
