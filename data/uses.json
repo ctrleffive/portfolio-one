@@ -53,8 +53,8 @@
       },
       {
         "emoji": "📱",
-        "name": "iPhone SE",
-        "description": "",
+        "name": "Nokia 7.2",
+        "description": "I made a switch from iOS to Android",
         "link": ""
       },
       {
@@ -197,7 +197,7 @@
       },
       {
         "emoji": "🎤",
-        "name": "Spotify (Podcast)",
+        "name": "Google Podcast",
         "description": "My favourite podcast is StarTalk hosted by Neil Degrasse Tyson.",
         "link": "https://open.spotify.com/show/1mNsuXfG95Lf76YQeVMuo1?si=C50rUXZfSROHE7WtDjAgGw"
       },
@@ -240,12 +240,6 @@
       {
         "emoji": "☕️",
         "name": "Coffee",
-        "description": "",
-        "link": ""
-      },
-      {
-        "emoji": "😶",
-        "name": "Perfectionism",
         "description": "",
         "link": ""
       }
