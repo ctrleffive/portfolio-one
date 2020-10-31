@@ -6,6 +6,23 @@ import Img from 'gatsby-image/withIEPolyfill'
 import { Component } from 'react'
 
 export default class WorkThumbnail extends Component {
+  state = {
+    width: window.innerWidth,
+  }
+
+  updateDimensions = () => {
+    this.setState({
+      width: window.innerWidth,
+    })
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.updateDimensions)
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateDimensions)
+  }
+
   render = () => {
     const data = this.props.data
     return (
@@ -36,9 +53,21 @@ export default class WorkThumbnail extends Component {
             }).node
             data.thumbnail = thumbnail
           }
+
+          let widthClass = 'col-xl-4'
+          if (this.state.width > 1800) {
+            widthClass = 'col-xl-3'
+            if (this.state.width > 2550) {
+              widthClass = 'col-xl-2'
+              if (this.state.width > 4000) {
+                widthClass = 'col-xl-1'
+              }
+            }
+          }
+
           return (
             <div
-              className="col-xl-4 col-md-6"
+              className={widthClass + ' col-md-6'}
               css={css`
                 margin-bottom: 1.4rem;
                 @media screen and (max-width: 766px) {
