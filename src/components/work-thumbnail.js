@@ -7,7 +7,7 @@ import { Component } from 'react'
 
 export default class WorkThumbnail extends Component {
   state = {
-    width: window.innerWidth,
+    width: 0,
   }
 
   updateDimensions = () => {
@@ -17,6 +17,7 @@ export default class WorkThumbnail extends Component {
   }
 
   componentDidMount() {
+    this.updateDimensions()
     window.addEventListener('resize', this.updateDimensions)
   }
   componentWillUnmount() {
