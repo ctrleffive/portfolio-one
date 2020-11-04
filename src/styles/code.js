@@ -2,6 +2,10 @@ import { css } from '@emotion/core'
 import { Colors } from './main.js'
 
 export default css`
+  .table-wrapper-paragraph {
+    margin-bottom: 1.5rem;
+  }
+
   .ltag__link {
     display: none;
   }
