@@ -15,3 +15,4 @@ tags:
 ## I built a PC!
 
 Checkout my Google Photos Album of some of the photos I took during the process.
+Don't forgot to check out my experience building the PC [HERE](/blog/a-story-of-0s-1s-380p).
