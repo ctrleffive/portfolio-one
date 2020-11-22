@@ -45,29 +45,29 @@ const ListItem = ({ icon, title, skill, children }) =>
       {children}
     </div>
   ) : (
-    <div
-      css={css`
+      <div
+        css={css`
         margin-bottom: 1.5rem;
         &:last-child {
           margin-bottom: 0;
         }
       `}>
-      {title ? (
-        <div
-          css={css`
+        {title ? (
+          <div
+            css={css`
             text-transform: uppercase;
             margin-bottom: 0.2rem;
             font-weight: bold;
             color: ${ColorsAdvanced.main};
           `}>
-          {title}
-        </div>
-      ) : (
-        ''
-      )}
-      {icon ? (
-        <img
-          css={css`
+            {title}
+          </div>
+        ) : (
+            ''
+          )}
+        {icon ? (
+          <img
+            css={css`
             display: inline-block;
             margin-right: 1rem;
             width: 1.7rem;
@@ -77,15 +77,15 @@ const ListItem = ({ icon, title, skill, children }) =>
             filter: invert(1);
             opacity: 0.7;
           `}
-          src={icon}
-          alt="Social Icon"
-        />
-      ) : (
-        ''
-      )}
-      {children}
-    </div>
-  )
+            src={icon}
+            alt="Social Icon"
+          />
+        ) : (
+            ''
+          )}
+        {children}
+      </div>
+    )
 
 export default class ResumePage extends Component {
   render = () => {
@@ -147,7 +147,6 @@ export default class ResumePage extends Component {
                       proficiency
                     }
                     location
-                    phone
                     position
                     proProfile
                     website
@@ -221,7 +220,6 @@ export default class ResumePage extends Component {
                       `}>
                       <InfoSection title="Contact">
                         <ListItem title="Location">{person.location}</ListItem>
-                        <ListItem title="Phone">{person.phone}</ListItem>
                         <ListItem title="Email">{person.email}</ListItem>
                         <ListItem title="Website">{person.website}</ListItem>
                       </InfoSection>
@@ -334,8 +332,8 @@ export default class ResumePage extends Component {
                                 </ul>
                               </div>
                             ) : (
-                              ''
-                            )}
+                                ''
+                              )}
                           </div>
                         ))}
                       </InfoSection>
