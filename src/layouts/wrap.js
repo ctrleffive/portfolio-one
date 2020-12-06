@@ -108,6 +108,7 @@ export default class Wrap extends Component {
                     content: metaTags.description,
                   },
                   { name: 'twitter:image', content: cover },
+                  { name: 'p:domain_verify', content: '6ab38d0b388f8724fc4382d381928e1f' },
                 ]}>
                 <html lang="en" />
               </Helmet>
