@@ -1,8 +1,9 @@
 /** @jsx jsx */
 
 import { Link } from 'gatsby'
-import { css, jsx } from '@emotion/core'
 import { Component } from 'react'
+import { css, jsx } from '@emotion/core'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import { ColorsAdvanced, Colors } from '../styles/main'
 
@@ -12,6 +13,37 @@ import Wrap from '../layouts/wrap'
 
 export default class IndexPage extends Component {
   render = () => {
+    const linkStyle = css`
+      margin-right: 1rem;
+      display: inline-block;
+      transition-duration: 0.2s;
+      cursor: pointer;
+      top: 0px;
+      padding: 0.5rem 1.3rem;
+      border-width: 0;
+      border-style: solid;
+      border-image: initial;
+      border-radius: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      background-color: ${Colors.brand};
+      color: #fff;
+      .lights-on & {
+        background-color: ${Colors.accent};
+        color: ${ColorsAdvanced.main};
+      }
+      &.active,
+      &:hover {
+        background-color: ${Colors.accent};
+        color: ${ColorsAdvanced.main};
+        .lights-on & {
+          background-color: ${Colors.brand};
+          color: #fff;
+        }
+      }
+    `
+
     return (
       <Wrap
         pageBg={<PageBg />}
@@ -47,39 +79,21 @@ export default class IndexPage extends Component {
               <span className="blinker">.</span>
             </div>
           </h1>
-          <Link
-            to="/work"
-            className="mt-4"
-            css={css`
-              display: inline-block;
-              transition-duration: 0.2s;
-              cursor: pointer;
-              top: 0px;
-              padding: 0.5rem 1.3rem;
-              border-width: 0;
-              border-style: solid;
-              border-image: initial;
-              border-radius: 2rem;
-              font-weight: bold;
-              text-transform: uppercase;
-              font-size: 0.8rem;
-              background-color: ${Colors.brand};
-              color: #fff;
-              .lights-on & {
-                background-color: ${Colors.accent};
-                color: ${ColorsAdvanced.main};
-              }
-              &:hover {
-                background-color: ${Colors.accent};
-                color: ${ColorsAdvanced.main};
-                .lights-on & {
-                  background-color: ${Colors.brand};
-                  color: #fff;
-                }
-              }
-            `}>
+          <Link to="/work" className="mt-4 active" css={linkStyle}>
             GoTo Work
           </Link>
+          {/* TODO: Feed data from JSON file */}
+          <OutboundLink
+            eventLabel="Calendar Booking"
+            href="https://calendly.com/ctrleffive/meet"
+            target="_blank"
+            className="social-icon"
+            rel="noopener noreferrer"
+            alt="Reserve a time slot"
+            className="mt-4"
+            css={linkStyle}>
+            Let's Talk!
+          </OutboundLink>
         </div>
       </Wrap>
     )
